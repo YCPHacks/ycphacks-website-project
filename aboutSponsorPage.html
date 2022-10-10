@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <title>About our Sponsors</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!Link to CSS file>
+    <link rel="stylesheet" href="StyleSheet.css">
 
 </head>
 <body>
-Sponsor Page
+<!dropdown menu - placed at top left of screen>
+<div class="dropdown">
+    <!Label of the dropdown menu>
+    <button class="dropbtn">Menu</button>
+    <!Div for the links inside the dropdown menu as a whole>
+    <div class="dropdown-content">
+        <!Separate div for each link - creating highlighted background for each link>
+        <div class="droplink">
+            <a href="welcomePage.html">Welcome Page</a>
+        </div>
+        <div class="droplink">
+            <a href="pastEventsPage.html">Past Events Page</a>
+        </div>
+    </div>
+</div>
+<!Title of the page - aligned at the center>
+<div style="text-align: center; height: 50px;">
+    Sponsor Page
+</div>
+<!Title of table - everything within this div can be edited through the page>
+<div class="sponsorInfo" contenteditable="true">
+    Sponsor Information
+    <!Table for now, most likely will change later>
+    <table style="width: 50%; font-size: 25px;">
+        <tr>
+            <th>Company Name</th>
+            <th>Sponsor Name</th>
+            <th>Tier</th>
+        </tr>
+        <tr>
+            <td>Example Company Name 1</td>
+            <td>Example Sponsor Name 1</td>
+            <td>Example Tier 1</td>
+        </tr>
+        <tr>
+            <td>Example Company Name 2</td>
+            <td>Example Sponsor Name 2</td>
+            <td>Example Tier 2</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
