@@ -10,9 +10,30 @@
 This can be our welcome page
 
 <br></p>
+<body>
+<!-----FAQ SECTION----->
+<!Button that will expand and collapse when clicked>
+<button type="button" class="collapsible">FAQ</button>
+<div class="content">
+    <p>Test Data 1</p>
+    <p>Test Data 2</p>
+    <p>Test Data 3</p>
+</div>
+<!JavaScript for the expand / collapse functionality -> https://www.w3schools.com/howto/howto_js_collapsible.asp>
 <script>
-
-    document.write("This is a JavaScript test string");
-
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for(i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if(content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
 </script>
+</body>
 </html>
