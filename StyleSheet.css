@@ -72,3 +72,13 @@ table, th, td {
     text-align: center;
     width: 20%;
 }
+
+.prizeList {
+    text-align: center;
+    font-size: 25px;
+}
+
+.prizeWinners {
+    text-align: center;
+    font-size: 15px;
+}

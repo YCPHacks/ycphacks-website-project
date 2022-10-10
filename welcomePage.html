@@ -13,13 +13,15 @@ This can be our welcome page
 <body>
 <!-----FAQ SECTION----->
 <!Button that will expand and collapse when clicked>
-<button type="button" class="collapsible">FAQ</button>
-<div class="content">
-    <p>Test Data 1</p>
-    <p>Test Data 2</p>
-    <p>Test Data 3</p>
+<div contenteditable="true">
+    <button type="button" class="collapsible">FAQ</button>
+    <div class="content">
+        <p>Test Data 1</p>
+        <p>Test Data 2</p>
+        <p>Test Data 3</p>
+    </div>
 </div>
-<!JavaScript for the expand / collapse functionality -> https://www.w3schools.com/howto/howto_js_collapsible.asp>
+<!JavaScript for the expand and collapse functionality = https://www.w3schools.com/howto/howto_js_collapsible.asp>
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
