@@ -1,3 +1,53 @@
 body{
     font-family: "Courier New";
 }
+/* "One, Two, Three" including container around it */
+.tab-content{
+    color:black;
+    /*background: rgba(0, 128, 0, 0.5);*/
+}
+.mt-4{
+    border: 1px solid darkgreen;
+
+}
+.mt-3{
+    height: 300px;
+    overflow: auto;
+}
+/* Text in day tabs */
+.nav-link{
+    color: white;
+}
+/* Striped table with events */
+.table-striped{
+    color: white;
+
+    /*background: rgba(0, 120, 0, 0.5);*/
+}
+
+.container{
+    background: rgba(0, 128, 0, 0.5);
+}
+
+
+/* SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkslategray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
