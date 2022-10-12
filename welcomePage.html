@@ -17,33 +17,6 @@
 <p>
 This can be our welcome page
 <br></p>
-<body>
-<!-----FAQ SECTION----->
-<!Button that will expand and collapse when clicked>
-<div contenteditable="true">
-    <button type="button" class="collapsible">FAQ</button>
-    <div class="content">
-        <p>Test Data 1</p>
-        <p>Test Data 2</p>
-        <p>Test Data 3</p>
-    </div>
-</div>
-<!JavaScript for the expand and collapse functionality = https://www.w3schools.com/howto/howto_js_collapsible.asp>
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for(i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if(content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    }
-</script>
 <!--NAVIGATION BAR-->
 <ul class="nav justify-content-end">
 
@@ -75,7 +48,32 @@ This can be our welcome page
 </div>
 <input id="end" type="button" value="Save my changes" onclick="saveEdits()"/>
 <div id="update"> - Edit the text and click to save for next time</div>
-
+<!-----FAQ SECTION----->
+<!Button that will expand and collapse when clicked>
+<div contenteditable="true">
+    <button type="button" class="collapsible">FAQ</button>
+    <div class="content">
+        <p>Test Data 1</p>
+        <p>Test Data 2</p>
+        <p>Test Data 3</p>
+    </div>
+</div>
+<!JavaScript for the expand and collapse functionality = https://www.w3schools.com/howto/howto_js_collapsible.asp>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for(i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if(content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
 <!------------------JavaScript------------------>
 <script>
     const info = document.getElementById("edit");
