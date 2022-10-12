@@ -50,12 +50,19 @@ This can be our welcome page
 <div id="update"> - Edit the text and click to save for next time</div>
 <!-----FAQ SECTION----->
 <!Button that will expand and collapse when clicked>
-<div contenteditable="true">
-    <button type="button" class="collapsible">FAQ</button>
-    <div class="content">
-        <p>Test Data 1</p>
-        <p>Test Data 2</p>
-        <p>Test Data 3</p>
+<div id="faq">
+    <div class="card" style="width: 50%;">
+        <div class="card-header">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                FAQ
+            </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-bs-parent="#faq">
+            <div class="card-body">
+                <u>What's a Hackathon?</u>
+                <p>A 36 hour event where you work together with a team to make something awesome. You don't need to know how to code or be a supreme hacker, just how to be creative! You can also get help from our mentors and speakers who will be attending.</p>
+            </div>
+        </div>
     </div>
 </div>
 <!JavaScript for the expand and collapse functionality = https://www.w3schools.com/howto/howto_js_collapsible.asp>
