@@ -20,8 +20,10 @@ body{
     overflow: auto;
 }
 /* Text in day tabs */
+
+
 .nav-link{
-    color: white;
+    color: black;
 }
 /* Striped table with events */
 .table-striped{
