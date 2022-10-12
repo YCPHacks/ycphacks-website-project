@@ -24,14 +24,11 @@ body{
 
     /*background: rgba(0, 120, 0, 0.5);*/
 }
-
 .container{
     background: rgba(0, 128, 0, 0.5);
 }
 
-
-/* SCROLL BAR */
-
+/* ------SCROLL BAR------*/
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -51,3 +48,4 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+/*-----------------------*/
