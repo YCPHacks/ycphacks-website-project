@@ -1,4 +1,9 @@
+import 'dotenv/config';
+
 import express from 'express';
+import mysqlx from '@mysql/xdevapi';
+
+import config from './config.mjs';
 
 const app = express();
 
@@ -11,9 +16,15 @@ app.get('/users/:user_id', async (req, res) => {
   res.status(200).send(response.id);
 });
 
-app.get('/api/users/:user_id', (req, res) => {
+app.get('/api/users/:user_id', async (req, res) => {
+  const session = await mysqlx.getSession(config);
+
+  console.log(session.inspect());
+
   res.status(200).send({ id: req.params.user_id });
   // res.status(200).json({ id: req.params.user_id });
+
+  session.close();
 });
 
 app.listen(port, () => {
