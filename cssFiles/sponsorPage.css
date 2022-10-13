@@ -47,38 +47,3 @@ table, th, td {
     margin-left: auto;
     margin-right: auto;
 }
-
-.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 25%;
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 15px;
-}
-
-.active, .collapsible:hover {
-    background-color: #ccc;
-}
-
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    text-align: center;
-    width: 20%;
-}
-
-.prizeList {
-    text-align: center;
-    font-size: 25px;
-}
-
-.prizeWinners {
-    text-align: center;
-    font-size: 15px;
-}
