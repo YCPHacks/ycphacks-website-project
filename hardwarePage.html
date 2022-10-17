@@ -3,32 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Hardware Page</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
-  <!Link to CSS file>
-  <link rel="stylesheet" href="cssFiles/hardwarePage.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <!-- CSS only -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cssFiles/hardwarePage.css">
 </head>
 <body>
-<!dropdown menu - placed at top left of screen>
-<div class="dropdown">
-    <!Label of the dropdown menu>
-    <button class="dropbtn">Menu</button>
-    <!Div for the links inside the dropdown menu as a whole>
-    <div class="dropdown-content">
-        <!Separate div for each link - creating highlighted background for each link>
-        <div class="droplink">
-            <a href="welcomePage.html">Home</a>
-        </div>
-        <div class="droplink">
-            <a href="pastEventsPage.html">Past Events Page</a>
-        </div>
-        <div class="droplink">
-            <a href="judgingCriteria.html">Judge Criteria</a>
-        </div>
-        <div class="droplink">
-            <a href="sponsorPage.html">Sponsor Page</a>
+<!--NAVIGATION BAR-->
+<nav class="navbar navbar-expand-sm bg-success bg-gradient navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="welcomePage.html">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Attend</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sponsorPage.html">Sponsor Us!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="judgingCriteria.html">Judging Criteria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hardwarePage.html">Hardware</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pastEventsPage.html">Past Events</a>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Link</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                        <li><a class="dropdown-item" href="#">A third link</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
+</nav>
+
 <!Title of the page - aligned at the center>
 <div style="text-align: center; height: 50px;">
     Hardware Page

@@ -20,8 +20,6 @@ body{
     overflow: auto;
 }
 /* Text in day tabs */
-
-
 .nav-link{
     color: black;
 }
@@ -97,7 +95,7 @@ body{
 }
 
 /*FAQ Section*/
-.active, .collapsible:hover {
+.collapsible:hover {
     background-color: #ccc;
 }
 

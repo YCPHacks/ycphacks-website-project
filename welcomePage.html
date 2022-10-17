@@ -1,46 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script type="text/javascript"></script>
+    <meta charset="UTF-8">
     <title> YCP Hacks </title>
     <!-- CSS only -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" rel="stylesheet">
     <!-- JavaScript Bundle with Popper -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <link href="cssFiles/welcomePage.css" rel="stylesheet">
 
 </head>
 
 <p>
-This can be our welcome page
-<br></p>
+    <br></p>
 <!--NAVIGATION BAR-->
-<ul class="nav justify-content-end">
+<nav class="navbar navbar-expand-sm bg-success bg-gradient navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="welcomePage.html">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Attend</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sponsorPage.html">Sponsor Us!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="judgingCriteria.html">Judging Criteria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hardwarePage.html">Hardware</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pastEventsPage.html">Past Events</a>
+                </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="welcomePage.html">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="">Attend</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="sponsorPage.html">Sponsor Us</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="judgingCriteria.html">Judge Criteria</a>
-    </li>
-</ul>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Link</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                        <li><a class="dropdown-item" href="#">A third link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
-<body onload="checkEdits()">
+<!--<body onload="checkEdits()">-->
 
-<button id="edit-button" onclick="toEdit()" type="submit">Edit</button>
+<!--<button id="edit-button" onclick="toEdit()" type="submit">Edit</button>-->
 
 <div contenteditable="false" id="edit">
     <h1 class="display-5">Information</h1>
@@ -176,8 +194,8 @@ This can be our welcome page
 
     <h1 class="display-5">FAQ</h1>
 </div>
-<input id="end" onclick="saveEdits()" type="button" value="Save my changes"/>
-<div id="update"> - Edit the text and click to save for next time</div>
+<!--<input id="end" onclick="saveEdits()" type="button" value="Save my changes"/>-->
+<!--<div id="update"> - Edit the text and click to save for next time</div>-->
 <!-----FAQ SECTION----->
 <div id="faq">
     <div class="card" style="width: 50%;">
@@ -189,17 +207,24 @@ This can be our welcome page
         <div id="collapseOne" class="collapse show" data-bs-parent="#faq">
             <div class="card-body">
                 <b>What's a Hackathon?</b>
-                <p>A 36 hour event where you work together with a team to make something awesome. You don't need to know how to code or be a supreme hacker, just how to be creative! You can also get help from our mentors and speakers who will be attending.</p>
+                <p>A 36 hour event where you work together with a team to make something awesome. You don't need to know
+                    how to code or be a supreme hacker, just how to be creative! You can also get help from our mentors
+                    and speakers who will be attending.</p>
                 <b>Can I come?</b>
-                <p>We'll take any college student from anywhere on earth! We sadly cannot accept students under the age of 18. All students from outside of York College may be asked to attend online if Covid protocols change</p>
+                <p>We'll take any college student from anywhere on earth! We sadly cannot accept students under the age
+                    of 18. All students from outside of York College may be asked to attend online if Covid protocols
+                    change</p>
                 <b>Where is this going to be?</b>
-                <p>The Willman Business Center of York College! There will be free parking in the adjacent lot for the entire weekend.</p>
+                <p>The Willman Business Center of York College! There will be free parking in the adjacent lot for the
+                    entire weekend.</p>
                 <b>When will this be?</b>
                 <p>November 4-6, 2022</p>
                 <b>Why?</b>
                 <p>Learn new things, meet new people, and tons of free food and swag.</p>
                 <b>Will you reimburse travel?</b>
-                <p>If we get enough sponsors this season, we may offer it closer to the event date. At this time we cannot confirm it though. Apply and we'll email our applicants with more information as it becomes available.</p>
+                <p>If we get enough sponsors this season, we may offer it closer to the event date. At this time we
+                    cannot confirm it though. Apply and we'll email our applicants with more information as it becomes
+                    available.</p>
                 <b>But I can't code!</b>
                 <p>We'll have tons of great workshops and mentors to help you learn and build something amazing!</p>
                 <b>How much does it cost?</b>
@@ -221,11 +246,11 @@ This can be our welcome page
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
-    for(i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-            if(content.style.display === "block") {
+            if (content.style.display === "block") {
                 content.style.display = "none";
             } else {
                 content.style.display = "block";
@@ -234,7 +259,7 @@ This can be our welcome page
     }
 </script>
 <!------------------JavaScript------------------>
-<script>
+<!--<script>
     const info = document.getElementById("edit");
     const edit_button = document.getElementById("edit-button");
     const end_button = document.getElementById("end");
@@ -256,12 +281,12 @@ This can be our welcome page
     // needs to be commented out to make active HTML edits for the time being
     function checkEdits() {
         // find out if the user has previously saved edits
-        if (localStorage.userEdits != null)
+        if (localStorage.userEdits != null) {
             //document.getElementById("edit").innerHTML = localStorage.userEdits;
-            }
-
+        }
+    }
     //document.write("This is a JavaScript test string");
-</script>
+</script>-->
 <!------------------End of JavaScript------------------>
 
 </body>
