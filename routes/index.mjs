@@ -3,7 +3,7 @@
 import express from 'express';
 import mysqlx from '@mysql/xdevapi';
 
-import config from './config.mjs';
+import config from '../simple/config.mjs';
 
 const app = express();
 
