@@ -39,6 +39,10 @@ app.get('/login', (req,res) => {
 	res.status(200).render('login');
 });
 
+app.get('/registration', (req,res) => {
+	res.status(200).render('registration');
+});
+
 app.get('/users', async (req, res) => {
   const request = await fetch(`http://localhost:${port}/api/users`);
   const response = await request.json();
