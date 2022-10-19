@@ -2,8 +2,9 @@ html
   head    
   body
    include includes/navbar.pug
-   .container-sm
-    table.table.table-success.table-striped.table-hover.table-bordered
+  .container-sm
+   h1.text-center Users List
+   table.table.table-success.table-striped.table-hover.table-bordered
       tr
         each column in columns
           th.table-dark= column

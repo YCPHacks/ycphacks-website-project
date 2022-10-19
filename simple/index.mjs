@@ -43,6 +43,14 @@ app.get('/registration', (req,res) => {
 	res.status(200).render('registration');
 });
 
+app.get('/polls', (req,res) => {
+	res.status(200).render('polls');
+});
+
+app.get('/usersPage', (req,res) => {
+	res.status(200).render('usersPage');
+});
+
 app.get('/users', async (req, res) => {
   const request = await fetch(`http://localhost:${port}/api/users`);
   const response = await request.json();
