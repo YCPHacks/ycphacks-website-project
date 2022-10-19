@@ -1,11 +1,12 @@
- import 'dotenv/config';
+import 'dotenv/config';
 
 import express from 'express';
 import mysqlx from '@mysql/xdevapi';
 
-import config from '../simple/config.mjs';
+import config from './config/config.mjs';
 
 const app = express();
+console.log(process.env.MYSQLX_USER);
 
 app.set('view engine', 'pug');
 
@@ -50,43 +51,34 @@ app.get('/users/:user_id', async (req, res) => {
   res.status(200).render('index', response);
 });
 
-app.get('/api/users', async (req, res) => {
-  const session = await mysqlx.getSession(config);
+ app.get('/api/users', async (req, res) => {
+   const session = await mysqlx.getSession(config);
 
-  const table = session
-    .getSchema('prototype_schema')
-    .getTable('prototype_table');
+   const result = await session.sql('CALL GetAllUsers').execute();
 
-  const result = await table.select().execute();
+   // Gets the columns for the table.
+   const columns = result.getColumns();
 
-  // Gets the columns for the table.
-  const columns = result.getColumns();
+   // Creates an array of column names.
+   const columnNames = [columns[0].getColumnName()];
 
-  // Creates an array of column names.
-  const columnNames = [ columns[0].getColumnName(),
-                        columns[1].getColumnName() ];
+   // Send an object containing columns and rows from table.
+   res.status(200).send({ columns: columnNames, rows: result.fetchAll() });
 
-  // Send an object containing columns and rows from table.
-  res.status(200).send({ columns: columnNames, rows: result.fetchAll() });
-
-  session.close();
-});
+   session.close();
+ });
 
 app.get('/api/users/:user_id', async (req, res) => {
   const session = await mysqlx.getSession(config);
 
-  const table = session
-    .getSchema('prototype_schema')
-    .getTable('prototype_table');
-
-  const result = await table.select().where(`id LIKE :id`).bind('id', req.params.user_id).execute();
+  const result = await session.sql('CALL GetOneUser(?)').bind(req.params.user_id).execute();
 
   // Gets the columns for the table.
   const columns = result.getColumns();
 
   // Creates an array of column names.
-  const columnNames = [ columns[0].getColumnName(),
-                        columns[1].getColumnName() ];
+  const columnNames = [columns[0].getColumnName(),
+                        columns[1].getColumnName()];
 
   // Send an object containing columns and rows from table.
   res.status(200).send({ columns: columnNames, rows: result.fetchAll() });
@@ -98,11 +90,7 @@ app.get('/api/users/:user_id', async (req, res) => {
 app.delete('/api/users/:user_id', async (req, res) => {
   const session = await mysqlx.getSession(config);
 
-  const table = session
-    .getSchema('prototype_schema')
-    .getTable('prototype_table');
-
-  const result = await table.delete().where(`id LIKE :id`).bind('id', req.params.user_id).execute();
+  const result = await session.sql('CALL DeleteUser(?)').bind(req.params.user_id).execute();
 
   // Send an object containing columns and rows from table.
   res.status(204).end();
@@ -114,14 +102,10 @@ app.delete('/api/users/:user_id', async (req, res) => {
 app.post('/api/users', async (req, res) => {
   const session = await mysqlx.getSession(config);
 
-  const table = session
-    .getSchema('prototype_schema')
-    .getTable('prototype_table');
-
   let result;
 
   try {
-    result = await table.insert({ id: 4, value: 'lady' }).execute();
+    result = await session.sql('CALL CreateUser(?)').bind("joeMama").execute();
 
     res.status(200).end();
   } catch (e) {
@@ -135,14 +119,10 @@ app.post('/api/users', async (req, res) => {
 app.put('/api/users/:user_id', async (req, res) => {
   const session = await mysqlx.getSession(config);
 
-  const table = session
-    .getSchema('prototype_schema')
-    .getTable('prototype_table');
-
     try {
-        const result = await table.update().where(`id LIKE ${req.params.user_id}`).set('value', 'gotChanged').execute();
-    
-        // Send an object containing columns and rows from table.
+        const result = await session.sql('CALL UpdateUser(?, ?)').bind(req.params.user_id, "Changed").execute();
+
+      // Send an object containing columns and rows from table.
         res.status(200).end();
     } catch (e) {
         res.status(500).end();
