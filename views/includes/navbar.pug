@@ -14,7 +14,7 @@ html
     // NAVIGATION BAR
     nav.navbar.navbar-expand-sm.bg-success.bg-gradient.navbar-dark
       .container-fluid
-        a.navbar-brand(href='welcomePage') Logo
+        a.navbar-brand(href='welcomePage') YCP Hacks
         |         
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#collapsibleNavbar')
           span.navbar-toggler-icon
@@ -37,14 +37,17 @@ html
               a.nav-link(href='pastEvents') Past Events
             |                 
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') Dropdown
+              a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') More
               |                     
-              ul.dropdown-menu
+              ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lgstart
                 li
-                  a.dropdown-item(href='/users') DB Data 
+                  a.dropdown-item(href='/users') List of Users 
                 |                         
                 li
                   a.dropdown-item(href='sponsor') Sponsors
                 |                         
                 li
-                  a.dropdown-item(href='#') Poll Results
+                  a.dropdown-item(href='polls') Polls
+                |
+                li
+                  a.dropdown-item(href='#') Poll Results		
