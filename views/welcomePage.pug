@@ -10,47 +10,48 @@ html
     // JavaScript Bundle with Popper
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3', crossorigin='anonymous')
     link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
+
   body
     // NAVIGATION BAR - need to fix for this page
     nav.navbar.navbar-expand-sm.bg-success.bg-gradient.navbar-dark
       .container-fluid
         a.navbar-brand(href='welcomePage') YCP Hacks
-        |         
+        |
         button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#collapsibleNavbar')
           span.navbar-toggler-icon
-        |         
+        |
         #collapsibleNavbar.collapse.navbar-collapse.justify-content-end
           ul.navbar-nav
             li.nav-item
               a.nav-link(href='#') Attend
-            |                 
+            |
             li.nav-item
               a.nav-link(href='sponsorPage') Sponsor Us!
-            |                 
+            |
             li.nav-item
               a.nav-link(href='judgingCriteria') Judging Criteria
-            |                 
+            |
             li.nav-item
               a.nav-link(href='hardware') Hardware
-            |                 
+            |
             li.nav-item
               a.nav-link(href='pastEvents') Past Events
-            |                 
+            |
             li.nav-item.dropdown
               a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') Dropdown
-              |                     
+              |
               ul.dropdown-menu
                 li
-                  a.dropdown-item(href='/users') List of Users 
-                |                         
+                  a.dropdown-item(href='/users') List of Users
+                |
                 li
                   a.dropdown-item(href='sponsor') Sponsors
-                |                         
+                |
                 li
                   a.dropdown-item(href='polls') Polls
                 |
                 li
-                  a.dropdown-item(href='#') Poll Results			
+                  a.dropdown-item(href='#') Poll Results
     #edit(contenteditable='false')
       h1.display-5 Information
 
@@ -68,130 +69,130 @@ html
         .tab-content
           #one.container.tab-pane.active
             br
-            |                 
+            |
             h3 One
-            |                 
+            |
             p
               .container.mt-3.overflow-auto
                 table.table.table-striped
                   tbody
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-          |             
+          |
           #two.container.tab-pane.fade
             br
-            |                 
+            |
             h3 Two
-            |                 
+            |
             p
               .container.mt-3
                 table.table.table-striped
                   tbody
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-          |             
+          |
           #three.container.tab-pane.fade
             br
-            |                 
+            |
             h3 Three
-            |                 
+            |
             p
               .container.mt-3
                 table.table.table-striped
                   tbody
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
-                    |                         
+                    |
                     tr
                       td 4:00-5:00
-                      |                             
+                      |
                       td Check in
-                      |                             
+                      |
                       td Check in
       // END OF SCHEDULE
-      h1.display-5.text-center FAQ
+      h1.display-5 FAQ
     // <input id="end" onclick="saveEdits()" type="button" value="Save my changes"/>
     // <div id="update"> - Edit the text and click to save for next time</div>
     // ---FAQ SECTION---
@@ -200,76 +201,90 @@ html
         .card-header
           a.btn(data-bs-toggle='collapse', href='#collapseOne')
             | FAQ
-        |         
+        |
         #collapseOne.collapse.show(data-bs-parent='#faq')
           .card-body
             b What&apos;s a Hackathon?
-            |                 
+            |
             p
               | A 36 hour event where you work together with a team to make something awesome. You don&apos;t need to know
               | how to code or be a supreme hacker, just how to be creative! You can also get help from our mentors
               | and speakers who will be attending.
-            |                 
+            |
             b Can I come?
-            |                 
+            |
             p
               | We&apos;ll take any college student from anywhere on earth! We sadly cannot accept students under the age
               | of 18. All students from outside of York College may be asked to attend online if Covid protocols
               | change
-            |                 
+            |
             b Where is this going to be?
-            |                 
+            |
             p
               | The Willman Business Center of York College! There will be free parking in the adjacent lot for the
               | entire weekend.
-            |                 
+            |
             b When will this be?
-            |                 
+            |
             p November 4-6, 2022
-            |                 
+            |
             b Why?
-            |                 
+            |
             p Learn new things, meet new people, and tons of free food and swag.
-            |                 
+            |
             b Will you reimburse travel?
-            |                 
+            |
             p
               | If we get enough sponsors this season, we may offer it closer to the event date. At this time we
               | cannot confirm it though. Apply and we&apos;ll email our applicants with more information as it becomes
               | available.
-            |                 
+            |
             b But I can&apos;t code!
-            |                 
+            |
             p
               | We&apos;ll have tons of great workshops and mentors to help you learn and build something amazing!
-            |                 
+            |
             b How much does it cost?
-            |                 
+            |
             p
               | Nothing! Registration is free and food will be provided for you. And of course, swag is free too.
-            |                 
+            |
             b Will there be hardware available?
-            |                 
+            |
             p Yes! Hardware will be provided.
-            |                 
+            |
             b What should I bring?
-            |                 
+            |
             p
               | ID, Clothing, sleeping bag, and any necessary tech (and chargers). And deodorant. Please.
-            |                 
+            |
             b Do I keep my Intellectual Property?
-            |                 
+            |
             p
               | Yes! Participants retain 100% of the intellectual property that they create during the event.
-            |                 
+            |
             b Are there any rules?
-            |                 
+            |
             p
               | You can find the MLH code here: href=&quot;https://static.mlh.io/docs/mlh-code-of-conduct.pdf&quot;
-            |                 
+            |
             b You didn&apos;t answer my question1
-            |                 
+            |
             p Send it to us at info@ycphacks.io!
+    script.
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+      content.style.display = "none";
+      } else {
+      content.style.display = "block";
+      }
+      });
+      }
 
   h1.display-5.text-center Our Sponsors!
   // work on getting this CSS in the .css
