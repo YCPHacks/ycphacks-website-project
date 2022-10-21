@@ -50,4 +50,8 @@ router.get('/hardware', (req, res) => {
   res.status(200).render('hardware');
 });
 
+router.get('/gallery', (req, res) => {
+  res.status(200).render('gallery');
+});
+
 export default router;
