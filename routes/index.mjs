@@ -54,4 +54,8 @@ router.get('/gallery', (req, res) => {
   res.status(200).render('gallery');
 });
 
+router.get('/teams', (req, res) => {
+  res.status(200).render('teams');
+});
+
 export default router;
