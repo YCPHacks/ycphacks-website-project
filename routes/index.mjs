@@ -58,4 +58,8 @@ router.get('/teams', (req, res) => {
   res.status(200).render('teams');
 });
 
+router.get('/teamManager', (req, res) => {
+  res.status(200).render('teamManager');
+});
+
 export default router;
