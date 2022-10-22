@@ -66,6 +66,9 @@ h3{
 .table-striped{
     color: white;
 }
+td{
+    color: black;
+}
 
 .container{
     background: #cfe7cf;
