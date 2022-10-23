@@ -4,9 +4,16 @@
     font-size: 20px;
 }
 
-table, th, td {
+.table {
     border: 1px solid black;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+
+h1 {
+    text-align: center;
 }
 /*------END OF HARDWARE TABLE------*/
