@@ -195,95 +195,80 @@ html
     // <input id="end" onclick="saveEdits()" type="button" value="Save my changes"/>
     // <div id="update"> - Edit the text and click to save for next time</div>
     // ---FAQ SECTION---
-    #faq
-      .card(style='width: 50%;').position-relative.start-50.translate-middle-x
-        .card-header
-          a.btn(data-bs-toggle='collapse', href='#collapseOne')
-            | FAQ
-        |
-        #collapseOne.collapse.show(data-bs-parent='#faq')
-          .card-body
-            b What&apos;s a Hackathon?
-            |
-            p
-              | A 36 hour event where you work together with a team to make something awesome. You don&apos;t need to know
-              | how to code or be a supreme hacker, just how to be creative! You can also get help from our mentors
-              | and speakers who will be attending.
-            |
-            b Can I come?
-            |
-            p
+    div(style='text-align: center;')
+      button.accordion What&apos;s a Hackathon?
+      .panel
+          p
+            | A 36 hour event where you work together with a team to make something awesome. You don&apos;t need to know
+            | how to code or be a supreme hacker, just how to be creative! You can also get help from our mentors
+            | and speakers who will be attending.
+      button.accordion Can I come?
+      .panel
+          p
               | We&apos;ll take any college student from anywhere on earth! We sadly cannot accept students under the age
               | of 18. All students from outside of York College may be asked to attend online if Covid protocols
               | change
-            |
-            b Where is this going to be?
-            |
-            p
+      button.accordion Where is this going to be?
+      .panel
+          p
               | The Willman Business Center of York College! There will be free parking in the adjacent lot for the
               | entire weekend.
-            |
-            b When will this be?
-            |
-            p November 4-6, 2022
-            |
-            b Why?
-            |
-            p Learn new things, meet new people, and tons of free food and swag.
-            |
-            b Will you reimburse travel?
-            |
-            p
+      button.accordion When will this be?
+      .panel
+          p
+              | November 4-6, 2022
+      button.accordion Why?
+      .panel
+          p
+              | Learn new things, meet new people, and tons of free food and swag.
+      button.accordion Will you reimburse travel?
+      .panel
+          p
               | If we get enough sponsors this season, we may offer it closer to the event date. At this time we
               | cannot confirm it though. Apply and we&apos;ll email our applicants with more information as it becomes
               | available.
-            |
-            b But I can&apos;t code!
-            |
-            p
+      button.accordion But I can&apos;t code!
+      .panel
+          P
               | We&apos;ll have tons of great workshops and mentors to help you learn and build something amazing!
-            |
-            b How much does it cost?
-            |
-            p
+      button.accordion How much does it cost?
+      .panel
+          p
               | Nothing! Registration is free and food will be provided for you. And of course, swag is free too.
-            |
-            b Will there be hardware available?
-            |
-            p Yes! Hardware will be provided.
-            |
-            b What should I bring?
-            |
-            p
+      button.accordion Will there be hardware available?
+      .panel
+          p
+              | Yes! Hardware will be provided.
+      button.accordion What should I bring?
+      .panel
+          p
               | ID, Clothing, sleeping bag, and any necessary tech (and chargers). And deodorant. Please.
-            |
-            b Do I keep my Intellectual Property?
-            |
-            p
+      button.accordion Do I keep my Intellectual Property?
+      .panel
+          p
               | Yes! Participants retain 100% of the intellectual property that they create during the event.
-            |
-            b Are there any rules?
-            |
-            p
-              | You can find the MLH code here: href=&quot;https://static.mlh.io/docs/mlh-code-of-conduct.pdf&quot;
-            |
-            b You didn&apos;t answer my question1
-            |
-            p Send it to us at info@ycphacks.io!
+      button.accordion Are there any rules?
+      .panel
+          p
+              | You can find the MLH code here: https://static.mlh.io/docs/mlh-code-of-conduct.pdf&quot
+      button.accordion You didn&apos;t answer my question1
+      .panel
+          p
+              | Send it to us at info@ycphacks.io!
     script.
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-      for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-      content.style.display = "none";
-      } else {
-      content.style.display = "block";
-      }
-      });
-      }
+       var acc = document.getElementsByClassName("accordion");
+       var i;
+       for (i = 0; i < acc.length; i++) {
+         acc[i].addEventListener("click", function () {
+           this.classList.toggle("active");
+           var panel = this.nextElementSibling;
+           if (panel.style.maxHeight) {
+             panel.style.maxHeight = null;
+           } else {
+             panel.style.maxHeight = panel.scrollHeight + "px";
+           }
+         });
+       }
 
   h1.display-5.text-center Our Sponsors!
   // work on getting this CSS in the .css

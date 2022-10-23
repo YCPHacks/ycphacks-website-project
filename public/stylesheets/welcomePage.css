@@ -101,15 +101,31 @@ td{
 /*-----------------------*/
 
 /*FAQ Section*/
-.collapsible:hover {
-    background-color: #ccc;
+.accordion {
+  background-color: #63b163;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: solid;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
 }
 
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    text-align: center;
-    width: 20%;
+.active, .accordion:hover {
+  background-color: #cfe7cf;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #b9dcb9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
