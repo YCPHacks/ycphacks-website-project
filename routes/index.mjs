@@ -62,4 +62,8 @@ router.get('/teamManager', (req, res) => {
   res.status(200).render('teamManager');
 });
 
+router.get('/pollResults', (req, res) => {
+  res.status(200).render('pollResults');
+});
+
 export default router;
