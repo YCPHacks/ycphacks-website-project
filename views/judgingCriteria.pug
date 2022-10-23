@@ -4,11 +4,29 @@ html
     title  YCP Hacks 
     // CSS only
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+    link(rel='stylesheet', type='text/css', href='/static/stylesheets/judgingCriteria.css')
   body
     include includes/navbar.pug
-    h2  Judging Criteria 
-    br
-    h2  Hack Categories 
-    br
-    h2  Sponsored Hacks 
-
+    .bgimg-1
+      .caption
+        span.border JUDGING CRITERIA
+    div(style='color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;')
+      h3(style='text-align:center;') Parallax Demo
+      p
+        | Parallax scrolling is a web site trend where the background content is moved at a different
+    .bgimg-2
+      .caption
+        span.border(style='background-color:transparent;font-size:25px;color: #f7f7f7;') HACK CATEGORIES
+    div(style='position:relative;')
+      div(style='color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;')
+        p Scroll up and down to really get the feeling of how Parallax Scrolling works.
+    .bgimg-3
+      .caption
+        span.border(style='background-color:transparent;font-size:25px;color: #f7f7f7;') SPONSORED HACKS
+    div(style='position:relative;')
+      div(style='color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;')
+        p Scroll up and down to really get the feeling of how Parallax Scrolling works.
+    .bgimg-1
+      .caption
+        span.border COOL!
