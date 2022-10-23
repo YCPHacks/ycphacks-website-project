@@ -4,16 +4,14 @@ html
     title  YCP Hacks 
     // CSS only
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    // CSS only
-    link(rel='icon', type='image/x-icon', href='https://avatars.githubusercontent.com/u/103200737?s=200&v=4')
+    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
     link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi', crossorigin='anonymous')
-    // JavaScript Bundle with Popper
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3', crossorigin='anonymous')
     link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
 
-  body
+  body.bg-success.bg-gradient
     // NAVIGATION BAR - need to fix for this page
-    nav.navbar.navbar-expand-sm.bg-success.bg-gradient.navbar-dark
+    nav.navbar.navbar-expand-sm.bg-success.bg-gradient
       .container-fluid
         a.navbar-brand(href='welcomePage') YCP Hacks
         |
@@ -23,35 +21,35 @@ html
         #collapsibleNavbar.collapse.navbar-collapse.justify-content-end
           ul.navbar-nav
             li.nav-item
-              a.nav-link(href='#') Attend
+              a.navbarLink.nav-link(href='#') Attend
             |
             li.nav-item
-              a.nav-link(href='sponsorPage') Sponsor Us!
+              a.navbarLink.nav-link(href='#') Sponsor Us!
             |
             li.nav-item
-              a.nav-link(href='judgingCriteria') Judging Criteria
+              a.navbarLink.nav-link(href='judgingCriteria') Judging Criteria
             |
             li.nav-item
-              a.nav-link(href='hardware') Hardware
+              a.navbarLink.nav-link(href='hardware') Hardware
             |
             li.nav-item
-              a.nav-link(href='pastEvents') Past Events
+              a.navbarLink.nav-link(href='pastEvents') Past Events
             |
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') Dropdown
+              a.navbarLink.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') More
               |
-              ul.dropdown-menu
+              ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lgstart
                 li
-                  a.dropdown-item(href='/users') List of Users
+                  a.navbarLink.dropdown-item(href='/users') List of Users
                 |
                 li
-                  a.dropdown-item(href='sponsor') Sponsors
+                  a.navbarLink.dropdown-item(href='sponsor') Sponsors
                 |
                 li
-                  a.dropdown-item(href='polls') Polls
+                  a.navbarLink.dropdown-item(href='polls') Polls
                 |
                 li
-                  a.dropdown-item(href='#') Poll Results
+                  a.navbarLink.dropdown-item(href='#') Poll Results
     #edit(contenteditable='false')
       h1.display-5 Information
 
@@ -60,11 +58,11 @@ html
       .schedule.container.p-2.mt-2.shadow-lg.rounded
         ul.nav.nav-tabs.nav-justified
           li.nav-item
-            a.nav-link.active(data-bs-toggle='tab', href='#one') 1st day
+            a.scheduleLink.nav-link.active(data-bs-toggle='tab', href='#one') 1st day
           li.nav-item
-            a.nav-link(data-bs-toggle='tab', href='#two') 2nd day
+            a.scheduleLink.nav-link(data-bs-toggle='tab', href='#two') 2nd day
           li.nav-item
-            a.nav-link(data-bs-toggle='tab', href='#three') 3rd day
+            a.scheduleLink.nav-link(data-bs-toggle='tab', href='#three') 3rd day
         // Tab panes
         .tab-content
           #one.container.tab-pane.active
@@ -192,6 +190,7 @@ html
                       |
                       td Check in
       // END OF SCHEDULE
+
       h1.display-5 FAQ
     // <input id="end" onclick="saveEdits()" type="button" value="Save my changes"/>
     // <div id="update"> - Edit the text and click to save for next time</div>
@@ -288,7 +287,7 @@ html
 
   h1.display-5.text-center Our Sponsors!
   // work on getting this CSS in the .css
-  #demo.carousel.slide(data-bs-ride='carousel').position-relative.start-50.translate-middle-x.shadow-lg.p-1.mb-1.bg-body.rounded
+  #demo.carousel.slide(data-bs-ride='carousel').position-relative.start-50.translate-middle-x.shadow-lg.rounded
     // Indicators/dots
     .carousel-indicators
       button.active(type='button', data-bs-target='#demo', data-bs-slide-to='0')
@@ -297,23 +296,32 @@ html
       button(type='button', data-bs-target='#demo', data-bs-slide-to='3')
     // The slideshow/carousel
     .carousel-inner
+      // Gold Tier Sponsors
       .carousel-item.active
-        img.image.d-block.start-50.top-50.translate-middle(src='/static/images/bd_logo.png', alt='BD', style='width:50%')
-        //.carousel-caption
-        //  h3 Los Angeles
-        //  p We had such a great time in LA!
+        img.goldTier.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/bd_logo.png', alt='BD', style='width:50%')
+        img.goldTier.d-block.position-absolute.top-50.start-0.translate-middle-y.px-3(src='/static/images/echo3D.png', alt='Dataforma', style='width:20%')
+        img.goldTier.d-block.position-absolute.top-50.end-0.translate-middle-y.px-3(src='/static/images/googleCloudLogo.png', alt='Dataforma', style='width:20%')
+        .carousel-caption
+          //h3 Gold Tier
+          //p We had such a great time in LA!
+      // Second Tier
       .carousel-item
-        img.image.d-block.start-50.top-50.translate-middle(src='/static/images/grahamSchool.png', alt='Dataforma', style='width:50%')
-        //.carousel-caption
+        img.image.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/dataforma.png', alt='BD', style='width:50%')
+        img.image.d-block.position-absolute.top-50.start-0.translate-middle-y.px-3(src='/static/images/cs-davidson-logo.png', alt='Dataforma', style='width:20%')
+        img.image.d-block.position-absolute.top-50.end-0.translate-middle-y.px-3(src='/static/images/eSportsYCP.png', alt='Dataforma', style='width:20%')
+        .carousel-caption
         //  h3 Chicago
-        //  p Thank you, Chicago!
+              p Thank you, Chicago!
       .carousel-item
-        img.image.d-block.start-50.top-50.translate-middle(src='/static/images/mlh-logo-color.svg', alt='MLH', style='width:50%')
+        img.image.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/pennWasteLogo.jpg', alt='Penn Waste', style='width:25%')
+        img.image.d-block.position-absolute.top-50.start-0.translate-middle-y.px-3(src='/static/images/wolframLanguage.png', alt='Wolfram Language', style='width:20%')
+        img.image.d-block.position-absolute.top-50.end-0.translate-middle-y.px-3(src='/static/images/Hopewell.png', alt='Hopewell', style='width:20%')
         //.carousel-caption
         //  h3 New York
-        //  p We love the Big Apple!
-      //.carousel-item
-      //    p temp
+      .carousel-item
+        img.image.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/mlh-logo-color.svg', alt='MLH', style='width:25%')
+        img.image.d-block.position-absolute.top-50.start-0.translate-middle-y.mx-5(src='/static/images/wolframLanguage.png', alt='Wolfram Language', style='width:20%')
+        img.image.d-block.position-absolute.top-50.end-0.translate-middle-y.mx-5(src='/static/images/Hopewell.png', alt='Hopewell', style='width:20%')
 
     // Left and right controls/icons
     button.carousel-control-prev(type='button', data-bs-target='#demo', data-bs-slide='prev')
@@ -321,6 +329,12 @@ html
     button.carousel-control-next(type='button', data-bs-target='#demo', data-bs-slide='next')
       span.carousel-control-next-icon
   .container-fluid.mt-3
-    h3 Sponsors
+    //h3 Sponsors
     p
-      | Sponsors :]
+      | Want to sponsor? Email us at INFO@YCPHacks.IO
+      br
+      |  Checkout what we have to offer to sponsors&nbsp
+      a.text-light(href='https://www.youtube.com/watch?v=Vp7dTMmLmos&t=1s') Sponsor Video!
+      br
+      |  Our prospectus can be found&nbsp
+      a.text-light(href='https://ycphacks.io/YCP_HACKS_SPONOSRSHIP_BROCHURE_2022_FINAL_FILE.pdf') here!
