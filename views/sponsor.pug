@@ -3,12 +3,32 @@ html
 		meta(charset='UTF-8')
 		|     
 		title About our Sponsors
-		|     
+		|
+		link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
 	body
 		include includes/navbar.pug
-		div(style='text-align: center; height: 50px;')
-		| Sponsor Page
-		.sponsorInfo(contenteditable='true')
-		| Sponsor Information
+		.container-sm
+			h1.text-center About our Sponsors
+			table.table.table-success.table-striped.table-hover.table-bordered(style='text-align: center;' contenteditable='true')
+				tr
+					th.table-dark Sponsor Name
+					th.table-dark Company Name
+					th.table-dark Tier
+				tr
+					td Sponsor #1
+					td Company #1
+					td Platinum
+				tr
+					td Sponsor #2
+					td Company #2
+					td Gold
+				tr
+					td Sponsor #3
+					td Company #3
+					td Silver
+				tr
+					td Sponsor #4
+					td Company #4
+					td Bronze
 
 	
