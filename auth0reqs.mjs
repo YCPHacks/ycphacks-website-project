@@ -126,7 +126,7 @@ const create_user = async (jwt) => {
     body: JSON.stringify({
       connection: 'Username-Password-Authentication',
       email: 'DemonstrationAccount@outlook.com',
-      password: 'mummy420!notanun24'
+      password: 'mummy439!heliotype24'
     })
   };
 
@@ -160,7 +160,7 @@ const update_user = async (jwt) => {
 	// Change these to update a user 
       given_name: 'Tyler',
       family_name: 'Franks',
-      nickname: 'MacDaddy'
+      nickname: 'CurrentFarmerOfAmerica'
     })
   };
 
@@ -196,12 +196,12 @@ const create_user_meta = async (jwt) => {
     },
     body: JSON.stringify({
       connection: 'Username-Password-Authentication',
-      email: 'MomFuckers@milfbangers.com',
-      password: 'Dummy420!notan21@m',
+      email: 'mamaOfJoe@joemama.com',
+      password: 'Dummy1024!notan21@m3',
 	  user_metadata: {
 		addresses: {
-			home: "Your Mom's House",
-			work: "Your Mom's Job"
+			home: "123 Sesame Street",
+			work: "456 York College"
 			}
 		},
 	  app_metadata: {
