@@ -125,8 +125,8 @@ const create_user = async (jwt) => {
     },
     body: JSON.stringify({
       connection: 'Username-Password-Authentication',
-      email: 'DemonstrationAccount@outlook.com',
-      password: 'mummy439!heliotype24'
+      email: '', //Enter a email string here
+      password: '' //Enter a string here
     })
   };
 
@@ -196,8 +196,8 @@ const create_user_meta = async (jwt) => {
     },
     body: JSON.stringify({
       connection: 'Username-Password-Authentication',
-      email: 'mamaOfJoe@joemama.com',
-      password: 'Dummy1024!notan21@m3',
+      email: '', // Enter an email string here
+      password: '', // Enter a string here
 	  user_metadata: {
 		addresses: {
 			home: "123 Sesame Street",
