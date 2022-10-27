@@ -1,36 +1,82 @@
-body{
-    font-family: "Courier New";
+/*Carousel*/
+.carousel{
+    width: 75%;
+
 }
 
-.tab-pane{
-    background-color: white;
+.goldTier{
+    position: relative;
+    filter: drop-shadow(0px 5px 5px grey);
+    animation: goldTier 2.0s infinite;
 }
 
-/* "One, Two, Three" including container around it */
-.tab-content{
+.image{
+    position: relative;
+    filter: drop-shadow(0px 5px 5px grey);
+    animation: other 2.0s infinite;
+}
+
+@keyframes goldTier {
+    50% {
+        filter: drop-shadow(0px 10px 20px goldenrod);
+    }
+}
+
+@keyframes other {
+    50% {
+        filter: drop-shadow(0px 10px 20px lightblue);
+    }
+}
+
+.carousel-item{
+    height: 300px;
+    background: #cfe7cf;
+    border-radius: 25px;
+}
+.container-fluid{
+    text-align: center;
+}
+
+.scheduleLink, td{
+    color:white;
+}
+
+.navbarLink, .navbar-brand{
+    color:white;
+}
+
+.dropdown-item{
     color:black;
-    /*background: rgba(0, 128, 0, 0.5);*/
 }
-.mt-4{
-    border: 1px solid darkgreen;
 
+h1{
+    margin-top: 100px;
+    text-align: center;
 }
+
+h3{
+    color: black;
+}
+
 .mt-3{
     height: 300px;
     overflow: auto;
 }
-/* Text in day tabs */
-.nav-link{
-    color: black;
-}
+
 /* Striped table with events */
 .table-striped{
     color: white;
-
-    /*background: rgba(0, 120, 0, 0.5);*/
 }
+td{
+    color: black;
+}
+
 .container{
-    background: rgba(0, 128, 0, 0.5);
+    background: #cfe7cf;
+}
+
+.nav-tabs{
+    background: #84c284;
 }
 
 /* ------SCROLL BAR------*/
@@ -41,12 +87,12 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #e3f1e3;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: darkslategray;
+    background: grey;
 }
 
 /* Handle on hover */
@@ -55,17 +101,32 @@ body{
 }
 /*-----------------------*/
 
-
 /*FAQ Section*/
-.collapsible:hover {
-    background-color: #ccc;
+.accordion {
+  background-color: #63b163;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: solid;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
 }
 
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    text-align: center;
-    width: 20%;
+.active, .accordion:hover {
+  background-color: #cfe7cf;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #b9dcb9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
