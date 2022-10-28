@@ -66,4 +66,8 @@ router.get('/pollResults', (req, res) => {
   res.status(200).render('pollResults');
 });
 
+router.get('/userList', (req, res) => {
+  res.status(200).render('userList');
+});
+
 export default router;
