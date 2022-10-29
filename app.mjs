@@ -1,16 +1,23 @@
 import 'dotenv/config';
 
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 import mysqlx from '@mysql/xdevapi';
 
+import { default as index } from './routes/index.mjs';
 import config from './config/config.mjs';
 
 const app = express();
 console.log(process.env.MYSQLX_USER);
 
+const port = process.env.PORT || 7777;
+
 app.set('view engine', 'pug');
 
-const port = process.env.PORT || 7777;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.get('/about', (req,res) => {
 	res.status(200).render('about');
@@ -64,8 +71,11 @@ app.get('/users/:user_id', async (req, res) => {
 
    // Send an object containing columns and rows from table.
    res.status(200).send({ columns: columnNames, rows: result.fetchAll() });
+   
 
    session.close();
+   
+   
  });
 
 app.get('/api/users/:user_id', async (req, res) => {
@@ -130,9 +140,10 @@ app.put('/api/users/:user_id', async (req, res) => {
   session.close();
 });
 
+app.use('/static', express.static(path.join(__dirname, 'public')));
+
+app.use('/', index);
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
 });
-
-
-
