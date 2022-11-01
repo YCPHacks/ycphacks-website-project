@@ -50,4 +50,24 @@ router.get('/hardware', (req, res) => {
   res.status(200).render('hardware');
 });
 
+router.get('/gallery', (req, res) => {
+  res.status(200).render('gallery');
+});
+
+router.get('/teams', (req, res) => {
+  res.status(200).render('teams');
+});
+
+router.get('/teamManager', (req, res) => {
+  res.status(200).render('teamManager');
+});
+
+router.get('/pollResults', (req, res) => {
+  res.status(200).render('pollResults');
+});
+
+router.get('/userList', (req, res) => {
+  res.status(200).render('userList');
+});
+
 export default router;
