@@ -57,8 +57,12 @@ html
                                 li
                                     a.navbarLink.dropdown-item(href='teamManager') Team Page
 
+        h1.display-5 Information
+            .container
+                h3.display-6 What is Hackathon?
+                p ...
         #edit(contenteditable='false')
-            h1.display-5 Information
+
 
             h1.display-5 Schedule
             // SCHEDULE
@@ -284,6 +288,8 @@ html
         iframe(width='420', height='345', src='https://www.youtube.com/embed/Ru9zvWGSH8U', style='margin-right: 50px;', allow='fullscreen')
         iframe(width='420', height='345', src='https://www.youtube.com/embed/k5A2QTasITs' allow='fullscreen')
 
+
+
     h1.display-5.text-center Our Sponsors!
     // work on getting this CSS in the .css
     //#demo.carousel.slide(data-bs-ride='carousel').position-relative.start-50.translate-middle-x.shadow-lg.rounded
@@ -328,16 +334,17 @@ html
     //    button.carousel-control-next(type='button', data-bs-target='#demo', data-bs-slide='next')
     //        span.carousel-control-next-icon
 
-.carousel.container
+//button.rightArrow &#10095;
+.carousel.container.shadow-lg
     button.leftArrow  &#10094;
     button.rightArrow &#10095;
     .center
-        img(src='/static/images/bd_logo.png')
-        img(src='/static/images/googleCloudLogo.png')
-        img(src='/static/images/echo3d.png')
+        img.goldTier(src='/static/images/bd_logo.png')
+        img.goldTier(src='/static/images/googleCloudLogo.png')
+        img.image(src='/static/images/echo3d.png')
         img(src='/static/images/stand-out-stickers-logo.png')
-        img(src='/static/images/bd_logo.png')
-        img(src='/static/images/bd_logo.png')
+        img(src='/static/images/eSportsYCP.png')
+        img(src='/static/images/Hopewell.png')
 
 .container-fluid.mt-3
     h3 Sponsors
