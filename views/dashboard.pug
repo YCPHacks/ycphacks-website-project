@@ -26,7 +26,10 @@ html
                             #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne', data-bs-parent='#accordionFlushExample')
                                 .accordion-body.bg-success
                                     .d-grid.gap-2
-                                        a.btn(href='#') Button
+                                        a.btn(href='#') Registration Settings
+                                        //a.btn(href='#')
+                                        a.btn(href='#') Team Settings
+                                        //a.btn(href='#')
 
 
                         .accordion-item
@@ -34,19 +37,30 @@ html
                                 button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseTwo', aria-expanded='false', aria-controls='flush-collapseTwo')
                                     | Judging
                             #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo', data-bs-parent='#accordionFlushExample')
-                                .accordion-body
-                                    | Placeholder content for this accordion, which is intended to demonstrate the
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='#') Judging Setup
+                                        a.btn(href='#') Judging Results
+                                        a.btn(href='#') Assign Winners
 
-                                    |  class. This is the second item&apos;s accordion body. Let&apos;s imagine this being filled with some actual content.
                         .accordion-item
                             h2#flush-headingThree.accordion-header
                                 button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseThree', aria-expanded='false', aria-controls='flush-collapseThree')
                                     | Participant Management
                             #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree', data-bs-parent='#accordionFlushExample')
-                                .accordion-body
-                                    | Placeholder content for this accordion, which is intended to demonstrate the
-
-                                    |  class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='#') Participant List
+                                        a.btn(href='#') Team Management
+                        .accordion-item
+                            h2#flush-headingFour.accordion-header
+                                button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseFour', aria-expanded='false', aria-controls='flush-collapseThree')
+                                    | Permission Management
+                            #flush-collapseFour.accordion-collapse.collapse(aria-labelledby='flush-headingFour', data-bs-parent='#accordionFlushExample')
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='#') Administrators
+                                        a.btn(href='#') (something else)
 
             hr
             .dropdown

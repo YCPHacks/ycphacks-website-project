@@ -70,8 +70,14 @@
 
 .space{
     height: 10px;
+    background: #d1d1d2;
 }
 
 .btn{
-    background: pink !important;
+    background: #87dea2 !important;
+}
+
+.btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
 }
