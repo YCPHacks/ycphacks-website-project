@@ -49,4 +49,29 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
-    
+
+.tots{
+    /*position: relative;*/
+    border: 10px solid;
+    width:100%;
+    height: 300px;
+    background-image: url("https://hw-events.s3.amazonaws.com/636294cf5cb43c71cf9ed524/cat.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:cover;
+    display: inline-block;
+}
+
+/*absolute to the cover image above*/
+.loop{
+    position: absolute;
+    top:50%;
+}
+
+.space{
+    height: 10px;
+}
+
+.btn{
+    background: pink !important;
+}
