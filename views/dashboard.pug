@@ -1,0 +1,98 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        // CSS only
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/dashboard.css')
+
+    body
+        include includes/navbar.pug
+        //header
+        //    h2 header of some sort idk
+        //section
+        //    #accordionFlushExample.accordion.accordion-flush
+        //        .accordion-item
+        //            h2#flush-headingOne.accordion-header
+        //                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne', aria-expanded='false', aria-controls='flush-collapseOne')
+        //                    | Accordion Item #1
+        //            #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne', data-bs-parent='#accordionFlushExample')
+        //                .accordion-body
+        //                    | Placeholder content for this accordion, which is intended to demonstrate the
+        //                    code .accordion-flush
+        //                    |  class. This is the first item&apos;s accordion body.
+        //        .accordion-item
+        //            h2#flush-headingTwo.accordion-header
+        //                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseTwo', aria-expanded='false', aria-controls='flush-collapseTwo')
+        //                    | Accordion Item #2
+        //            #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo', data-bs-parent='#accordionFlushExample')
+        //                .accordion-body
+        //                    | Placeholder content for this accordion, which is intended to demonstrate the
+        //                    code .accordion-flush
+        //                    |  class. This is the second item&apos;s accordion body. Let&apos;s imagine this being filled with some actual content.
+        //        .accordion-item
+        //            h2#flush-headingThree.accordion-header
+        //                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseThree', aria-expanded='false', aria-controls='flush-collapseThree')
+        //                    | Accordion Item #3
+        //            #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree', data-bs-parent='#accordionFlushExample')
+        //                .accordion-body
+        //                    | Placeholder content for this accordion, which is intended to demonstrate the
+        //                    code .accordion-flush
+        //                    |  class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+        //
+        //    article
+        //        h1 London
+        //        p
+        //            | London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.
+        //        p
+        //            | Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.
+        //footer
+        //    p Footer
+    main.d-flex.flex-nowrap
+        h1.visually-hidden Sidebars examples
+        .d-flex.flex-column.flex-shrink-0.p-3.text-bg-dark(style='width: 280px;')
+            a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.text-white.text-decoration-none(href='/')
+                span.fs-4 Sidebar
+            hr
+            ul.nav.nav-pills.flex-column.mb-auto
+                li.nav-item
+                    a.nav-link.active(href='#', aria-current='page')
+                        | Home
+                li
+                    a.nav-link.text-white(href='#')
+                        | Dashboard
+                li
+                    a.nav-link.text-white(href='#')
+                        | Orders
+                li
+                    a.nav-link.text-white(href='#')
+                        | Products
+                li
+                    a.nav-link.text-white(href='#')
+                        | Customers
+            hr
+            .dropdown
+                a.d-flex.align-items-center.text-white.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
+                    img.rounded-circle.me-2(src='https://github.com/mdo.png', alt='', width='32', height='32')
+                    strong mdo
+                ul.dropdown-menu.dropdown-menu-dark.text-small.shadow
+                    li
+                        a.dropdown-item(href='#') New project...
+                    li
+                        a.dropdown-item(href='#') Settings
+                    li
+                        a.dropdown-item(href='#') Profile
+                    li
+                        hr.dropdown-divider
+                    li
+                        a.dropdown-item(href='#') Sign out
+        .b-example-divider.b-example-vr
+
+
+    p hello there
+
+
+
+
+
