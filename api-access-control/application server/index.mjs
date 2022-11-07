@@ -18,6 +18,7 @@ const __dirname = path.dirname(__filename);
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
+//attach app router
 app.use('/', router);
 
 app.listen(port, () => {
