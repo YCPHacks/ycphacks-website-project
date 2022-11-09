@@ -19,10 +19,6 @@ app.set('view engine', 'pug');
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.get('/about', (req,res) => {
-	res.status(200).render('about');
-});
-
 app.get('/judgingCriteria', (req,res) => {
 	res.status(200).render('judgingCriteria');
 });
