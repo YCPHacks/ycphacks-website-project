@@ -1,0 +1,83 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        // CSS only
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/dashboard.css')
+
+    body
+
+    .space
+    main.d-flex.flex-nowrap
+        .d-flex.flex-column.flex-shrink-0.p-3.text-bg-success(style='width: 280px;')
+            a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.text-white.text-decoration-none(href='/dashboard')
+                span.fs-4 Dashboard
+            hr
+            ul.nav.nav-pills.flex-column.mb-auto
+                li.nav-item
+                    #accordionFlushExample.accordion.accordion-flush
+                        .accordion-item
+                            h2#flush-headingOne.accordion-header
+                                button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne', aria-expanded='false', aria-controls='flush-collapseOne')
+                                    | Challenge Design
+                            #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne', data-bs-parent='#accordionFlushExample')
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='/registrationSettings') Registration Settings
+                                        //a.btn(href='#')
+                                        a.btn(href='/teamSettings') Team Settings
+                                        //a.btn(href='#')
+
+
+                        .accordion-item
+                            h2#flush-headingTwo.accordion-header
+                                button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseTwo', aria-expanded='false', aria-controls='flush-collapseTwo')
+                                    | Judging
+                            #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo', data-bs-parent='#accordionFlushExample')
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='/judgingSetup') Judging Setup
+                                        a.btn(href='/judgingResults') Judging Results
+                                        a.btn(href='/assignWinners') Assign Winners
+
+                        .accordion-item
+                            h2#flush-headingThree.accordion-header
+                                button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseThree', aria-expanded='false', aria-controls='flush-collapseThree')
+                                    | Participant Management
+                            #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree', data-bs-parent='#accordionFlushExample')
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='/participantsList') Participant List
+                                        a.btn(href='/teamManagement') Team Management
+                        .accordion-item
+                            h2#flush-headingFour.accordion-header
+                                button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseFour', aria-expanded='false', aria-controls='flush-collapseThree')
+                                    | Permission Management
+                            #flush-collapseFour.accordion-collapse.collapse(aria-labelledby='flush-headingFour', data-bs-parent='#accordionFlushExample')
+                                .accordion-body.bg-success
+                                    .d-grid.gap-2
+                                        a.btn(href='/adminRoles') Administrator Roles
+                                        a.btn(href='#') (something else)
+                //changed the indentation to put the profile a little higher
+                hr
+                .dropdown
+                    a.d-flex.align-items-center.text-white.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
+                        img.rounded-circle.me-2(src='/static/images/derek.png', alt='', width='32', height='32')
+                        strong admin
+                    ul.dropdown-menu.dropdown-menu-light.text-small.shadow
+                        li
+                            a.dropdown-item(href='#') New project...
+                        li
+                            a.dropdown-item(href='#') Settings
+                        li
+                            a.dropdown-item(href='#') Profile
+                        li
+                            hr.dropdown-divider
+                        li
+                            a.dropdown-item(href='#') Leave admin view
+                            a.dropdown-item(href='#') Sign out
+        .b-example-divider.b-example-vr
+        .page-content
+            .article.tots.shadow-lg

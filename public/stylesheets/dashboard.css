@@ -70,7 +70,7 @@
 
 .space{
     height: 10px;
-    background: #d1d1d2;
+    background: #bcbcbd;
 }
 
 .btn{
@@ -80,4 +80,50 @@
 .btn:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
+}
+
+main .b-example-divider{
+    min-height: 1000px !important;
+}
+
+
+.page-content{
+    /*margin: 0;*/
+    width: 100%;
+    height: auto;
+    background: #ade8c0;
+    /*text-align: center;*/
+}
+
+.container{
+    background: #b7e5bf;
+}
+
+
+.title{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    margin: 0;
+    z-index: 0;
+    color: #f10d0d;
+}
+
+.secondpage{
+    text-align: center;
+}
+
+.content{
+    position: relative;
+    /*text-align: center;*/
+    /*margin: 0;*/
+    padding: 1em;
+    z-index: 0;
+    color: #18211d;
+}
+
+.page{
+    position: relative;
+    padding: 1em;
+    color: #18211d;
 }

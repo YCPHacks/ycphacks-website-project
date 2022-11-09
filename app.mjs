@@ -43,9 +43,7 @@ app.get('/pastEvents', (req,res) => {
 	res.status(200).render('pastEvents');
 });
 
-app.get('/dashboard', (req,res) => {
-	res.status(200).render('dashboard');
-});
+
 
 app.get('/users', async (req, res) => {
   const request = await fetch(`http://localhost:${port}/api/users`);

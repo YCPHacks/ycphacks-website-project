@@ -83,8 +83,8 @@ button.leftArrow{
     left: 1px;
     height: 200px;
     width: 100px;
-    border: solid;
-    /*border: none;*/
+    /*border: solid;*/
+    border: none;
     background: none;
     top: 50%;
     -ms-transform: translateY(-50%);
