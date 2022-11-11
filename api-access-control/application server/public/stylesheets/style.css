@@ -1,0 +1,22 @@
+:root {
+  --color-neutral-500: #000;
+  --body-text-color: var(--color-neutral-500);
+}
+
+:root {
+  --text-font: system-ui, 'Inter', 'Helvetica Neue', sans-serif;
+  --mono-font: ui-monospace, monospace;
+}
+
+*, * ::before, * ::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--text-font);
+}
+
+body {
+  color: var(--body-text-color);
+  overflow: hidden;
+}
