@@ -58,6 +58,18 @@ router.get('/teams', (req, res) => {
   res.status(200).render('teams');
 });
 
+router.get('/teamView', (req, res) => {
+	const team_list = {
+		created_at: "2022-10-28T14:58:13.967Z",
+		email: ["rgreaves@ycp.edu"], 
+		name: "Ralph Greaves", 
+		status: "Team Manager",
+		teamName: "Ralph's Team"
+	};
+
+  res.status(200).render('teamView', { team_list });
+});
+
 router.get('/teamManager', (req, res) => {
   res.status(200).render('teamManager');
 });
@@ -78,6 +90,10 @@ router.get('/dashboard', (req,res) => {
   res.status(200).render('dashboard');
 });
 
+router.get('/participantDashboard', (req,res) => {
+  res.status(200).render('participantDashboard');
+});
+
 router.get('/teamManagement', (req,res) => {
   res.status(200).render('teamManagement');
 });
@@ -91,7 +107,7 @@ router.get('/participantsList', (req,res) => {
 
   const user_list = {
     created_at: "2022-10-28T14:58:13.967Z",
-    email: ["rgreaves@ycp.edu"]
+    email: ["rgreaves@ycp.edu"], 
   };
 
   res.status(200).render('participantsList', {user_list});
