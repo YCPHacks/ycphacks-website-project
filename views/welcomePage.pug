@@ -10,18 +10,52 @@ html
         link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
 
     body.bg-success.bg-gradient
-        include includes/navbar
+        // NAVIGATION BAR - need to fix for this page
+        nav.navbar.navbar-expand-sm.bg-success.bg-gradient
+            .container-fluid
+                a.navbar-brand(href='welcomePage') YCP Hacks
+                |
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#collapsibleNavbar')
+                    span.navbar-toggler-icon
+                |
+                #collapsibleNavbar.collapse.navbar-collapse.justify-content-end
+                    ul.navbar-nav
+                        li.nav-item
+                            a.navbarLink.nav-link(href='#') Attend
+                        |
+                        li.nav-item
+                            a.navbarLink.nav-link(href='gallery') Gallery
+                        |
+                        li.nav-item
+                            a.navbarLink.nav-link(href='judgingCriteria') Judging Criteria
+                        |
+                        li.nav-item
+                            a.navbarLink.nav-link(href='hardware') Hardware
+                        |
+                        li.nav-item
+                            a.navbarLink.nav-link(href='pastEvents') Past Events
+                        |
+                        li.nav-item.dropdown
+                            a.navbarLink.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') More
+                            |
+                            ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lgstart
+                                li
+                                    a.navbarLink.dropdown-item(href='sponsor') Sponsors
+                                |
+                                li
+                                    a.navbarLink.dropdown-item(href='/dashboard') Dashboard
 
-
-        h1.display-5.py-3 What is Hackathon?
+        h1.display-5 What is Hackathon?
             .container.lh-base.shadow
+                hr
                 p.fs-5.p-3 Conveniently nestled in the middle of rural Pennsylvania, YCP Hacks is a college level hackathon with small town charm. An hour north of Baltimore, an hour and a half from Philadelphia, and 2 hours from Penn State places it right in the middle of Pennsylvania Dutch Country (presumably made of Funnel Cake). The event is set on the charming York College of Pennsylvania campus, with all the facilities, people and camaraderie that comes with it. Our mission is to promote technical knowledge, innovation, and entrepreneurship in York and beyond, and we just can't wait to see what you do next.
+
 
 
         #edit(contenteditable='false')
 
 
-            h1.display-5.py-3 Schedule
+            h1.display-5 Schedule
             // SCHEDULE
             .schedule.container.p-2.mt-2.shadow-lg.rounded
                 ul.nav.nav-tabs.nav-justified
@@ -159,7 +193,7 @@ html
                                             td Check in
             // END OF SCHEDULE
 
-            h1.display-5.py-3 FAQ
+            h1.display-5 FAQ
         // <input id="end" onclick="saveEdits()" type="button" value="Save my changes"/>
         // <div id="update"> - Edit the text and click to save for next time</div>
         // ---FAQ SECTION---
@@ -247,7 +281,49 @@ html
 
 
 
-    h1.display-5.text-center.py-3 Our Sponsors!
+    h1.display-5.text-center Our Sponsors!
+    // work on getting this CSS in the .css
+    //#demo.carousel.slide(data-bs-ride='carousel').position-relative.start-50.translate-middle-x.shadow-lg.rounded
+    //    // Indicators/dots
+    //    .carousel-indicators
+    //        button.active(type='button', data-bs-target='#demo', data-bs-slide-to='0')
+    //        button(type='button', data-bs-target='#demo', data-bs-slide-to='1')
+    //        button(type='button', data-bs-target='#demo', data-bs-slide-to='2')
+    //        button(type='button', data-bs-target='#demo', data-bs-slide-to='3')
+    //    // The slideshow/carousel
+    //    .carousel-inner
+    //        // Gold Tier Sponsors
+    //        .carousel-item.active
+    //            img.goldTier.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/bd_logo.png', alt='BD', style='width:50%')
+    //            img.goldTier.d-block.position-absolute.top-50.start-0.translate-middle-y.px-3(src='/static/images/echo3D.png', alt='Dataforma', style='width:20%')
+    //            img.goldTier.d-block.position-absolute.top-50.end-0.translate-middle-y.px-3(src='/static/images/googleCloudLogo.png', alt='Dataforma', style='width:20%')
+    //            .carousel-caption
+    //                //h3 Gold Tier
+    //                //p We had such a great time in LA!
+    //        // Second Tier
+    //        .carousel-item
+    //            img.image.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/dataforma.png', alt='BD', style='width:50%')
+    //            img.image.d-block.position-absolute.top-50.start-0.translate-middle-y.px-3(src='/static/images/cs-davidson-logo.png', alt='Dataforma', style='width:20%')
+    //            img.image.d-block.position-absolute.top-50.end-0.translate-middle-y.px-3(src='/static/images/eSportsYCP.png', alt='Dataforma', style='width:20%')
+    //            .carousel-caption
+    //            //  h3 Chicago
+    //                  p Thank you, Chicago!
+    //        .carousel-item
+    //            img.image.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/pennWasteLogo.png', alt='Penn Waste', style='width:25%')
+    //            img.image.d-block.position-absolute.top-50.start-0.translate-middle-y.px-3(src='/static/images/wolframLanguage.png', alt='Wolfram Language', style='width:20%')
+    //            img.image.d-block.position-absolute.top-50.end-0.translate-middle-y.px-3(src='/static/images/mrg-labs-logo.png', alt='Hopewell', style='width:20%')
+    //            //.carousel-caption
+    //            //  h3 New York
+    //        .carousel-item
+    //            img.image.d-block.position-absolute.start-50.top-50.translate-middle(src='/static/images/mlh-logo-color.svg', alt='MLH', style='width:25%')
+    //            img.image.d-block.position-absolute.top-50.start-0.translate-middle-y.mx-5(src='/static/images/wolframLanguage.png', alt='Wolfram Language', style='width:20%')
+    //            img.image.d-block.position-absolute.top-50.end-0.translate-middle-y.mx-5(src='/static/images/Hopewell.png', alt='Hopewell', style='width:20%')
+    //
+    //    // Left and right controls/icons
+    //    button.carousel-control-prev(type='button', data-bs-target='#demo', data-bs-slide='prev')
+    //        span.carousel-control-prev-icon
+    //    button.carousel-control-next(type='button', data-bs-target='#demo', data-bs-slide='next')
+    //        span.carousel-control-next-icon
 
 //button.rightArrow &#10095;
 .carousel.container.shadow-lg
