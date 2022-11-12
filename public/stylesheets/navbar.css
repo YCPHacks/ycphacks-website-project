@@ -5,3 +5,57 @@
 .dropdown-item{
     color:black;
 }
+
+/*Containers with admin options*/
+.container1{
+    padding: 1em;
+    margin: auto;
+    height: auto;
+    width: 65%;
+    background: #87dea2;
+    border-radius: 10px;
+}
+
+button.save{
+    border-radius: 10px;
+    justify-content: center;
+    margin: auto;
+    float: bottom;
+    left: 50%;
+    width: 100px;
+    padding: .5em;
+    background: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------SCROLL BAR------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e3f1e3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/*-----------------------*/
