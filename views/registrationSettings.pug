@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        // CSS only
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        //link(rel='stylesheet', type='text/css', href='/static/stylesheets/teamSettings.css')
+
+    body
+        include includes/navbar
+        include includes/dashboardBar
+
+            .display-5 Registration Settings
+                hr
+            .container1
+                .form-check.form-switch
+                    input#flexSwitchCheckDefault.form-check-input(type='checkbox', role='switch')
+                    label.form-check-label(for='flexSwitchCheckDefault') Manually Close Registration
+                        p hehe
+                .form-check.form-switch
+                    input#flexSwitchCheckChecked.form-check-input(type='checkbox', role='switch')
+                    label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
+                hr
+                button.save.d-flex.align-items-center Save
