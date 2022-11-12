@@ -54,6 +54,10 @@ router.get('/gallery', (req, res) => {
   res.status(200).render('gallery');
 });
 
+router.get('/projectGallery', (req, res) => {
+  res.status(200).render('projectGallery');
+});
+
 router.get('/teams', (req, res) => {
   res.status(200).render('teams');
 });

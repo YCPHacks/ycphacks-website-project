@@ -26,10 +26,9 @@ html
                                 .accordion-body.bg-success
                                     .d-grid.gap-2
                                         a.btn(href='/teamView') View Team
-                                        //a.btn(href='#')
-                                        a.btn(href='/teamSettings') Join Team
-                                        //a.btn(href='#')
-                                        a.btn(href='/teamSettings') Create Team
+                                        a.btn(href='/teamManagement') Team Management
+                                        a.btn(href='/teamManager') Join Team
+                                        a.btn(href='/') Create Team
 
 
                         .accordion-item
@@ -39,9 +38,9 @@ html
                             #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo', data-bs-parent='#accordionFlushExample')
                                 .accordion-body.bg-success
                                     .d-grid.gap-2
-                                        a.btn(href='/judgingSetup') Judging Criteria
-                                        a.btn(href='/judgingResults') Challenges
-                                        a.btn(href='/assignWinners') Judging Results
+                                        a.btn(href='/judgingcriteria') Judging Criteria
+                                        a.btn(href='/') Challenges
+                                        a.btn(href='/judgingResults') Judging Results
 
                         .accordion-item
                             h2#flush-headingThree.accordion-header
@@ -50,8 +49,7 @@ html
                             #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree', data-bs-parent='#accordionFlushExample')
                                 .accordion-body.bg-success
                                     .d-grid.gap-2
-                                        a.btn(href='/participantsList') View Projects
-                                        a.btn(href='/teamManagement') Team Management
+                                        a.btn(href='/projectGallery') View Projects
                 //changed the indentation to put the profile a little higher
                 hr
                 .dropdown
