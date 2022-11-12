@@ -17,7 +17,7 @@ html
 
                 .secondpage
                     .content
-                        h1 hello
+                        //h1 hello
                         // SEARCH BAR
                         .container
                             nav.navbar.bg-light
@@ -26,9 +26,26 @@ html
                                         input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
                                         button.btn.btn-outline-success(type='submit') Search
                     hr
-                    .participants.border.shadow-lg
-                        p= user_list.email
+                    //// LIST OF PARTICIPANTS
+                    //.participants.border.shadow-lg
+                    //    p= user_list.email
                     // PARTICIPANTS LIST
+                    // SEARCH BAR
+                    .container
+                        table.table.table-success.table-striped.table-bordered
+                            thead.table-dark
+                                tr
+                                    th(scope='col') First
+                                    th(scope='col') Last
+                                    th(scope='col') Time
+                                    th(scope='col') Status
+                            tbody
+                                tr
+                                    each val in user_list
+                                        td= val
+
+
+
 
 
 

@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        // CSS only
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/teamSettings.css')
+
+    body
+        include includes/navbar
+        include includes/dashboardBar
+
+            .display-5 Team Settings
+                hr
+            .container1.shadow-lg
+                h1 Team Size
+                p(for='quantity') MINIMUM TEAM MEMBERS
+                    p
+                    input#quantity(type='number', name='quantity', min='1', max='10')
+                    input(type='submit')
+
+                p(for='quantity') MAXIMUM TEAM MEMBERS
+                    p
+                    input#quantity(type='number', name='quantity', min='1', max='10')
+                    input(type='submit')
+                hr
+                button.save.d-flex.align-items-center Save

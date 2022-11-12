@@ -1,0 +1,23 @@
+
+.manage{
+    position: relative;
+    margin: auto;
+    width: 75%;
+    height:55px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: rgba(255, 255, 0, 0.48);
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+button:hover{
+    color:blue;
+}
+
+button.add{
+    background: none;
+}
