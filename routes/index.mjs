@@ -71,6 +71,10 @@ router.get('/pollView', (req, res) => {
     res.status(200).render('pollView');
 });
 
+router.get('/pollView', (req, res) => {
+  res.status(200).render('pollView');
+});
+
 router.get('/userList', (req, res) => {
     res.status(200).render('userList');
 });
