@@ -21,7 +21,7 @@ html
                                     input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
                                     button.btn.btn-outline-success(type='submit') Search
                         hr
-                        .manage.d-flex.shadow-lg.px-4
+                        .manage.d-flex.shadow.px-4
                             h3.p-2.flex-fill Create Team
                             .p-2.flex-fill
                                 button.add(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
@@ -38,14 +38,14 @@ html
                                         h1#exampleModalLabel.modal-title.fs-5 Modal title
                                         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                     .modal-body
-                                        | ...
+                                        h1 Team Details
                                     .modal-footer
                                         button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
                                         button.btn.btn-primary(type='button') Save changes
 
                         // for every team?
-                        .manage.d-flex.px-4.mt-5
-                            h3.p-2 Team Name
+                        .manage.d-flex.justify-content-around.px-4.mt-5.shadow
+                            h3.p-2.flex-fill Team Name
                             .p-2.flex-fill
                                 button.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal') edit
                                 button.btn.btn-primary(type='button') delete
