@@ -54,8 +54,24 @@ router.get('/gallery', (req, res) => {
     res.status(200).render('gallery');
 });
 
+router.get('/projectGallery', (req, res) => {
+  res.status(200).render('projectGallery');
+});
+
 router.get('/teams', (req, res) => {
     res.status(200).render('teams');
+});
+
+router.get('/teamView', (req, res) => {
+	const team_list = {
+		created_at: "2022-10-28T14:58:13.967Z",
+		email: "rgreaves@ycp.edu", 
+		name: "Ralph Greaves", 
+		status: "Team Manager",
+		teamName: "Ralph's Team"
+	};
+
+  res.status(200).render('teamView', { team_list });
 });
 
 router.get('/teamManager', (req, res) => {
@@ -87,8 +103,16 @@ router.get('/teamManagement', (req, res) => {
     res.status(200).render('teamManagement');
 });
 
+router.get('/participantDashboard', (req,res) => {
+  res.status(200).render('participantDashboard');
+});
+
+router.get('/teamManagement', (req,res) => {
+  res.status(200).render('teamManagement');
+});
+
 router.get('/teamSettings', (req, res) => {
-    res.status(200).render('teamSettings');
+  res.status(200).render('teamSettings');
 });
 
 router.get('/registrationSettings', (req, res) => {
@@ -99,11 +123,10 @@ router.get('/registrationSettings', (req, res) => {
 router.get('/participantsList', (req, res) => {
 
     const user_list = {
-        first: ["Ralph"],
-        last: ["Greaves"],
-        created_at: ["2022-10-28T14:58:13.967Z"],
-        status: ["Pending"]
-
+        first: "Ralph",
+        last: "Greaves",
+        created_at: "2022-10-28T14:58:13.967Z",
+        status: "Pending"
     };
 
     res.status(200).render('participantsList', {user_list});
@@ -112,9 +135,9 @@ router.get('/participantsList', (req, res) => {
 router.get('/adminRoles', (req, res) => {
 
     const admin_list = {
-        first: ["Ralph"],
-        last: ["Greaves"],
-        email: ["admin@email.edu"]
+        first: "Ralph",
+        last: "Greaves",
+        email: "admin@email.edu"
     };
 
     res.status(200).render('adminRoles', {admin_list});
