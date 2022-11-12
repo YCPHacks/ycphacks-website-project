@@ -13,6 +13,7 @@
     height: auto;
     width: 65%;
     background: #87dea2;
+    border-color: darkgreen;
     border-radius: 10px;
 }
 
@@ -22,21 +23,16 @@ button.save{
     margin: auto;
     float: bottom;
     left: 50%;
-    width: 100px;
-    padding: .5em;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    /*padding: .5em;*/
     background: orange;
 }
 
-
-
-
-
-
-
-
-
-
-
+input:hover{
+    cursor: pointer;
+}
 
 /* ------SCROLL BAR------*/
 /* width */

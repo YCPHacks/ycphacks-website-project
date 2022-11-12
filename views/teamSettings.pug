@@ -14,6 +14,17 @@ html
             .display-5 Team Settings
                 hr
             .container1.shadow-lg
+
+                h1 Feature Visibility
+                .form-check.form-switch
+                    input#flexSwitchCheckDefault.form-check-input(type='checkbox', role='switch')
+                    label.form-check-label(for='flexSwitchCheckDefault') Manually Close Registration
+                        p hehe
+                .form-check.form-switch
+                    input#flexSwitchCheckChecked.form-check-input(type='checkbox', role='switch')
+                    label.form-check-label(for='flexSwitchCheckChecked')
+                        p Checked switch checkbox input
+                hr
                 h1 Team Size
                 p(for='quantity') MINIMUM TEAM MEMBERS
                     p
@@ -25,4 +36,5 @@ html
                     input#quantity(type='number', name='quantity', min='1', max='10')
                     input(type='submit')
                 hr
-                button.save.d-flex.align-items-center Save
+                button.save.d-flex.align-items-center Save Changes
+            hr.footer
