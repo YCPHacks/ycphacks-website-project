@@ -1,9 +1,13 @@
-.prizeList {
-    text-align: center;
-    font-size: 25px;
+.joshua {
+	height: 150%;
+	background-color: #4EA764;
 }
 
-.prizeWinners {
-    text-align: center;
-    font-size: 15px;
+.table.table-success.table-striped.table-hover.table-bordered {
+	height: 250px;
+	box-shadow: 5px 10px #3C5242;
+}
+
+th.table-dark {
+	color: blue;
 }
