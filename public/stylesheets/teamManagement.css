@@ -23,3 +23,15 @@ button.add{
 .modal-body{
     text-align: center;
 }
+
+img#output{
+    border-radius: 10px;
+}
+
+img#output{
+    margin-right: 1rem;
+}
+
+input.form-control{
+    margin-top: 1rem;
+}
