@@ -14,7 +14,7 @@ html
             .col-auto.px-0
                 #sidebar.collapse.collapse-horizontal.show.border-end.bg-success
                     #sidebar-nav.list-group.border-0.rounded-0.text-sm-start.min-vh-100
-                        a.display-5.text-white.text-decoration-none(href='/dashboard') DASHBOARD
+                        a.dash.text-white.text-decoration-none.text-center.p-1.fs-3(href='/dashboard') DASHBOARD
                         hr
                         #accordionFlushExample.accordion.accordion-flush
                             .accordion-item
@@ -25,9 +25,9 @@ html
                                     .accordion-body.bg-success
                                         .d-grid.gap-2
                                             a.btn(href='/teamView') View Team
-                                            a.btn(href='/teamManagement') Team Management
-                                            a.btn(href='/teamManager') Join Team
-                                            a.btn(href='/teamCreate') Create Team
+                                            a.btn(href='/participantDashboard') Team Management
+                                            a.btn(href='/participantDashboard') Join Team
+                                            a.btn(href='/participantDashboard') Create Team
 
                             .accordion-item
                                 h2#flush-headingThree.accordion-header
@@ -37,8 +37,8 @@ html
                                     .accordion-body.bg-success
                                         .d-grid.gap-2
                                             a.btn(href='/judgingCriteria') Judging Criteria
-                                            a.btn(href='/challenges') Challenges
-                                            a.btn(href='/judgingResults') Judging Results
+                                            a.btn(href='/participantDashboard') Challenges
+                                            a.btn(href='/participantDashboard') Judging Results
 
                             .accordion-item
                                 h2#flush-headingTwo.accordion-header
@@ -70,7 +70,6 @@ html
                                 li
                                     hr.dropdown-divider
                                 li
-                                    a.dropdown-item(href='/welcomePage') Leave administrator view?
                                     a.dropdown-item(href='/welcomePage') Sign out
 
             main.col.ps-md-2.pt-2
