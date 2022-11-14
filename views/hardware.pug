@@ -1,29 +1,57 @@
 html
-  head
-    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
-    link(rel='stylesheet', type='text/css', href='/static/stylesheets/hardwarePage.css')
-    body
-     include includes/navbar.pug
-     include includes/dashboardBar.pug
-         .page.display-5 Hardware Management
-         hr
-         .container-sm
-          table.table.table-success.table-striped.table-hover.table-bordered
-                thead
-                  tr.table-dark
-                    th(scope='col') #
-                    th(scope='col') Hardware
-                    th(scope='col') Availability
-                tbody
-                  tr
-                    th(scope='row') 1
-                    td Ruler
-                    td Available
-                  tr
-                    th(scope='row') 2
-                    td Pencil
-                    td
-                  tr
-                    th(scope='row') 3
-                    td Stapler
-                    td
+    head
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/hardwarePage.css')
+        body
+            include includes/navbar.pug
+            include includes/dashboardBar.pug
+                .page.display-5 Hardware Management
+                hr
+
+                .container1
+                    .hardware#hardwareAccordion.accordion.accordion-flush
+                        .hardware.accordion-item
+                            h2#flush-headingOne.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne1', aria-expanded='false', aria-controls='flush-collapseOne')
+                                    | Add Hardware
+                            #flush-collapseOne1.accordion-collapse.collapse.py-4(aria-labelledby='flush-headingOne', data-bs-parent='#hardwareAccordion')
+                                .accordion-body
+                                    .form-floating.mb-3
+                                        input#floatingInput.form-control(type='email', placeholder='name@example.com')
+                                        label(for='floatingInput') Hardware Name
+
+                                    label(for='start') Checked out:
+                                    .form-check
+                                        input#flexCheckDefault.form-check-input(type='checkbox', value='')
+                                        label.form-check-label(for='flexCheckDefault')
+                                            //| Default checkbox
+                                    br
+                                    input#start(type='date', name='trip-start', value='2022-07-22', min='2022-01-01', max='2022-12-31')
+                                    .form-floating.mb-3
+                                        input#floatingInput.form-control(type='email', placeholder='name@example.com')
+                                        label(for='floatingInput') Assigned to "name"
+
+                                    button.my-4(type='button') Save changes
+
+
+
+                    .container-sm
+                        table.table.table-success.table-striped.table-hover.table-bordered
+                            thead
+                                tr.table-dark
+                                    th(scope='col') #
+                                    th(scope='col') Hardware
+                                    th(scope='col') Availability
+                            tbody
+                                tr
+                                    th(scope='row') 1
+                                    td Ruler
+                                    td Available
+                                tr
+                                    th(scope='row') 2
+                                    td Pencil
+                                    td
+                                tr
+                                    th(scope='row') 3
+                                    td Stapler
+                                    td
