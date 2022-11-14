@@ -6,78 +6,6 @@ body, html {
     /*background-image: url("../images/bd_logo.png");*/
 }
 
-/*.bgimg-1, .bgimg-2, .bgimg-3  {*/
-/*    position: relative;*/
-/*    opacity: 0.65;*/
-/*    background-attachment: fixed;*/
-/*    background-position: center;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-
-/*}*/
-/*.bgimg-1 {*/
-/*    background: linear-gradient(-45deg, #428858, #1eea09, #0ce04f, #438958);*/
-/*    background-size: 400% 400%;*/
-/*    animation: gradient 10s ease infinite;*/
-/*    height: 100vh;*/
-/*}*/
-
-/*@keyframes gradient {*/
-/*    0% {*/
-/*        background-position: 0% 50%;*/
-/*    }*/
-/*    50% {*/
-/*        background-position: 100% 50%;*/
-/*    }*/
-/*    100% {*/
-/*        background-position: 0% 50%;*/
-/*    }*/
-/*}*/
-
-/*.bgimg-2 {*/
-/*    background: linear-gradient(90deg, rgb(150, 180, 58) 0%, rgb(183, 43, 151) 50%, rgb(192, 210, 114) 100%);*/
-/*    min-height: 100%;*/
-/*}*/
-
-/*.bgimg-3 {*/
-/*    background: linear-gradient(90deg, rgb(64, 114, 65) 0%, rgb(192, 217, 37) 50%, rgb(16, 143, 57) 100%);*/
-/*    min-height: 100%;*/
-/*}*/
-
-
-/*.caption {*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    top: 50%;*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-/*    color: #000;*/
-/*}*/
-
-/*.caption span.border {*/
-/*    background-color: #111;*/
-/*    color: #fff;*/
-/*    width: 100px;*/
-/*    padding: 18px;*/
-/*    font-size: 25px;*/
-/*    letter-spacing: 10px;*/
-/*}*/
-
-
-/*h3 {*/
-/*    letter-spacing: 5px;*/
-/*    text-transform: uppercase;*/
-/*    font: 20px "Lato", sans-serif;*/
-/*    color: #111;*/
-/*}*/
-
-/*!* Turn off parallax scrolling for tablets and phones *!*/
-/*@media only screen and (max-device-width: 1024px) {*/
-/*    .bgimg-1, .bgimg-2, .bgimg-3 {*/
-/*        background-attachment: scroll;*/
-/*    }*/
-/*}*/
-
 .category{
     position: relative;
     background-size: 400% 400%;
@@ -116,7 +44,6 @@ body, html {
     backdrop-filter: blur(10px);
     border: 1px solid white;
     color:black;
-    /*text-align: center;*/
 }
 
 h2{
@@ -161,10 +88,6 @@ h6{
         transform:translateX(25%);
     }
 }
-
-
-
-
 
 /* ------SCROLL BAR------*/
 /* width */
