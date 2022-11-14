@@ -20,50 +20,48 @@ html
                             .accordion-item
                                 h2#flush-headingOne.accordion-header
                                     button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne', aria-expanded='false', aria-controls='flush-collapseOne')
-                                        | Challenge Design
+                                        | Your Team
                                 #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne', data-bs-parent='#accordionFlushExample')
                                     .accordion-body.bg-success
                                         .d-grid.gap-2
-                                            a.btn(href='/registrationSettings') Registration Settings
-                                            //a.btn(href='#')
-                                            a.btn(href='/teamSettings') Team Settings
-                                            a.btn(href='/hardware') Hardware
+                                            a.btn(href='/teamView') View Team
+                                            a.btn(href='/participantDashboard') Team Management
+                                            a.btn(href='/participantDashboard') Join Team
+                                            a.btn(href='/participantDashboard') Create Team
 
                             .accordion-item
                                 h2#flush-headingThree.accordion-header
                                     button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseThree', aria-expanded='false', aria-controls='flush-collapseThree')
-                                        | Participant Management
+                                        | Judging
                                 #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree', data-bs-parent='#accordionFlushExample')
                                     .accordion-body.bg-success
                                         .d-grid.gap-2
-                                            a.btn(href='/userList') Participant List
-                                            a.btn(href='/teamManagement') Team Management
+                                            a.btn(href='/judgingCriteria') Judging Criteria
+                                            a.btn(href='/participantDashboard') Challenges
+                                            a.btn(href='/participantDashboard') Judging Results
 
                             .accordion-item
                                 h2#flush-headingTwo.accordion-header
                                     button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseTwo', aria-expanded='false', aria-controls='flush-collapseTwo')
-                                        | Judging
+                                        | Project Gallery
                                 #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo', data-bs-parent='#accordionFlushExample')
                                     .accordion-body.bg-success
                                         .d-grid.gap-2
-                                            a.btn(href='/judgingSetup') Judging Setup
-                                            a.btn(href='/judgingResults') Judging Results
-                                            a.btn(href='/assignWinners') Assign Winners
+                                            a.btn(href='/projectGallery') View Projects
 
                             .accordion-item
                                 h2#flush-headingFour.accordion-header
                                     button.accordion-button.collapsed.text-white.bg-success(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseFour', aria-expanded='false', aria-controls='flush-collapseThree')
-                                        | Permission Management
+                                        | Polls
                                 #flush-collapseFour.accordion-collapse.collapse(aria-labelledby='flush-headingFour', data-bs-parent='#accordionFlushExample')
                                     .accordion-body.bg-success
                                         .d-grid.gap-2
-                                            a.btn(href='/adminRoles') Administrator Roles
-
+                                            a.btn(href='/pollView') Take Polls
                         hr
                         .dropdown
                             a.account.d-flex.align-items-center.text-white.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
                                 img.rounded-circle.me-2(src='/static/images/derek.png', alt='', width='32', height='32')
-                                strong admin
+                                strong participant
                             ul.dropdown-menu.dropdown-menu-light.text-small.shadow
                                 li
                                     a.dropdown-item(href='#') Settings
@@ -72,20 +70,18 @@ html
                                 li
                                     hr.dropdown-divider
                                 li
-                                    a.dropdown-item(href='/welcomePage') Leave Administrator View
                                     a.dropdown-item(href='/welcomePage') Sign out
-                                    
+
             main.col.ps-md-2.pt-2
                 a.p-1.text-decoration-none.text-black(href='#', data-bs-target='#sidebar', data-bs-toggle='collapse')
                     svg.bi.bi-list(xmlns='http://www.w3.org/2000/svg', width='30', height='30', fill='currentColor', viewbox='0 0 16 16')
                         path(fill-rule='evenodd', d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z')
 
                 .page-header.pt-3
-                    .article.tots.shadow-lg
+                    .article.totsPart.shadow-lg
                 //    h2 Bootstrap 5 Sidebar Menu - Simple
                 //p.lead A offcanvas &quot;push&quot; vertical nav menu example.
                 //hr
                 //.row
                 //    .col-12
                 //        p lil test hehee
-

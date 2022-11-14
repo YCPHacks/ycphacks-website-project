@@ -1,0 +1,37 @@
+.manage{
+    position: relative;
+    margin: auto;
+    width: 75%;
+    height:55px;
+    border: 0.5px solid;
+    border-radius: 10px;
+    background: rgba(213, 213, 210, 0.34);
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+button:hover{
+    color:blue;
+}
+
+button.add{
+    background: none;
+}
+.modal-body{
+    text-align: center;
+}
+
+img#output{
+    border-radius: 10px;
+}
+
+img#output{
+    margin-right: 1rem;
+}
+
+input.form-control{
+    margin-top: 1rem;
+}
