@@ -11,9 +11,26 @@
     margin-right: auto;
 }
 
-
-
 h1 {
     text-align: center;
 }
 /*------END OF HARDWARE TABLE------*/
+
+/*accordion*/
+#hardwareAccordion{
+    margin-bottom: 5rem;
+}
+
+.hardware.accordion-item{
+    width: 100% !important;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}

@@ -5,7 +5,6 @@ body, html {
 }
 
 .accordion-item {
-    background: pink;
     width: 300px !important;
 }
 

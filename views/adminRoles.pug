@@ -8,22 +8,19 @@ html
         include includes/navbar.pug
         include includes/dashboardBar.pug
 
-
             //.display-3 Participants List
             //p.lead This is where you will see the participants.
                 .title
                     h1 YCP Hacks
             .page.display-5 Administrators List
+            hr
 
-            .secondpage
-                .content
-                    // SEARCH BAR
-                    .container
-                        nav.navbar.bg-light
-                            .container-fluid
-                                form.d-flex(role='search')
-                                    input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
-                                    button.btn.btn-outline-success(type='submit') Search
+            .container1
+                nav.navbar.bg-light
+                    .container-fluid
+                        form.d-flex(role='search')
+                            input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                            button.btn.btn-outline-success(type='submit') Search
                 hr
                 //// LIST OF PARTICIPANTS
                 //.participants.border.shadow-lg

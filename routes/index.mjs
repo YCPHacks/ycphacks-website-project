@@ -92,7 +92,15 @@ router.get('/pollView', (req, res) => {
 });
 
 router.get('/userList', (req, res) => {
-    res.status(200).render('userList');
+    const users = [
+        { name: "Brady", role: "rol_Rtjhdoi7zz7wOjXX" },
+        { name: "Derek", role: "" },
+        { name: "Josh", role: "" },
+        { name: "Kayla", role: "rol_Rtjhdoi7zz7wOjXX" },
+        { name: "Ralph", role: "" }
+    ];
+
+    res.status(200).render('userList', { users });
 });
 
 router.get('/dashboard', (req, res) => {
@@ -142,6 +150,8 @@ router.get('/adminRoles', (req, res) => {
 
     res.status(200).render('adminRoles', {admin_list});
 });
+
+
 
 
 // router.get('/', (req, res) => {
