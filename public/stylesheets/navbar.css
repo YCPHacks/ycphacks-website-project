@@ -1,6 +1,9 @@
 .nav-link, .navbar-brand{
     color:white;
 }
+nav{
+    width: 100% !important;
+}
 
 .dropdown-item{
     color:black;
@@ -11,7 +14,7 @@
     padding: 1em;
     margin: auto;
     height: auto;
-    width: 65%;
+    width: 70%;
     background: #87dea2;
     border-color: darkgreen;
     border-radius: 10px;
