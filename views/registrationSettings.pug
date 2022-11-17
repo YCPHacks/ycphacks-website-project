@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/registrationSettings.css')
+
+    body
+        include includes/navbar
+        include includes/dashboardBar
+
+            .display-5 Registration Setup
+                hr
+
+            .container1.shadow
+                h1 Registration Settings
+                .form-check.form-switch
+                    input#flexSwitchCheckDefault.form-check-input(type='checkbox', role='switch')
+                    label.form-check-label(for='flexSwitchCheckDefault') Manually Close Registration
+                    .text-muted If toggle is on, participants will not be able to register. This will also close the waitlist.
+
+
+                .form-check.form-switch
+                    input#flexSwitchCheckChecked.form-check-input(type='checkbox', role='switch')
+                    label.form-check-label(for='flexSwitchCheckChecked') Close Registration Upon Challenge Completion
+                    .text-muted If toggle is turned on, registration will close automatically on the event end date and time set in Event Details. This will also close the waitlist.
+
+
+                hr
+                button.save.d-flex.align-items-center Save
+
+
+            .container1.shadow.my-4
+                h1 Registration Form
+                p Changes involving registration for participants
+
+                hr
+                button.save.d-flex.align-items-center Save
+            .container1.shadow.my-4
+                h1 Registration Survey
+                hr
+                #accordionFlushExample4.accordion.accordion-flush.bg-success
+                    .registration.accordion-item
+                        h2#flush-headingOne4.accordion-header
+                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne4', aria-expanded='false', aria-controls='flush-collapseOne4')
+                                | Create a Question
+                        #flush-collapseOne4.accordion-collapse.collapse(aria-labelledby='flush-headingOne4', data-bs-parent='#accordionFlushExample4')
+                            .accordion-body
+                                | Placeholder content for this accordion, which is intended to demonstrate

@@ -1,0 +1,30 @@
+html
+  head
+    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+    link(rel='stylesheet', type='text/css', href='/static/stylesheets/pollView.css')
+  body
+   include includes/navbar.pug
+   include includes/participantDashboardBar.pug
+           .container(style="width: 65%;")
+               h1.text-center Question
+               ul
+                   li
+                        input#f-option(type='radio', name='selector')
+                        |
+                        label(for='f-option') Answer #1
+                        |
+                        .check
+                   li
+                        input#s-option(type='radio', name='selector')
+                        |
+                        label(for='s-option') Answer #2
+                        |
+                        .check
+                   li
+                       input#t-option(type='radio', name='selector')
+                       |
+                       label(for='t-option') Answer #3
+                       |
+                       .check
+                   from(action='/pollResults')
+                        input(type='submit', value='Submit')

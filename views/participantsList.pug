@@ -1,0 +1,51 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/participantsList.css')
+
+    body
+        include includes/navbar.pug
+        include includes/dashboardBar.pug
+
+
+                //.display-3 Participants List
+                //p.lead This is where you will see the participants.
+                    .title
+                        h1 YCP Hacks
+                .page.display-5 Participants List
+                hr
+
+                .container1
+                    nav.navbar.bg-light
+                        .container-fluid
+                            form.d-flex(role='search')
+                                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                                button.btn.btn-outline-success(type='submit') Search
+                    hr
+                    //// LIST OF PARTICIPANTS
+                    //.participants.border.shadow-lg
+                    //    p= user_list.email
+                    // PARTICIPANTS LIST
+                    // SEARCH BAR
+                    .container
+                        table.table.table-success.table-striped.table-bordered
+                            thead.table-dark
+                                tr
+                                    th(scope='col') First
+                                    th(scope='col') Last
+                                    th(scope='col') Time
+                                    th(scope='col') Status
+                            tbody
+                                tr
+                                    each val in user_list
+                                        td= val
+
+
+
+
+
+
+
