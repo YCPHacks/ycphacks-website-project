@@ -1,8 +1,6 @@
-/*Carousel*/
-.carousel{
-    width: 75%;
+.container-fluid{
+    text-align: center;
 }
-
 .goldTier{
     position: relative;
     filter: drop-shadow(0px 5px 5px grey);
@@ -17,23 +15,101 @@
 
 @keyframes goldTier {
     50% {
-        filter: drop-shadow(0px 10px 20px goldenrod);
+        filter: drop-shadow(0px 10px 20px #2e7cd9);
     }
 }
 
 @keyframes other {
     50% {
-        filter: drop-shadow(0px 10px 20px lightblue);
+        filter: drop-shadow(0px 10px 20px #b23333);
     }
 }
 
-.carousel-item{
-    height: 300px;
-    background: #cfe7cf;
-    border-radius: 25px;
+
+.carousel {
+    padding-bottom: 100px;
+    margin:auto;
+    height: 200px;
+    width: 800px;
+    position: relative;
+    /*border:solid;*/
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius:10px;
+
+
 }
-.container-fluid{
-    text-align: center;
+
+button.leftArrow{
+    position: absolute;
+    /*margin: 0.5em;*/
+    left: 1px;
+    height: 200px;
+    width: 100px;
+    /*border: solid;*/
+    border: none;
+    background: none;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+/*.leftArrow:hover ~ .center{*/
+/*    !*animation-play-state: paused;*!*/
+/*    !*animation-direction: reverse;*!*/
+/*!*0%   {left: 0px;}*!*/
+/*    animation-duration: 2s;*/
+/*}*/
+
+button.rightArrow{
+    position: absolute;
+    margin: 0.5em;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    border:1px dotted;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    animation-duration: 10s;
+    animation-name: slidein;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /*animation-timing-function: linear;*/
+    animation-direction: alternate;
+
+}
+
+.center:hover{
+    animation-play-state: paused;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+img {
+    position:relative;
+    display: inline-block;
+    margin: 2em;
+    box-sizing: border-box;
+    width: 200px;
+    height: auto;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+@keyframes slidein {
+    0%   {left: 0px;}
+    100%  { left: -750px;}
 }
 
 .scheduleLink, td{
@@ -72,6 +148,7 @@ td{
 
 .container{
     background: #cfe7cf;
+    border-radius:10px;
 }
 
 .nav-tabs{

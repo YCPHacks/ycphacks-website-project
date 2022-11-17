@@ -1,54 +1,24 @@
-doctype html(lang='en')
-head
-    title Gallery
-    |
-    meta(charset='utf-8')
-    |
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    |
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
-    |
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
-    |
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
-    |
-    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
-body
-    include includes/navbar.pug
-    .container
-        h2(style='text-align: center;') YCPHacks Gallery
-        |
-        |
-        #imgCarousel.carousel.slide(data-ride='carousel', style='width: 75%; margin-left: auto; margin-right: auto;')
-            // Indicators
-            ol.carousel-indicators(style='margin-left: auto; margin-right: auto;')
-                li.active(data-target='#imgCarousel', data-slide-to='0')
-                |
-                li(data-target='#imgCarousel', data-slide-to='1')
-                |
-                li(data-target='#imgCarousel', data-slide-to='2')
-                |
-                li(data-target='#imgCarousel', data-slide-to='3')
-            // Wrapper for slides
-            .carousel-inner(style='width: 100%; height: 75%;')
-                .item.active
-                    img(src='/static/images/david_face.jpg', alt='david_one')
-                |
-                .item
-                    img(src='/static/images/david_face_two.jpg', alt='david_two')
-                |
-                .item
-                    img(src='/static/images/david_standing.jpg', alt='david_three')
-                |
-                .item
-                    img(src='/static/images/david_bike.jpg', alt='david_four')
-            // Left and right controls
-            a.left.carousel-control(href='#imgCarousel', data-slide='prev')
-                span.glyphicon.glyphicon-chevron-left
-                |
-                span.sr-only Previous
-            |
-            a.right.carousel-control(href='#imgCarousel', data-slide='next')
-                span.glyphicon.glyphicon-chevron-right
-                |
-                span.sr-only Next
+doctype html
+html
+    head
+        title Image Gallery
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/gallery.css')
+    body
+        include includes/navbar.pug
+        .maximilian
+            h1 Image Gallery
+            .container
+                .gallery-wrapper
+                    .img
+                        img(src='/static/images/TeamFocused.PNG', alt='hacks_four')
+                    .img
+                        img(src='/static/images/Presentation.PNG', alt='hacks_five')
+                    .img
+                        img(src='/static/images/Drone.PNG', alt='hacks_six')
+                    .img
+                        img(src='/static/images/Hardware.PNG', alt='hacks_one')
+                    .img
+                        img(src='/static/images/TylerEating.PNG', alt='hacks_two')
+                    .img
+                        img(src='/static/images/NerfWinners.PNG', alt='hacks_three')
