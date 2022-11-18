@@ -5,55 +5,17 @@ html
         // CSS only
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
-        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi', crossorigin='anonymous')
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3', crossorigin='anonymous')
         link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
 
     body.bg-success.bg-gradient
-        // NAVIGATION BAR - need to fix for this page
-        nav.navbar.navbar-expand-sm.bg-success.bg-gradient
-            .container-fluid
-                a.navbar-brand(href='welcomePage') YCP Hacks
-                |
-                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#collapsibleNavbar')
-                    span.navbar-toggler-icon
-                |
-                #collapsibleNavbar.collapse.navbar-collapse.justify-content-end
-                    ul.navbar-nav
-                        li.nav-item
-                            a.navbarLink.nav-link(href='#') Attend
-                        |
-                        li.nav-item
-                            a.navbarLink.nav-link(href='gallery') Gallery
-                        |
-                        li.nav-item
-                            a.navbarLink.nav-link(href='judgingCriteria') Judging Criteria
-                        |
-                        li.nav-item
-                            a.navbarLink.nav-link(href='hardware') Hardware
-                        |
-                        li.nav-item
-                            a.navbarLink.nav-link(href='pastEvents') Past Events
-                        |
-                        li.nav-item.dropdown
-                            a.navbarLink.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') More
-                            |
-                            ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lgstart
-                                li
-                                    a.navbarLink.dropdown-item(href='sponsor') Sponsors
-                                |
-                                li
-                                    a.navbarLink.dropdown-item(href='/dashboard') Dashboard
+        include includes/navbar
 
         h1.display-5 What is Hackathon?
             .container.lh-base.shadow
                 hr
                 p.fs-5.p-3 Conveniently nestled in the middle of rural Pennsylvania, YCP Hacks is a college level hackathon with small town charm. An hour north of Baltimore, an hour and a half from Philadelphia, and 2 hours from Penn State places it right in the middle of Pennsylvania Dutch Country (presumably made of Funnel Cake). The event is set on the charming York College of Pennsylvania campus, with all the facilities, people and camaraderie that comes with it. Our mission is to promote technical knowledge, innovation, and entrepreneurship in York and beyond, and we just can't wait to see what you do next.
 
-
-
         #edit(contenteditable='false')
-
 
             h1.display-5 Schedule
             // SCHEDULE

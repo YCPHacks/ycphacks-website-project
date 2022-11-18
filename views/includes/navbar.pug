@@ -33,17 +33,22 @@ html
               a.navbarLink.nav-link(href='judgingCriteria') Judging Criteria
             |
             li.nav-item
-              a.navbarLink.nav-link(href='hardware') Hardware
+              a.navbarLink.nav-link(href='hardwareList') Hardware
             |
             li.nav-item
               a.navbarLink.nav-link(href='pastEvents') Past Events
             |
             li.nav-item.dropdown
-              a.navbarLink.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown') More
-              |
-              ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lgstart
-                li
-                  a.navbarLink.dropdown-item(href='sponsor') Sponsors
-                |
-                li
-                  a.navbarLink.dropdown-item(href='/dashboard') Dashboard
+              a.account.d-flex.align-items-center.text-white.text-decoration-none.dropdown-toggle(href='#', data-bs-toggle='dropdown', aria-expanded='false')
+                  img.rounded-circle.me-2(src='/static/images/derek.png', alt='', width='32', height='32')
+                  strong admin
+              ul.dropdown-menu.dropdown-menu-light.text-small.shadow
+                  li
+                      a.dropdown-item(href='#') Settings
+                  li
+                      a.dropdown-item(href='#') Profile
+                  li
+                      hr.dropdown-divider
+                  li
+                      a.dropdown-item(href='/welcomePage') Leave Administrator View
+                      a.dropdown-item(href='/welcomePage') Sign out

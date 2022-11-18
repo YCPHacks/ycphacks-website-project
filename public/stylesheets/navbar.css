@@ -4,16 +4,12 @@ body, html {
     font: 400 15px/1.8 "Lato", sans-serif;
 }
 
-
-
 .nav-link, .navbar-brand{
     color:white;
 }
 nav{
     width: 100% !important;
 }
-
-
 
 .dropdown-item{
     color:black;
@@ -39,7 +35,6 @@ button.save{
     width: auto;
     height: auto;
     white-space: nowrap;
-    /*padding: .5em;*/
     background: orange;
 }
 
