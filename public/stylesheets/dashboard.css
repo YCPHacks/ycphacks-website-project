@@ -1,17 +1,6 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-}
 .offcanvas.offcanvas-start{
     width: fit-content !important;
 }
-
-#staticbackdrop{
-    width:50px !important;
-    /*height: 100%;*/
-}
-
 
 .accordion-item {
     width: 300px !important;
