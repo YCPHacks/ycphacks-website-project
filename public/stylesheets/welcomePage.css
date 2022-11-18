@@ -54,12 +54,12 @@ button.leftArrow{
     transform: translateY(-50%);
     z-index: 1;
 }
-.leftArrow:hover ~ .center{
-    /*animation-play-state: paused;*/
-    /*animation-direction: reverse;*/
-/*0%   {left: 0px;}*/
-    animation-duration: 2s;
-}
+/*.leftArrow:hover ~ .center{*/
+/*    !*animation-play-state: paused;*!*/
+/*    !*animation-direction: reverse;*!*/
+/*!*0%   {left: 0px;}*!*/
+/*    animation-duration: 2s;*/
+/*}*/
 
 button.rightArrow{
     position: absolute;
@@ -109,7 +109,7 @@ img:hover{
 
 @keyframes slidein {
     0%   {left: 0px;}
-    100%  { left: -200px;}
+    100%  { left: -750px;}
 }
 
 .scheduleLink, td{
