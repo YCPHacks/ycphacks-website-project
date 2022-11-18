@@ -3,6 +3,15 @@ body, html {
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
 }
+.offcanvas.offcanvas-start{
+    width: fit-content !important;
+}
+
+#staticbackdrop{
+    width:50px !important;
+    /*height: 100%;*/
+}
+
 
 .accordion-item {
     width: 300px !important;
@@ -48,6 +57,17 @@ svg {
 
 .btn {
     background: #87dea2;
+}
+
+button.menu{
+    background: none;
+    border: none;
+    margin: 1em;
+}
+button.menu:hover{
+    /*box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);*/
+    background: rgba(16, 143, 57, 0.45);
+    border-radius: 10px;
 }
 
 .btn:hover {
