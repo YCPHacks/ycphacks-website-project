@@ -7,3 +7,9 @@ html
            .display-5 User List
                hr
            .container
+               each user of users
+                   img(src=user['picture'] referrerpolicy="no-referrer")
+
+                   each [key, value] of Object.entries(user)
+                       unless (key == 'picture')
+                           div= `${key}: ${value}`
