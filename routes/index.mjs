@@ -46,12 +46,20 @@ router.get('/userList', (req, res) => {
     res.status(200).render('userList');
 });
 
+router.get('/roleManagement', (req, res) => {
+    res.status(200).render('roleManagement');
+});
+
 router.get('/hardware', (req, res) => {
     res.status(200).render('hardware');
 });
 
 router.get('/gallery', (req, res) => {
     res.status(200).render('gallery');
+});
+
+router.get('/registrationQuestions', (req, res) => {
+    res.status(200).render('registrationQuestions');
 });
 
 router.get('/projectGallery', (req, res) => {
