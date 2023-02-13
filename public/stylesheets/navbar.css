@@ -1,56 +1,34 @@
 body, html {
     height: 100%;
     margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
+    background: #eaefeb;
+    /*font: 400 15px/1.8 "Lato", sans-serif;*/
+
 }
 
-.nav-link, .navbar-brand{
-    color:white;
+/*york college green*/
+.navbar{
+    background: #39b54a !important;
 }
-nav{
-    width: 100% !important;
+.navbarLink.nav-link, .dropdown-toggle, .navbar-brand, .nav-link.dropdown-toggle{
+    color:white;
 }
 
 .dropdown-item{
     color:black;
 }
 
-/*Containers with admin options*/
-.container1{
-    padding: 1em;
-    margin: auto;
-    height: auto;
-    width: 70%;
-    background: #87dea2;
-    border-color: darkgreen;
-    border-radius: 10px;
-}
 
-button.save{
-    border-radius: 10px;
-    justify-content: center;
-    margin: auto;
-    float: bottom;
-    left: 50%;
-    width: auto;
-    height: auto;
-    white-space: nowrap;
-    background: orange;
-}
-
-input:hover{
-    cursor: pointer;
-}
 
 /* ------SCROLL BAR------*/
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #e3f1e3;
+    /*background: #e3f1e3;*/
 }
 
 /* Handle */

@@ -8,40 +8,25 @@ html
         include includes/navbar.pug
         include includes/dashboardBar.pug
 
-            //.display-3 Participants List
-            //p.lead This is where you will see the participants.
-                .title
-                    h1 YCP Hacks
-            .page.display-5 Administrators List
+        .page.display-5 Administrators List
+        hr
+
+        .container1
+            nav.navbar.bg-light
+                .container-fluid
+                    form.d-flex(role='search')
+                        input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                        button.btn.btn-outline-success(type='submit') Search
             hr
 
-            .container1
-                nav.navbar.bg-light
-                    .container-fluid
-                        form.d-flex(role='search')
-                            input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
-                            button.btn.btn-outline-success(type='submit') Search
-                hr
-                //// LIST OF PARTICIPANTS
-                //.participants.border.shadow-lg
-                //    p= user_list.email
-                // PARTICIPANTS LIST
-                // SEARCH BAR
-                .container
-                    table.table.table-success.table-striped.table-bordered.table-responsive
-                        thead.table-dark
-                            tr
-                                th(scope='col') First
-                                th(scope='col') Last
-                                th(scope='col') Email
-                        tbody
-                            tr
-                                each val in admin_list
-                                    td= val
-
-
-
-
-
-
-
+            .container
+                table.table.table-success.table-striped.table-bordered.table-responsive
+                    thead.table-dark
+                        tr
+                            th(scope='col') First
+                            th(scope='col') Last
+                            th(scope='col') Email
+                    tbody
+                        tr
+                            each val in admin_list
+                                td= val

@@ -43,8 +43,6 @@ app.get('/pastEvents', (req,res) => {
 	res.status(200).render('pastEvents');
 });
 
-
-
 app.get('/users', async (req, res) => {
   const request = await fetch(`http://localhost:${port}/api/users`);
   const response = await request.json();
@@ -143,6 +141,7 @@ app.put('/api/users/:user_id', async (req, res) => {
 });
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
 
 app.use('/', index);
 

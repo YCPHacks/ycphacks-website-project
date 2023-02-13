@@ -25,7 +25,6 @@
     }
 }
 
-
 .carousel {
     padding-bottom: 100px;
     margin:auto;
@@ -94,7 +93,7 @@ button.rightArrow{
     cursor: pointer;
 }
 
-img {
+.sponsorImage {
     position:relative;
     display: inline-block;
     margin: 2em;
@@ -103,7 +102,7 @@ img {
     height: auto;
 }
 
-img:hover{
+.sponsorImage:hover{
     transform: scale(1.5);
 }
 
@@ -139,16 +138,72 @@ h3{
 }
 
 /* Striped table with events */
+.row{
+    height: 50px !important;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+}
+
+.accordion-item{
+    background-color: transparent !important;
+}
+.accordion-button{
+    background-color: transparent !important;
+    align-items: center;
+    display: inline !important;
+}
+
+.accordion{
+    --bs-accordion-btn-padding-x: none !important;
+    --bs-accordion-btn-focus-box-shadow: none !important;
+}
+
+a.col{
+    text-decoration: none;
+}
+.accordion-body{
+    background: rgba(134, 206, 134, 0.69);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.accordion-button:hover{
+    box-shadow: rgb(83, 166, 60) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px;
+}
+
+.container.border.text-center{
+    text-align: left !important;
+}
+
+.accordion-button:not(.collapsed){
+    color: black !important;
+    background: none;
+}
+.accordion-button:focus{
+    border:none;
+}
+
+img.speaker{
+    width:100px;
+    height:auto;
+}
+
 .table-striped{
     color: white;
 }
-td{
-    color: black;
-}
+
 
 .container{
     background: #cfe7cf;
     border-radius:10px;
+}
+
+td{
+    color: black;
 }
 
 .nav-tabs{
@@ -178,7 +233,7 @@ td{
 /*-----------------------*/
 
 /*FAQ Section*/
-.accordion {
+.FAQ.accordion {
   background-color: #63b163;
   color: black;
   cursor: pointer;

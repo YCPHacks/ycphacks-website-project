@@ -1,4 +1,7 @@
-extends layout.pug
+extends layout
 
 block content
-  p This is the real content!
+    if isAuthenticated
+      include includes/dashboard.pug
+    else
+      include includes/welcomePage.pug
