@@ -16,240 +16,167 @@ html
         .space
 
         //    ADMINISTRATOR DASHBOARD VIEW
-        //nav
-        //    #nav-tab.nav.nav-tabs.justify-content-center(role='tablist')
-        //        button#nav-home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#nav-home', type='button', role='tab', aria-controls='nav-home', aria-selected='false') Home
-        //        button#nav-schedule-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-schedule', type='button', role='tab', aria-controls='nav-schedule', aria-selected='false') Schedule
-        //        button#nav-mentorship-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-mentorship', type='button', role='tab', aria-controls='nav-mentorship', aria-selected='false') Mentorship
-        //        button#nav-checkIn-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-checkIn', type='button', role='tab', aria-controls='nav-checkIn', aria-selected='false') Check In
-        //        button#nav-applications-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-applications', type='button', role='tab', aria-controls='nav-applications', aria-selected='false') Applications
-        //        button#nav-hardware-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-hardware', type='button', role='tab', aria-controls='nav-hardware', aria-selected='false') Hardware
-        //        button#nav-prizes-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-prizes', type='button', role='tab', aria-controls='nav-prizes', aria-selected='false') Prizes
-        //        button#nav-projects-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-projects', type='button', role='tab', aria-controls='nav-projects', aria-selected='false') Projects
-        //        button#nav-admins-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-admins', type='button', role='tab', aria-controls='nav-admins', aria-selected='false') Admin
-        //
-        //#nav-tabContent.tab-content
-        //    #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab', tabindex='0')
-        //
-        //        .outside.bd-example.bd-example-cols.m-3
-        //            .container.text-center
-        //                .row.row-cols-sm-2.row-cols-md-4.g-4.g-lg-4
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Total Applicants
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 RSVP&apos;d
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Hardware Checkouts
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Mentorship Requests
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Listed Events
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Listed Prizes
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Hardware Items
-        //                            span.badge.text-bg-secondary.m-1 0
-        //                    a.col.text-decoration-none(href="")
-        //                        .p-3 Listed Projects
-        //                            span.badge.text-bg-secondary.m-1 0
-        //
-        //        .row.row-cols-1.row-cols-md-3.g-4.text-center
-        //            .col
-        //                .card
-        //                    .card-body
-        //                        h5.card-title Schedule
-        //                        p.card-text
-        //                            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        //                        a.btn.btn-primary(href='#') Go somewhere
-        //            .col
-        //                .card
-        //                    .card-body
-        //                        h5.card-title Card title
-        //                        p.card-text
-        //                            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        //                        a.btn.btn-primary(href='#') Go somewhere
-        //            .col
-        //                .card
-        //                    .card-body
-        //                        h5.card-title Card title
-        //                        p.card-text
-        //                            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        //                        a.btn.btn-primary(href='#') Go somewhere
-        //
-        //
-        //
-        //    #nav-schedule.tab-pane.fade(role='tabpanel', aria-labelledby='nav-schedule-tab', tabindex='0')
-        //        h1.m-2 Schedule
-        //        .container-md.p-2.border
-        //            .card.mb-3
-        //                .row.g-0
-        //                    .col-sm-4
-        //                        svg.bd-placeholder-img.img-fluid.rounded-start(width='100%', height='250', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Image', preserveaspectratio='xMidYMid slice', focusable='false')
-        //                            title Placeholder
-        //                            rect(width='100%', height='100%', fill='#868e96')
-        //                            text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image
-        //                    .col-sm-8
-        //                        .card-body
-        //                            h5.card-title Card title
-        //                            p.card-text
-        //                                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-        //                            p.card-text
-        //                                small.text-muted Last updated 3 mins ago
-        //
-        //
-        //    #nav-contact.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab', tabindex='0') ...
-        //
-        //
-        //    #nav-checkIn.tab-pane.fade(role='tabpanel', aria-labelledby='nav-checkIn-tab', tabindex='0') ...
-        //
-        //
-        //    #nav-applications.tab-pane.fade(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0')
-        //        h1.m-2 Applications
-        //        .container-md.text-center.p-2.border
-        //            button.btn(type='button')
-        //                | All
-        //                span.badge.text-bg-primary.m-1 4
-        //
-        //            button.btn(type='button')
-        //                | Undecided
-        //                span.badge.text-bg-secondary.m-1 4
-        //
-        //            button.btn(type='button')
-        //                | Accepted
-        //                span.badge.text-bg-success.m-1 4
-        //
-        //            button.btn(type='button')
-        //                | Denied
-        //                span.badge.text-bg-danger.m-1 4
-        //
-        //            button.btn(type='button')
-        //                | Flagged
-        //                span.badge.text-bg-warning.m-1 4
-        //        .container-md.text-center.p-2.mt-3.border
-        //            form.d-flex(role='search')
-        //                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
-        //                button.btn.btn-outline-success.mx-1(type='submit') Search
-        //                button.btn.btn-outline-success.mx-1(type='submit') Download CSV
-        //        .container-md.text-center.p-2.mt-3.border
-        //
-        //
-        //
-        //    #nav-hardware.tab-pane.fade(role='tabpanel', aria-labelledby='nav-hardware-tab', tabindex='0')
-        //        h1.m-2 Hardware Inventory
-        //        .d-flex.justify-content-around
-        //            button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#newHardware')
-        //                | Create New Hardware Item
-        //            button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#viewHardware')
-        //                | View All Checked-Out Items
-        //
-        //        #newHardware.modal.fade(data-bs-backdrop='static', data-bs-keyboard='false', tabindex='-1', aria-labelledby='staticBackdropLabel', aria-hidden='true')
-        //            .modal-dialog
-        //                .modal-content
-        //                    .modal-header
-        //                        h1#staticBackdropLabel.modal-title.fs-5 Create New Hardware
-        //                        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
-        //                    .modal-body
-        //                        .form-floating.mb-3
-        //                            input#floatingName.form-control(type='email', placeholder='name@example.com')
-        //                            label(for='floatingName') Name
-        //                        .form-floating.mb-3
-        //                            input#floatingCount.form-control(type='password', placeholder='Password')
-        //                            label(for='floatingCount') Count
-        //                        .form-floating.mb-3
-        //                            input#floatingLink.form-control(type='password', placeholder='Password')
-        //                            label(for='floatingLink') Link
-        //                        select.form-select.mb-3(aria-label='Default select example')
-        //                            option(selected='') Open this select menu
-        //                            option(value='1') Microprocessors
-        //                            option(value='2') Microcontrollers
-        //                            option(value='3') etc
-        //
-        //                    .modal-footer
-        //                        button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-        //                        button.btn.btn-primary(type='button') Understood
-        //
-        //        - const data = [["5be5a912-a730-11ed-91d9-ac99fa1c98aa","wire","yes","wire",2,"yes","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"],["5be5a9f8-a730-11ed-91d9-ac99fa1c98aa","mouse","yes","mice",2,"yes","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"],["5be5aa48-a730-11ed-91d9-ac99fa1c98aa","computer","yes","computer",2,"no","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"]];
-        //
-        //        .container-sm.overflow-x-scroll.mt-3
-        //            table.table.table-striped.table-bordered
-        //                    thead
-        //                        tr
-        //                            th(scope='col') id
-        //                            th(scope='col') Name
-        //                            th(scope='col') Last
-        //                            th(scope='col') Handle
-        //                            th(scope='col') First
-        //                            th(scope='col') Last
-        //                            th(scope='col') Handle
-        //                            th(scope='col') Handle
-        //                            th(scope='col') Handle
-        //                    tbody
-        //                        each item of data
-        //                            tr
-        //                                //th(scope='row') id
-        //                                each value of item
-        //                                    td=value
-        //
-        //    #nav-prizes.tab-pane.fade(role='tabpanel', aria-labelledby='nav-prizes-tab', tabindex='0') ...
-        //    #nav-projects.tab-pane.fade(role='tabpanel', aria-labelledby='nav-projects-tab', tabindex='0') projects
-        //    #nav-admins.tab-pane.fade(role='tabpanel', aria-labelledby='nav-admins-tab', tabindex='0') admin
-
-
-        // PARTICIPANT DASHBOARD VIEW
         nav
             #nav-tab.nav.nav-tabs.justify-content-center(role='tablist')
-                button#nav-home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#nav-home', type='button', role='tab', aria-controls='nav-home', aria-selected='true') Home
-                button#nav-application-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-application', type='button', role='tab', aria-controls='nav-application', aria-selected='false') My Application
-                button#nav-project-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-project', type='button', role='tab', aria-controls='nav-project', aria-selected='false') My Project
+                button#nav-home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#nav-home', type='button', role='tab', aria-controls='nav-home', aria-selected='false') Home
+                button#nav-schedule-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-schedule', type='button', role='tab', aria-controls='nav-schedule', aria-selected='false') Schedule
+                button#nav-mentorship-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-mentorship', type='button', role='tab', aria-controls='nav-mentorship', aria-selected='false') Mentorship
+                button#nav-checkIn-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-checkIn', type='button', role='tab', aria-controls='nav-checkIn', aria-selected='false') Check In
+                button#nav-applications-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-applications', type='button', role='tab', aria-controls='nav-applications', aria-selected='false') Applications
+                button#nav-hardware-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-hardware', type='button', role='tab', aria-controls='nav-hardware', aria-selected='false') Hardware
+                button#nav-prizes-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-prizes', type='button', role='tab', aria-controls='nav-prizes', aria-selected='false') Prizes
+                button#nav-projects-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-projects', type='button', role='tab', aria-controls='nav-projects', aria-selected='false') Projects
+                button#nav-admins-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-admins', type='button', role='tab', aria-controls='nav-admins', aria-selected='false') Admin
 
+        #nav-tabContent.tab-content
+            #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab', tabindex='0')
+                .outside.bd-example.bd-example-cols.m-3
+                    .container.text-center
+                        .row.row-cols-sm-2.row-cols-md-4.g-4.g-lg-4
+                            .col.text-decoration-none
+                                .p-3 Total Applicants
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 RSVP&apos;d
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Hardware Checkouts
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Mentorship Requests
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Listed Events
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Listed Prizes
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Hardware Items
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Listed Projects
+                                    span.badge.text-bg-secondary.m-1 0
 
-
-                .row.row-cols-1.row-cols-md-3.g-4.text-center
-                    .col
-                        .card
-                            .card-body
-                                h5.card-title Check In
-                                p.card-text
-                                    | QR Code WEEEEE
-                                a.btn.btn-primary(href='#') Go somewhere
+                .row.row-cols-1.row-cols-md-2.g-4.text-center.m-3
                     .col
                         .card
                             .card-body
                                 h5.card-title Upcoming Events
                                 p.card-text
-                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                a.btn.btn-primary(href='#') Go somewhere
+                                    table.table
+                                        thead
+                                            tr
+                                                th(scope='col') Event
+                                                th(scope='col') Time
+                                        tbody
+                                            tr
+                                                td Event
+                                                td 10:00
+                                            tr
+                                                td Event 1
+                                                td 12:00
+                                a.btn.btn-secondary(href='#') View All
                     .col
                         .card
                             .card-body
-                                h5.card-title Discord Channel
+                                h5.card-title Card title
                                 p.card-text
                                     | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                a.btn.btn-primary(href='#') Go to Discord Channel
-
-
-            #nav-profile.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab', tabindex='0') ...
+                                a.btn.btn-primary(href='#') Go somewhere
+                    //.col
+                    //    .card
+                    //        .card-body
+                    //            h5.card-title Card title
+                    //            p.card-text
+                    //                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    //            a.btn.btn-primary(href='#') Go somewhere
+            #nav-schedule.tab-pane.fade(role='tabpanel', aria-labelledby='nav-schedule-tab', tabindex='0')
+                h1.m-2 Schedule
+                .container-md.p-2.border
+                    .card.mb-3
+                        .row.g-0
+                            .col-sm-4
+                                svg.bd-placeholder-img.img-fluid.rounded-start(width='100%', height='150', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Image', preserveaspectratio='xMidYMid slice', focusable='false')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                    text(x='50%', y='50%', fill='#dee2e6', dy='.3em') 10:00 PM
+                            .col-sm-8
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                    p.card-text
+                                        small.text-muted Location: xxx
+                    .card.mb-3
+                        .row.g-0
+                            .col-sm-4
+                                svg.bd-placeholder-img.img-fluid.rounded-start(width='100%', height='150', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Image', preserveaspectratio='xMidYMid slice', focusable='false')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                    text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image
+                            .col-sm-8
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                    p.card-text
+                                        small.text-muted Location: xxx
             #nav-contact.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab', tabindex='0') ...
-            #nav-checkIn.tab-pane.fade(role='tabpanel', aria-labelledby='nav-checkIn-tab', tabindex='0') ...
-            #nav-applications.tab-pane.fade(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0') ...
+
+
+            #nav-checkIn.tab-pane.fade(role='tabpanel', aria-labelledby='nav-checkIn-tab', tabindex='0')
+                .outside.bd-example.bd-example-cols.m-3
+                    .container.text-center
+                        .row.row-cols-sm-2.row-cols-md-2.g-4.g-lg-4
+                            a.col.text-decoration-none(href="")
+                                .p-3 Checked In Attendees
+                                    span.badge.text-bg-secondary.m-1 0
+                            a.col.text-decoration-none(href="")
+                                .p-3 RSVP&apos;d Users
+                                    span.badge.text-bg-secondary.m-1 0
+                .container-md.text-center.p-2.mt-3.border
+                    form.d-flex(role='search')
+                        input.form-control.me-2(type='search', placeholder='Attendee Email', aria-label='Attendee Email')
+                        button.btn.btn-outline-success.mx-1(type='submit') Check in
+                        button.btn.btn-outline-secondary.mx-1(type='submit') Scan QR Code
+
+            #nav-applications.tab-pane.fade(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0')
+                h1.m-2 Applications
+                .container-md.text-center.p-2.border
+                    button.btn(type='button')
+                        | All
+                        span.badge.text-bg-primary.m-1 4
+
+                    button.btn(type='button')
+                        | Undecided
+                        span.badge.text-bg-secondary.m-1 4
+
+                    button.btn(type='button')
+                        | Accepted
+                        span.badge.text-bg-success.m-1 4
+
+                    button.btn(type='button')
+                        | Denied
+                        span.badge.text-bg-danger.m-1 4
+
+                    button.btn(type='button')
+                        | Flagged
+                        span.badge.text-bg-warning.m-1 4
+                .container-md.text-center.p-2.mt-3.border
+                    form.d-flex(role='search')
+                        input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                        button.btn.btn-outline-success.mx-1(type='submit') Search
+                        button.btn.btn-outline-success.mx-1(type='submit') Download CSV
+                .container-md.text-center.p-2.mt-3.border
+
             #nav-hardware.tab-pane.fade(role='tabpanel', aria-labelledby='nav-hardware-tab', tabindex='0')
-
-
-
                 h1.m-2 Hardware Inventory
-
                 .d-flex.justify-content-around
                     button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#newHardware')
                         | Create New Hardware Item
                     button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#viewHardware')
                         | View All Checked-Out Items
-
 
                 #newHardware.modal.fade(data-bs-backdrop='static', data-bs-keyboard='false', tabindex='-1', aria-labelledby='staticBackdropLabel', aria-hidden='true')
                     .modal-dialog
@@ -273,229 +200,182 @@ html
                                     option(value='2') Microcontrollers
                                     option(value='3') etc
 
-
                             .modal-footer
                                 button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
                                 button.btn.btn-primary(type='button') Understood
 
-                table.table
-                    thead
-                        tr
-                            th(scope='col') #
-                            th(scope='col') Name
-                            th(scope='col') Category
-                            th(scope='col') Count
-                            th(scope='col') Available
-                    tbody
-                        tr
+                - const data = [["5be5a912-a730-11ed-91d9-ac99fa1c98aa","wire","yes","wire",2,"yes","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"],["5be5a9f8-a730-11ed-91d9-ac99fa1c98aa","mouse","yes","mice",2,"yes","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"],["5be5aa48-a730-11ed-91d9-ac99fa1c98aa","computer","yes","computer",2,"no","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"]];
+                - var x = 0;
+                .container-sm.overflow-x-scroll.mt-3.p-3
+                    //table.table.table-striped.table-bordered
+                    //        thead
+                    //            tr
+                    //                th(scope='col') id
+                    //                th(scope='col') Name
+                    //                th(scope='col') Last
+                    //                th(scope='col') Handle
+                    //                th(scope='col') First
+                    //                th(scope='col') Last
+                    //                th(scope='col') Handle
+                    //                th(scope='col') Handle
+                    //                th(scope='col') Handle
+                    //        tbody
+                    //            each item of data
+                    //                - x++
+                    //                tr
+                    //                    each value of item
+                    //                        td=value
+                    //h3 Hardware Checked Out
+                    //h5= x
+                    table.table.table-striped.table-bordered.my-4
+                        thead
+                            tr
+                                th(scope='col') ID
+                                th(scope='col') Name
+                                th(scope='col') Hardware Name
+                                th(scope='col') X
+                                th(scope='col') X
+                                th(scope='col') X
+                                th(scope='col') Time Checked Out
+                                th(scope='col') X
+                                th(scope='col') X
+                                th(scope='col') Actions
 
-                            td
-                                a(href="") 123456
-                            td Arduino
-                            td @mdo
+                            tbody
+                                each item of data
+                                    - x++
+                                    tr
+                                        each value of item
+                                            td=value
+                                        td
+                                            .d-grid.gap-2.text-nowrap
+                                                button.btn.btn-danger(type='button') Return Item
+                                                button.btn.btn-secondary(type='button') Message on Discord
+
+                        h5 Total Checked Out : #{x}
 
 
             #nav-prizes.tab-pane.fade(role='tabpanel', aria-labelledby='nav-prizes-tab', tabindex='0') ...
             #nav-projects.tab-pane.fade(role='tabpanel', aria-labelledby='nav-projects-tab', tabindex='0') projects
-            #nav-admins.tab-pane.fade(role='tabpanel', aria-labelledby='nav-admins-tab', tabindex='0') admin
+            #nav-admins.tab-pane.fade(role='tabpanel', aria-labelledby='nav-admins-tab', tabindex='0')
+                h1.m-2 Feature Flags
+                .container-md
+                    ul.list-group
+                        li.list-group-item
+                            input#firstCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='firstCheckbox') Schedule
+                        li.list-group-item
+                            input#secondCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='secondCheckbox') Mentorship
+                        li.list-group-item
+                            input#thirdCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='thirdCheckbox') Applications
+                        li.list-group-item
+                            input#fourthCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='fourthCheckbox') Hardware
+                        li.list-group-item
+                            input#fifthCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='fifthCheckbox') Prizes
+                        li.list-group-item
+                            input#sixthCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='sixthCheckbox') Projects
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //.row
-        //    .col-4
-        //        nav#navbar-example3.h-100.flex-column.align-items-stretch.pe-4
-        //            nav.nav.nav-pills.flex-column
-        //                a.nav-link.active(href='#item-1') Challenge Design
-        //                nav.nav.nav-pills.flex-column
-        //                    a.nav-link.ms-3(href='#item-1-1') Registration Settings
-        //                    a.nav-link.ms-3(href='#item-1-2') Team Settings
-        //                    a.nav-link.ms-3(href='#item-1-3') Hardware Settings
-        //                hr
-        //                a.nav-link(href='#item-2') Participant Management
-        //                    a.nav-link.ms-3(href='#item-2-1') Participant List
-        //                    a.nav-link.ms-3(href='#item-2-2') Team Management
-        //                hr
-        //                a.nav-link(href='#item-3') Judging
-        //                nav.nav.nav-pills.flex-column
-        //                    a.nav-link.ms-3(href='#item-3-1') Judging Setup
-        //                    a.nav-link.ms-3(href='#item-3-2') Judging Results
-        //                    a.nav-link.ms-3(href='#item-3-3') Assign Winners
-        //                hr
-        //                a.nav-link(href='#item-4') Permission Management
-        //                    a.nav-link.ms-3(href='#item-4-1') Administrator Roles
-        //                    a.nav-link.ms-3(href='#item-4-2') Role Management
-        //    .col-8
-        //        .scrollspy-example-2(data-bs-spy='scroll', data-bs-target='#navbar-example3', data-bs-smooth-scroll='true', tabindex='0')
-        //            //#item-1
-        //            //    h3 Challenge Design
-        //            #item-1-1
-        //                .container1.shadow
-        //                    h4 Registration Settings
-        //                    .form-check.form-switch
-        //                        input#flexSwitchCheckDefault.form-check-input(type='checkbox', role='switch')
-        //                        label.form-check-label(for='flexSwitchCheckDefault') Manually Close Registration
-        //                        .text-muted If toggle is on, participants will not be able to register. This will also close the waitlist.
+        // PARTICIPANT DASHBOARD VIEW
+        //nav
+        //    #nav-tab.nav.nav-tabs.justify-content-center(role='tablist')
+        //        button#nav-home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#nav-home', type='button', role='tab', aria-controls='nav-home', aria-selected='true') Home
+        //        button#nav-application-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-application', type='button', role='tab', aria-controls='nav-application', aria-selected='false') My Application
+        //        button#nav-project-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-project', type='button', role='tab', aria-controls='nav-project', aria-selected='false') My Project
         //
         //
-        //                    .form-check.form-switch
-        //                        input#flexSwitchCheckChecked.form-check-input(type='checkbox', role='switch')
-        //                        label.form-check-label(for='flexSwitchCheckChecked') Close Registration Upon Challenge Completion
-        //                        .text-muted If toggle is turned on, registration will close automatically on the event end date and time set in Event Details. This will also close the waitlist.
+        //
+        //        .row.row-cols-1.row-cols-md-3.g-4.text-center
+        //            .col
+        //                .card
+        //                    .card-body
+        //                        h5.card-title Check In
+        //                        p.card-text
+        //                            | QR Code WEEEEE
+        //                        a.btn.btn-primary(href='#') Go somewhere
+        //            .col
+        //                .card
+        //                    .card-body
+        //                        h5.card-title Upcoming Events
+        //                        p.card-text
+        //                            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        //                        a.btn.btn-primary(href='#') Go somewhere
+        //            .col
+        //                .card
+        //                    .card-body
+        //                        h5.card-title Discord Channel
+        //                        p.card-text
+        //                            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        //                        a.btn.btn-primary(href='#') Go to Discord Channel
         //
         //
-        //                    hr
-        //                    button.save.d-flex.align-items-center Save
+        //    #nav-profile.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab', tabindex='0') ...
+        //    #nav-contact.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab', tabindex='0') ...
+        //    #nav-checkIn.tab-pane.fade(role='tabpanel', aria-labelledby='nav-checkIn-tab', tabindex='0') ...
+        //    #nav-applications.tab-pane.fade(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0') ...
+        //    #nav-hardware.tab-pane.fade(role='tabpanel', aria-labelledby='nav-hardware-tab', tabindex='0')
         //
         //
-        //                .container1.shadow.my-4
-        //                    h4 Registration Form
-        //                    p Changes involving registration for participants
         //
-        //                    hr
-        //                    button.save.d-flex.align-items-center Save
-        //                .container1.shadow.my-4
-        //                    h4 Registration Survey
-        //                    hr
-        //                    #accordionFlushExample4.accordion.accordion-flush.bg-success
-        //                        .registration.accordion-item
-        //                            h2#flush-headingOne4.accordion-header
-        //                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne4', aria-expanded='false', aria-controls='flush-collapseOne4')
-        //                                    | Create a Question
-        //                            #flush-collapseOne4.accordion-collapse.collapse(aria-labelledby='flush-headingOne4', data-bs-parent='#accordionFlushExample4')
-        //                                .accordion-body
-        //                                    | Placeholder content for this accordion, which is intended to demonstrate
-        //            hr
-        //            #item-1-2
-        //                h3 Team Settings
-        //                    .container1.shadow-lg
-        //                        h4 Feature Visibility
-        //                        .form-check.form-switch
-        //                            input#flexSwitchCheckDefault.form-check-input(type='checkbox', role='switch')
-        //                            label.form-check-label(for='flexSwitchCheckDefault') Manually Close Registration
+        //        h1.m-2 Hardware Inventory
         //
-        //                        .form-check.form-switch
-        //                            input#flexSwitchCheckChecked.form-check-input(type='checkbox', role='switch')
-        //                            label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
-        //
-        //                        hr
-        //                        h4 Team Size
-        //                        p(for='quantity') MINIMUM TEAM MEMBERS
-        //                            p
-        //                            input#quantity.me-1(type='number', name='quantity', min='1', max='10')
-        //                            input(type='submit')
-        //
-        //                        p(for='quantity') MAXIMUM TEAM MEMBERS
-        //                            p
-        //                            input#quantity.me-1(type='number', name='quantity', min='1', max='10')
-        //                            input(type='submit')
-        //                        hr
-        //                        button.save.d-flex.align-items-center Save Changes
-        //            hr
-        //
-        //            #item-1-3
-        //                h4 Hardware Management
-        //                .container1
-        //                    .hardware#hardwareAccordion.accordion.accordion-flush
-        //                        .hardware.accordion-item
-        //                            h2#flush-headingOne.accordion-header
-        //                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne1', aria-expanded='false', aria-controls='flush-collapseOne')
-        //                                    | Add Hardware
-        //                            #flush-collapseOne1.accordion-collapse.collapse.py-4(aria-labelledby='flush-headingOne', data-bs-parent='#hardwareAccordion')
-        //                                .accordion-body
-        //                                    .form-floating.mb-3
-        //                                        input#floatingInput.form-control(type='email', placeholder='name@example.com')
-        //                                        label(for='floatingInput') Hardware Name
-        //
-        //                                    label(for='start') Checked out:
-        //                                    .form-check
-        //                                        input#flexCheckDefault.form-check-input(type='checkbox', value='')
-        //                                        label.form-check-label(for='flexCheckDefault')
-        //                                            //| Default checkbox
-        //                                    br
-        //                                    input#start(type='date', name='trip-start', value='2022-07-22', min='2022-01-01', max='2025-12-31')
-        //                                    .form-floating.mb-3
-        //                                        input#floatingInput.form-control(type='email', placeholder='name@example.com')
-        //                                        label(for='floatingInput') Assigned to "name"
-        //
-        //                                    button.save.my-4(type='button') Save changes
-        //            hr
-        //            #item-2
-        //                h4 Item 2
-        //                p
-        //                    | This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It&apos;s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
-        //
-        //            #item-2-1
-        //                h4 Participant List
-        //                .container
-        //                    nav.navbar.bg-light
-        //                        .container-fluid
-        //                            form.d-flex(role='search')
-        //                                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
-        //                                button.btn.btn-outline-success(type='submit') Search
-        //                    hr
-        //
-        //            #item-2-2
-        //                h4 Team Management
-        //                .container
-        //                    nav.navbar.bg-light
-        //                        .container-fluid
-        //                            form.d-flex(role='search')
-        //                                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
-        //                                button.btn.btn-outline-success(type='submit') Search
+        //        .d-flex.justify-content-around
+        //            button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#newHardware')
+        //                | Create New Hardware Item
+        //            button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#viewHardware')
+        //                | View All Checked-Out Items
         //
         //
-        //                    // CREATE TEAM BLOCK
-        //                    .container1
-        //                        .d-flex
-        //                            .p-2.flex-fill Create Team
-        //                            .p-2.flex-fill
-        //                                button.add(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
-        //                                    svg.bi.bi-plus-square(xmlns='http://www.w3.org/2000/svg', width='30', height='30', fill='currentColor', viewbox='0 0 16 16')
-        //                                        path(d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z')
-        //                                        path(d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+        //        #newHardware.modal.fade(data-bs-backdrop='static', data-bs-keyboard='false', tabindex='-1', aria-labelledby='staticBackdropLabel', aria-hidden='true')
+        //            .modal-dialog
+        //                .modal-content
+        //                    .modal-header
+        //                        h1#staticBackdropLabel.modal-title.fs-5 Create New Hardware
+        //                        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+        //                    .modal-body
+        //                        .form-floating.mb-3
+        //                            input#floatingName.form-control(type='email', placeholder='name@example.com')
+        //                            label(for='floatingName') Name
+        //                        .form-floating.mb-3
+        //                            input#floatingCount.form-control(type='password', placeholder='Password')
+        //                            label(for='floatingCount') Count
+        //                        .form-floating.mb-3
+        //                            input#floatingLink.form-control(type='password', placeholder='Password')
+        //                            label(for='floatingLink') Link
+        //                        select.form-select.mb-3(aria-label='Default select example')
+        //                            option(selected='') Open this select menu
+        //                            option(value='1') Microprocessors
+        //                            option(value='2') Microcontrollers
+        //                            option(value='3') etc
         //
         //
-        //                        //Modal
-        //                        #exampleModal.modal.fade(data-bs-backdrop='static', data-bs-keyboard='false', tabindex='-1', aria-labelledby='staticBackdropLabel', aria-hidden='true')
-        //                            .modal-dialog.modal-dialog-centered
-        //                                .modal-content
+        //                    .modal-footer
+        //                        button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+        //                        button.btn.btn-primary(type='button') Understood
         //
-        //                                    .modal-header
-        //                                        #exampleModalLabel.modal-title.fs-5 Create Team
-        //                                        button.team-create.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+        //        table.table
+        //            thead
+        //                tr
+        //                    th(scope='col') #
+        //                    th(scope='col') Name
+        //                    th(scope='col') Category
+        //                    th(scope='col') Count
+        //                    th(scope='col') Available
+        //            tbody
+        //                tr
         //
-        //                                    .modal-body
-        //                                        h1 Team Details
-        //                                        input.form-control(type='text', placeholder='Team Name', aria-label='default input example')
+        //                    td
+        //                        a(href="") 123456
+        //                    td Arduino
+        //                    td @mdo
         //
-        //                                    .modal-footer
-        //                                        button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
-        //                                        button.btn.btn-primary(type='button') Save changes
         //
-        //                    // for every team?
-        //                    //.manage.d-flex.justify-content-around.px-4.mt-5.shadow
-        //                    //    h3.p-2.flex-fill Team Name
-        //                    //    .p-2.flex-fill
-        //                    //        button.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal') edit
-        //                    //        button.btn.btn-primary(type='button') delete
+        //    #nav-prizes.tab-pane.fade(role='tabpanel', aria-labelledby='nav-prizes-tab', tabindex='0') ...
+        //    #nav-projects.tab-pane.fade(role='tabpanel', aria-labelledby='nav-projects-tab', tabindex='0') projects
+        //    #nav-admins.tab-pane.fade(role='tabpanel', aria-labelledby='nav-admins-tab', tabindex='0') admin
         //
-        //            hr
-        //
-        //            #item-3
-        //                h4 Judging Setup
-        //                p
-        //                    | This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It&apos;s repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
