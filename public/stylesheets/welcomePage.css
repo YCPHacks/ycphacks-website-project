@@ -1,3 +1,4 @@
+/* ------SPONSOR CAROUSEL------ */
 .container-fluid{
     text-align: center;
 }
@@ -6,72 +7,61 @@
     filter: drop-shadow(0px 5px 5px grey);
     animation: goldTier 2.0s infinite;
 }
-
 .image{
     position: relative;
     filter: drop-shadow(0px 5px 5px grey);
     animation: other 2.0s infinite;
 }
-
 @keyframes goldTier {
     50% {
         filter: drop-shadow(0px 10px 20px #2e7cd9);
     }
 }
-
 @keyframes other {
     50% {
         filter: drop-shadow(0px 10px 20px #b23333);
     }
 }
-
-.carousel{
-    margin:auto;
-    height: auto;
-    width: 75%;
-    overflow: hidden;
-    white-space: nowrap;
+.carousel, .carousel-inner, .carousel-item, .carousel-item-container{
+    height: 200px;
+}
+.carousel-item-container{
+    display: flex;
+    justify-content: space-between;
     border-radius:10px;
     background-color: #97cd8a;
 }
-
-.img-fluid1{
-    width: 33%;
+.carousel-item-container .dixie{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 33.3%;
     height: auto;
 }
-
+.linkSponsor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-fluid1{
+    object-fit: fill;
+    width: 75%;
+    height: 75%;
+}
 .sponsorImage:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
-.scheduleLink, td{
-    color:white;
-}
-
-.navbarLink, .navbar-brand{
-    color:white;
-}
-
-.dropdown-item{
-    color:black;
-}
-
+/* ------HEADERS------ */
 h1{
-    margin-top: 100px;
     text-align: center;
 }
-
 h3{
     color: black;
 }
 
-.mt-3{
-    height: 300px;
-    overflow: auto;
-}
-
-
-@media (max-width: 500px){
+/* ------YOUTUBE RECAPS------ */
+ @media (max-width: 500px){
   .youtube{
       flex-direction: column;
       align-items: center;
@@ -82,58 +72,39 @@ h3{
     width: 35vw;
 }
 
-a.col{
-    text-decoration: none;
-}
-
-img.speaker{
-    width:100px;
-    height:auto;
-}
-
-.table-striped{
-    color: white;
-}
-
-
+/* ------CONTAINER FOR ALL SECTIONS------ */
 .container{
     background: #8ad08a;
     border-radius:10px;
 }
 
+/* ------SCHEDULE OF EVENTS------ */
 td,tr{
     color: black;
 }
-
 .nav-tabs{
     background: #84c284;
 }
-
-
 
 /* ------SCROLL BAR------*/
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
     background: #e3f1e3;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: grey;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-/*-----------------------*/
 
-/*FAQ Section*/
+/* ------FAQ Section------ */
 .FAQ.accordion {
   background-color: #63b163;
   color: black;
