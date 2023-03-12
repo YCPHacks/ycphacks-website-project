@@ -1,9 +1,3 @@
-body, html {
-    height: 100%;
-    /*margin: 0;*/
-    background: #eaefeb;
-}
-
 /*york college green*/
 .navbar{
     background: #39b54a !important;
@@ -15,8 +9,18 @@ body, html {
 .dropdown-item{
     color:black;
 }
+.navbar-nav{
+    right: 130px;
+    position: relative;
+}
 
+@media (max-width: 700px) {
+    .mlh-logo{
+        right: 45%;
+        position: relative;
+    }
 
+}
 
 /* ------SCROLL BAR------*/
 /* width */
