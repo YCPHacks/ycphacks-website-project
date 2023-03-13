@@ -1,6 +1,6 @@
 /*york college green*/
 .navbar{
-    background: #39b54a !important;
+    background: rgba(0, 0, 0, 0.14);
 }
 .navbarLink.nav-link, .dropdown-toggle, .navbar-brand, .nav-link.dropdown-toggle{
     color:white;
@@ -14,18 +14,25 @@
     position: relative;
 }
 
+/* ------MOBILE VIEW------*/
 @media (max-width: 700px) {
     .mlh-logo{
         right: 45%;
         position: relative;
     }
-
+    .navbar-nav{
+        right: 0;
+    }
+    #carouselExampleAutoplaying, .sponsorSection{
+        display: none;
+    }
 }
+
 
 /* ------SCROLL BAR------*/
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
 }
 
 /* Track */
@@ -43,3 +50,4 @@
     background: #555;
 }
 /*-----------------------*/
+
