@@ -1,6 +1,6 @@
 body {
     background-color: #efebeb;
-    font-family: "Sora", sans-serif;
+    font-family: sans-serif;
     background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
     font-weight: 500;
     font-size: 1.2em;
@@ -91,7 +91,6 @@ h3 {
     color: black;
 }
 
-
 /* ------YOUTUBE RECAPS------ */
 @media (max-width: 500px) {
     .youtube {
@@ -113,7 +112,6 @@ h3 {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
 /* ------SCHEDULE OF EVENTS------ */
 td, tr {
     color: black;
@@ -123,16 +121,29 @@ td, tr {
     background: #84c284;
 }
 
-
 /* ------FAQ Section------ */
+.accordion {
+    --bs-accordion-bg: none;
+    --bs-accordion-border-color: none;
+    --bs-accordion-btn-active-color: none;
+}
+
 .accordion-item {
-    margin: 20px;
-    box-shadow: rgb(103, 100, 100) 0px 3px 8px;
+    margin: 10px;
+    /*box-shadow: rgb(103, 100, 100) 0px 3px 8px;*/
+}
+
+.accordion-body {
+    font-size: 16px;
 }
 
 .accordion-button:not(.collapsed) {
     background-color: #97cd8a;
     color: black;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
 }
 
 /* ------The Team------ */
@@ -148,6 +159,7 @@ td, tr {
 .memberPhoto:hover .memberContainer {
     background-color: rgba(16, 23, 41, 0);
 }
+
 
 .memberPhoto .memberTitle {
     position: absolute;
@@ -199,12 +211,40 @@ td, tr {
     white-space: nowrap;
 }
 
-.fa{
-    padding: 10px;
-    font-size: 30px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
+@media (max-width: 500px) {
+    .memberPhoto {
+        height: 60px;
+    }
+
+    .memberPhoto .memberTitle {
+        font-size: 8px;
+        width: 100%;
+        top: 10%;
+        left: -100%;
+    }
+
+    .memberPhoto .memberLabel {
+        top: 0;
+        width: 100%;
+        right: -100%;
+    }
+}
+
+/* ------First Section------ */
+.intro {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ycpHeader {
+    font-family: 'MuseoModerno', serif;
+    color: #ffffff;
+    font-size: 10vw;
+    letter-spacing: 1.5pt;
+    margin-bottom: 0px;
 }
 
 .hacks {
@@ -222,22 +262,7 @@ td, tr {
     letter-spacing: -0.3pt;
 }
 
-.intro {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ycp {
-    font-family: 'MuseoModerno', serif;
-    color: #ffffff;
-    font-size: 5em;
-    letter-spacing: 1.5pt;
-    margin-bottom: 0px;
-}
-
+/* ------Intro Buttons------ */
 .reggy {
     align-items: center;
     appearance: none;
@@ -283,10 +308,17 @@ td, tr {
     transform: translateY(2px);
 }
 
-footer{
-    background-color: rgba(0, 0, 0, 0.33);
+
+#bgvideo {
+    width: 100%;
+    /*position: absolute;*/
+    /*z-index: -100;*/
+    /*filter: grayscale(100%);*/
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-hr{
+
+hr {
     border-width: 0 0 1px;
     color: #000000;
     border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), #000000 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
