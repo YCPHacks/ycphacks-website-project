@@ -308,19 +308,15 @@ td, tr {
     transform: translateY(2px);
 }
 
-
-#bgvideo {
-    width: 100%;
-    /*position: absolute;*/
-    /*z-index: -100;*/
-    /*filter: grayscale(100%);*/
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
 hr {
     border-width: 0 0 1px;
     color: #000000;
     border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), #000000 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
     border-style: solid;
+}
+
+.img2{
+    width: 100%;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

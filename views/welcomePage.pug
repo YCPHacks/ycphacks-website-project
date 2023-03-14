@@ -2,11 +2,8 @@ doctype html
 html
     head
         include includes/navbar
-        title  YCP Hacks
-        // CSS only
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
         link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
+
 
     body
         a#mlh-trust-badge(style='display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:10000', href='https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue', target='_blank')
@@ -27,7 +24,7 @@ html
         hr
 
         .container3.text-container.m-5
-            .row.m-0
+            .row.m-0.d-flex.align-items-center
                 .col-md-8
                     .hacks what is hackathon?
                     p
@@ -43,10 +40,8 @@ html
                         | Our mission is to promote technical knowledge,
                         | innovation, and entrepreneurship in York and beyond, and we just can't wait to see
                         | what you do next.
-                .col-md-4.p-1
-                    //img(src='/static/images/pic6.png')
-                //    video#bgvideo(autoplay='true', loop='loop', muted='muted', preload='auto')
-                //        source(src='/static/images/BGVideo.mp4', type='video/mp4')
+                .col-md-4
+                    img.img2(src='/static/images/Presentation.png')
 
         .margin.p-2
             h1.display-5.mt-5 Schedule
@@ -197,7 +192,7 @@ html
                         #collapseFifteen.accordion-collapse.collapse(aria-labelledby='headingFifteen', data-bs-parent='#accordionExample1')
                             .accordion-body
                                 |  Send it to us at&nbsp
-                                a.primary-link(href='info@ycphacks.io') info@ycphacks.io!
+                                a.primary-link(href='mailto:info@ycphacks.io') info@ycphacks.io!
 
 
         // Youtube Recap Videos
