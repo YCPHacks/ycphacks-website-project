@@ -1,13 +1,25 @@
-.joshua {
-	height: 150%;
-	background-color: #4EA764;
+body {
+    background-color: #efebeb;
+    font-family: sans-serif;
+    background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .table.table-success.table-striped.table-hover.table-bordered {
-	height: 250px;
-	box-shadow: 5px 10px #3C5242;
+    height: 250px;
+    box-shadow: 5px 10px #3C5242;
 }
 
-th.table-dark {
-	color: blue;
+.ycpHeader {
+    font-family: 'MuseoModerno', serif;
+    color: #ffffff;
+    font-size: 3vw;
+    letter-spacing: 1.5pt;
+    margin-bottom: 0px;
+}
+
+.table {
+    text-align: center;
 }
