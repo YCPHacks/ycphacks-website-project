@@ -20,6 +20,11 @@
     right: 130px;
     position: relative;
 }
+@media (min-width: 992px){
+    .dropdown-menu-lg-start[data-bs-popper]{
+        left: -60px;
+    }
+}
 
 /* ------MOBILE VIEW------*/
 @media (max-width: 700px) {
