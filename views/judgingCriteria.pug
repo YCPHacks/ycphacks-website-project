@@ -1,54 +1,55 @@
 doctype html
 html
     head
+        include includes/navbar
         title  YCP Hacks
         // CSS only
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
         link(rel='stylesheet', type='text/css', href='/static/stylesheets/judgingCriteria.css')
-    body
-        include includes/navbar.pug
 
-        .categoryContainer.p-4
-            .category.m-3
-                .d-flex.justify-content-center.display-6.p-3 JUDGING CRITERIA
+    body
+        .row.m-0
+            .col-md-6
+                .d-flex.justify-content-center.ycpHeader.p-3 Judging Criteria
                 hr
                 .d-flex.justify-content-around.flex-column.text-center
                     //p Engineering skills, demonstrated quality code, etc.
-                    .label Design
+                    .hacks Design
                     p Attention to aesthetics, interaction, and UI
-                    .label Potential
+                    .hacks Potential
                     p Potential for growth or monetization
-                    .label Presentation
+                    .hacks Presentation
                     p Clarity of written and oral presentation
-                    .label Inspiration
+                    .hacks Inspiration
                     p How excited are you about this idea?
-            .category.m-3
-                .d-flex.justify-content-center.display-6.p-3 HACK CATEGORIES
+            .col-md-6
+                .d-flex.justify-content-center.ycpHeader.p-3 Hack Categories
                 hr
                 .d-flex.justify-content-around.flex-column.text-center
-                    h6 Best of show
-                    h6 YCP Hack
-                    h6 Gaming Hack
-                    h6 Hardware Hack
-                    h6 First Hack
-                    h6 Hackers Choice
-                    h6 Google Cloud
-
-
-            .category.m-3
-                .d-flex.justify-content-center.display-6.p-3 SPONSORED HACKS
-                hr
-                .d-flex.justify-content-around.flex-column.text-center
-                    h2 Google Cloud Hack
-                    p
-                    | Create a hack using any Google Cloud service in order to be entered into the Google Hack category.
-                    br
-                    br
-                    h2 YCP Hacks 2022: The Schneider Prize for Technology Innovation
-                    br
-                    h2 Graham Center for Collaborative Innovation Category
-                    h6 The Graham Center for Collaborative Innovation is sponsoring a $500 prize for the group Hack that best illustrates the power and processes of collaborative thinking. That can be illustrated by:
-                    li   A team of individuals that features--and takes into account--diverse disciplines, cultures, genders, etc in its work in ways that improve the product.
-                    li   A team that can best describe its collaborative processes, and how collaborations supported innovative ideas.
-                    li   A team who can describe what it learned by collaboration, and how that might affect their future work.
+                    h6.hacks Best of show
+                    h6.hacks YCP Hack
+                    h6.hacks Gaming Hack
+                    h6.hacks Hardware Hack
+                    h6.hacks First Hack
+                    h6.hacks Hackers Choice
+                    h6.hacks Google Cloud
+            .col-12
+                .ycpHeader Sponsored Hacks
+                    hr
+                .d-flex.justify-content-center.text-center
+                    .sponsored
+                        h2.hacks Google Cloud Hack
+                        p
+                        | Create a hack using any Google Cloud service in order to be entered into the Google Hack category.
+                        hr
+                        h2.hacks YCP Hacks 2022: The Schneider Prize for Technology Innovation
+                        hr
+                        h2.hacks Graham Center for Collaborative Innovation Category
+                        small.text-muted The Graham Center for Collaborative Innovation is sponsoring a $500 prize for the group Hack that best illustrates the power and processes of collaborative thinking. That can be illustrated by:
+                        ul.list-group.list-group-numbered
+                            li.list-group-item A team of individuals that features--and takes into account--diverse disciplines, cultures, genders, etc in its work in ways that improve the product.
+                            li.list-group-item A team that can best describe its collaborative processes, and how collaborations supported innovative ideas.
+                            li.list-group-item A team who can describe what it learned by collaboration, and how that might affect their future work.
+        hr
+        include includes/footer
