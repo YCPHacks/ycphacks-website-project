@@ -1,9 +1,16 @@
 /*york college green*/
+
+/* ------NAVIGATION BAR------*/
 .navbar{
     background: rgba(0, 0, 0, 0.14);
+    padding: 10px;
 }
 .navbarLink.nav-link, .dropdown-toggle, .navbar-brand, .nav-link.dropdown-toggle{
     color:white;
+}
+
+.nav-link:hover{
+    color: black;
 }
 
 .dropdown-item{
@@ -27,7 +34,6 @@
         display: none;
     }
 }
-
 
 /* ------SCROLL BAR------*/
 /* width */
