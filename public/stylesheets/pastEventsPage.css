@@ -1,0 +1,52 @@
+body {
+    background-color: #efebeb;
+    font-family: sans-serif;
+    background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.table{
+    /*height: 250px;*/
+    width: 85%;
+    box-shadow: 5px 10px #3C5242;
+}
+
+.ycpHeader {
+    font-family: 'MuseoModerno', serif;
+    color: #ffffff;
+    font-size: 3vw;
+    letter-spacing: 1.5pt;
+    margin-bottom: 0px;
+}
+
+.table {
+    text-align: center;
+}
+.card-body{
+    border-top: double;
+}
+
+.card-text{
+    color: black;
+    font-size: 16px;
+}
+.row{
+    width: 85%;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.link {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #27718a;
+    margin: 0 -.25rem;
+    padding: 4px .40rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.link:hover {
+    box-shadow: inset 200px 0 0 0 #54b3d6;
+    color: white;
+}

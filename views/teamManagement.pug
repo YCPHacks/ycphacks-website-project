@@ -1,0 +1,61 @@
+doctype html
+html
+    head
+        title  YCP Hacks
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/teamManagement.css')
+        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    body
+        include includes/navbar.pug
+        include includes/dashboardBar.pug
+
+        .page.display-5 Team List
+        hr
+
+        .container1
+            nav.navbar.bg-light
+                .container-fluid
+                    form.d-flex(role='search')
+                        input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                        button.btn.btn-outline-success(type='submit') Search
+            hr
+
+
+            .manage.d-flex.shadow.px-4
+                h3.p-2.flex-fill Create Team
+                .p-2.flex-fill
+                    button.add(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
+                        svg.bi.bi-plus-square(xmlns='http://www.w3.org/2000/svg', width='30', height='30', fill='currentColor', viewbox='0 0 16 16')
+                            path(d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z')
+                            path(d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+
+
+            //Modal
+            #exampleModal.modal.fade(data-bs-backdrop='static', data-bs-keyboard='false', tabindex='-1', aria-labelledby='staticBackdropLabel', aria-hidden='true')
+                .modal-dialog.modal-dialog-centered
+                    .modal-content
+                        .modal-header
+                            h1#exampleModalLabel.modal-title.fs-5 Create Team
+                            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                        .modal-body
+
+                            h1 Team Details
+                            img#output(src='', width='100', height='100')
+                            input(name='photo', type='file', accept='image/*', onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])")
+
+                            input.form-control.popup(type='text', placeholder='Team Name', aria-label='default input example')
+
+
+                        .modal-footer
+                            button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                            button.btn.btn-primary(type='button') Save changes
+
+            // for every team?
+            .manage.d-flex.justify-content-around.px-4.mt-5.shadow
+                h3.p-2.flex-fill Team Name
+                .p-2.flex-fill
+                    button.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal') edit
+                    button.btn.btn-primary(type='button') delete
+
+        hr.footer

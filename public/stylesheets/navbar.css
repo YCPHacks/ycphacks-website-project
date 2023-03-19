@@ -1,0 +1,64 @@
+/*york college green*/
+
+
+/* ------NAVIGATION BAR------*/
+.navbar{
+    background: rgba(0, 0, 0, 0.14);
+    padding: 10px;
+}
+.navbarLink.nav-link, .dropdown-toggle, .navbar-brand, .nav-link.dropdown-toggle{
+    color:white;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.dropdown-item{
+    color:black;
+}
+.navbar-nav{
+    right: 130px;
+    position: relative;
+}
+@media (min-width: 992px){
+    .dropdown-menu-lg-start[data-bs-popper]{
+        left: -60px;
+    }
+}
+
+/* ------MOBILE VIEW------*/
+@media (max-width: 700px) {
+    .mlh-logo{
+        right: 45%;
+        position: relative;
+    }
+    .navbar-nav{
+        right: 0;
+    }
+    #carouselExampleAutoplaying, .sponsorSection{
+        display: none;
+    }
+}
+
+/* ------SCROLL BAR------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*background: #e3f1e3;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/*-----------------------*/

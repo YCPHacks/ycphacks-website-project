@@ -1,0 +1,670 @@
+doctype html
+html
+    head
+        include includes/navbar
+        script(src='/static/scripts/dashboard.js')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/dashboard.css')
+
+    body
+        .space
+        //    ADMINISTRATOR DASHBOARD VIEW
+        nav
+            #nav-tab.nav.nav-tabs.justify-content-center(role='tablist')
+                button#nav-home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#nav-home', type='button', role='tab', aria-controls='nav-home', aria-selected='false') Home
+                button#nav-schedule-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-schedule', type='button', role='tab', aria-controls='nav-schedule', aria-selected='false') Schedule
+                button#nav-mentorship-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-mentorship', type='button', role='tab', aria-controls='nav-mentorship', aria-selected='false') Mentorship
+                button#nav-checkIn-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-checkIn', type='button', role='tab', aria-controls='nav-checkIn', aria-selected='false') Check In
+                button#nav-applications-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-applications', type='button', role='tab', aria-controls='nav-applications', aria-selected='false') Applications
+                button#nav-hardware-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-hardware', type='button', role='tab', aria-controls='nav-hardware', aria-selected='false') Hardware
+                button#nav-prizes-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-prizes', type='button', role='tab', aria-controls='nav-prizes', aria-selected='false') Prizes
+                button#nav-projects-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-projects', type='button', role='tab', aria-controls='nav-projects', aria-selected='false') Projects
+                button#nav-admins-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-admins', type='button', role='tab', aria-controls='nav-admins', aria-selected='false') Admin
+
+        #nav-tabContent.tab-content
+            #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab', tabindex='0')
+                .outside.bd-example.bd-example-cols.m-3
+                    .container.text-center
+                        .row.row-cols-sm-2.row-cols-md-4.g-4.g-lg-4
+                            .col.text-decoration-none
+                                .p-3 Total Applicants
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 RSVP&apos;d
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Hardware Checkouts
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Mentorship Requests
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Listed Events
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Listed Prizes
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Hardware Items
+                                    span.badge.text-bg-secondary.m-1 0
+                            .col.text-decoration-none
+                                .p-3 Listed Projects
+                                    span.badge.text-bg-secondary.m-1 0
+
+                .row.row-cols-1.row-cols-md-2.g-4.text-center.m-3
+                    .col
+                        .card
+                            .card-body
+                                h5.card-title Upcoming Events
+                                p.card-text
+                                    table.table
+                                        thead
+                                            tr
+                                                th(scope='col') Event
+                                                th(scope='col') Time
+                                        tbody
+                                            tr
+                                                td Event
+                                                td 10:00
+                                            tr
+                                                td Event 1
+                                                td 12:00
+                                a.btn.btn-secondary(href='#') View All
+                    .col
+                        .card
+                            .card-body
+                                h5.card-title Card title
+                                p.card-text
+                                    | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                a.btn.btn-primary(href='#') Go somewhere
+                    //.col
+                    //    .card
+                    //        .card-body
+                    //            h5.card-title Card title
+                    //            p.card-text
+                    //                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    //            a.btn.btn-primary(href='#') Go somewhere
+            #nav-schedule.tab-pane.fade(role='tabpanel', aria-labelledby='nav-schedule-tab', tabindex='0')
+                h1.m-2 Schedule
+                .container-md.p-2.border
+                    .card.mb-3
+                        .row.g-0
+                            .col-sm-4
+                                svg.bd-placeholder-img.img-fluid.rounded-start(width='100%', height='150', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Image', preserveaspectratio='xMidYMid slice', focusable='false')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                    text(x='50%', y='50%', fill='#dee2e6', dy='.3em') 10:00 PM
+                            .col-sm-8
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                    p.card-text
+                                        small.text-muted Location: xxx
+                    .card.mb-3
+                        .row.g-0
+                            .col-sm-4
+                                svg.bd-placeholder-img.img-fluid.rounded-start(width='100%', height='150', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Image', preserveaspectratio='xMidYMid slice', focusable='false')
+                                    title Placeholder
+                                    rect(width='100%', height='100%', fill='#868e96')
+                                    text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image
+                            .col-sm-8
+                                .card-body
+                                    h5.card-title Card title
+                                    p.card-text
+                                        | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                                    p.card-text
+                                        small.text-muted Location: xxx
+            #nav-contact.tab-pane.fade(role='tabpanel', aria-labelledby='nav-contact-tab', tabindex='0') ...
+
+
+            #nav-checkIn.tab-pane.fade(role='tabpanel', aria-labelledby='nav-checkIn-tab', tabindex='0')
+                .outside.bd-example.bd-example-cols.m-3
+                    .container.text-center
+                        .row.row-cols-sm-2.row-cols-md-2.g-4.g-lg-4
+                            a.col.text-decoration-none(href="")
+                                .p-3 Checked In Attendees
+                                    span.badge.text-bg-secondary.m-1 0
+                            a.col.text-decoration-none(href="")
+                                .p-3 RSVP&apos;d Users
+                                    span.badge.text-bg-secondary.m-1 0
+                .container-md.text-center.p-2.mt-3.border
+                    form.d-flex(role='search')
+                        input.form-control.me-2(type='search', placeholder='Attendee Email', aria-label='Attendee Email')
+                        button.btn.btn-outline-success.mx-1(type='submit') Check in
+                        button.btn.btn-outline-secondary.mx-1(type='submit') Scan QR Code
+
+            #nav-applications.tab-pane.fade(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0')
+                h1.m-2 Applications
+                .container-md.text-center.p-2.border
+                    button.btn(type='button')
+                        | All
+                        span.badge.text-bg-primary.m-1 4
+
+                    button.btn(type='button')
+                        | Undecided
+                        span.badge.text-bg-secondary.m-1 4
+
+                    button.btn(type='button')
+                        | Accepted
+                        span.badge.text-bg-success.m-1 4
+
+                    button.btn(type='button')
+                        | Denied
+                        span.badge.text-bg-danger.m-1 4
+
+                    button.btn(type='button')
+                        | Flagged
+                        span.badge.text-bg-warning.m-1 4
+                .container-md.text-center.p-2.mt-3.border
+                    form.d-flex(role='search')
+                        input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                        button.btn.btn-outline-success.mx-1(type='submit') Search
+                        button.btn.btn-outline-success.mx-1(type='submit') Download CSV
+                .container-md.text-center.p-2.mt-3.border
+
+            #nav-hardware.tab-pane.fade(role='tabpanel', aria-labelledby='nav-hardware-tab', tabindex='0')
+                h1.m-2 Hardware Inventory
+                .d-flex.justify-content-around
+                    button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#newHardware')
+                        | Create New Hardware Item
+                    button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#viewHardware')
+                        | View All Checked-Out Items
+
+                #newHardware.modal.fade(data-bs-backdrop='static', data-bs-keyboard='false', tabindex='-1', aria-labelledby='staticBackdropLabel', aria-hidden='true')
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h1#staticBackdropLabel.modal-title.fs-5 Create New Hardware
+                                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                            .modal-body
+                                .form-floating.mb-3
+                                    input#floatingName.form-control(type='email', placeholder='name@example.com')
+                                    label(for='floatingName') Name
+                                .form-floating.mb-3
+                                    input#floatingCount.form-control(type='password', placeholder='Password')
+                                    label(for='floatingCount') Count
+                                .form-floating.mb-3
+                                    input#floatingLink.form-control(type='password', placeholder='Password')
+                                    label(for='floatingLink') Link
+                                select.form-select.mb-3(aria-label='Default select example')
+                                    option(selected='') Open this select menu
+                                    option(value='1') Microprocessors
+                                    option(value='2') Microcontrollers
+                                    option(value='3') etc
+
+                            .modal-footer
+                                button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+                                button.btn.btn-primary(type='button') Understood
+
+                - const data = [["5be5a912-a730-11ed-91d9-ac99fa1c98aa","wire","yes","wire",2,"yes","2023-02-07T16:42:46.000Z","yes", "2023-02-07T16:42:46.000Z"]];
+                - var x = 0;
+                .container-sm.overflow-x-scroll.mt-3.p-3
+                    //table.table.table-striped.table-bordered
+                    //        thead
+                    //            tr
+                    //                th(scope='col') id
+                    //                th(scope='col') Name
+                    //                th(scope='col') Last
+                    //                th(scope='col') Handle
+                    //                th(scope='col') First
+                    //                th(scope='col') Last
+                    //                th(scope='col') Handle
+                    //                th(scope='col') Handle
+                    //                th(scope='col') Handle
+                    //        tbody
+                    //            each item of data
+                    //                - x++
+                    //                tr
+                    //                    each value of item
+                    //                        td=value
+                    //h3 Hardware Checked Out
+                    //h5= x
+
+                    // each item of idk
+                    //p= idk.value
+                    table.table.table-striped.table-bordered.my-4
+                        thead
+                            tr
+                                th(scope='col') ID
+                                th(scope='col') Name
+                                th(scope='col') Hardware Name
+                                th(scope='col') X
+                                th(scope='col') X
+                                th(scope='col') X
+                                th(scope='col') Time Checked Out
+                                th(scope='col') X
+                                th(scope='col') X
+                                th(scope='col') Actions
+
+                            tbody
+                                each item of data
+                                    - x++
+                                    tr
+                                        each value of item
+                                            td=value
+                                        td
+                                            .d-grid.gap-2.text-nowrap
+                                                button.btn.btn-danger(type='button') Return Item
+                                                button.btn.btn-secondary(type='button') Message on Discord
+
+                        h5 Total Checked Out : #{x}
+
+
+            #nav-prizes.tab-pane.fade(role='tabpanel', aria-labelledby='nav-prizes-tab', tabindex='0') ...
+            #nav-projects.tab-pane.fade(role='tabpanel', aria-labelledby='nav-projects-tab', tabindex='0') projects
+            #nav-admins.tab-pane.fade(role='tabpanel', aria-labelledby='nav-admins-tab', tabindex='0')
+                h1.m-2 Feature Flags
+                .container-md
+                    ul.list-group
+                        li.list-group-item
+                            input#firstCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='firstCheckbox') Schedule
+                        li.list-group-item
+                            input#secondCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='secondCheckbox') Mentorship
+                        li.list-group-item
+                            input#thirdCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='thirdCheckbox') Applications
+                        li.list-group-item
+                            input#fourthCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='fourthCheckbox') Hardware
+                        li.list-group-item
+                            input#fifthCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='fifthCheckbox') Prizes
+                        li.list-group-item
+                            input#sixthCheckbox.form-check-input.me-1(type='checkbox', value='')
+                            label.form-check-label(for='sixthCheckbox') Projects
+
+
+        // PARTICIPANT DASHBOARD VIEW
+        //nav
+        //    #nav-tab.nav.nav-tabs.justify-content-center(role='tablist')
+        //        button#nav-home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#nav-home', type='button', role='tab', aria-controls='nav-home', aria-selected='true') Home
+        //        button#nav-application-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-application', type='button', role='tab', aria-controls='nav-application', aria-selected='false') My Application
+        //        button#nav-hardware-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-hardware', type='button', role='tab', aria-controls='nav-hardware', aria-selected='false') Hardware
+        //        //button#nav-project-tab.nav-link(data-bs-toggle='tab', data-bs-target='#nav-project', type='button', role='tab', aria-controls='nav-project', aria-selected='false') My Project
+        //
+        //#nav-tabContent.tab-content
+        //    #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0')
+        //        h1.m-2 Home
+        //        .row.row-cols-1.row-cols-md-3.g-0.m-3.text-center
+        //            .col
+        //                .card.m-1
+        //                    .card-body
+        //                        h5.card-title Check In
+        //                        hr
+        //                        p.card-text
+        //                            | QR Code
+        //                        a.btn.btn-primary(href='') Go somewhere
+        //            .col
+        //                .card.m-1
+        //                    .card-body
+        //                        h5.card-title Upcoming Events
+        //                        hr
+        //                        p.card-text
+        //                            table.table
+        //                                thead
+        //                                    tr
+        //                                        th(scope='col') Event
+        //                                        th(scope='col') Time
+        //                                tbody
+        //                                    tr
+        //                                        td Event
+        //                                        td 10:00
+        //                                    tr
+        //                                        td Event 1
+        //                                        td 12:00
+        //                        a.btn.btn-secondary(href='') View All
+        //            .col
+        //                .card.m-1
+        //                    .card-body
+        //                        h5.card-title Discord Channel
+        //                        hr
+        //                        p.card-text
+        //                            | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        //                        a.btn.btn-primary(href='') Go to Discord Channel
+        //
+        //    #nav-application.tab-pane.fade(role='tabpanel', aria-labelledby='nav-applications-tab', tabindex='0')
+        //        form.needs-validation.regContainer.pb-3(novalidate="")
+        //            .display-5.p-2.m-3 Required Contact Information
+        //                hr
+        //            .col-lg-8.m-3
+        //                label.form-label(for='firstName') First Name:
+        //                input#firstName.form-control(type='value', required='')
+        //                .invalid-feedback Please enter your first name
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='lastName') Last Name:
+        //                input#lastName.form-control(type='value', required='')
+        //                .invalid-feedback Please enter your last name
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='phone') Phone:
+        //                input#phone.form-control(type='value', required='')
+        //                .invalid-feedback Please enter your phone number
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='age') Age
+        //                select#age.form-select(required='')
+        //                    option(selected='', disabled='', value='') Select
+        //                    option(value='13') 13
+        //                    option(value='14') 14
+        //                    option(value='15') 15
+        //                    option(value='16') 16
+        //                    option(value='17') 17
+        //                    option(value='18') 18
+        //                    option(value='19') 19
+        //                    option(value='20') 20
+        //                    option(value='21') 21
+        //                    option(value='21+') 21+
+        //                .invalid-feedback
+        //                    | Please select a valid age
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='gender') What gender do you identify as?
+        //                select#gender.form-select(required='')
+        //                    option(selected='', disabled='', value='') Select
+        //                    option(value='') Man
+        //                    option(value='') Woman
+        //                    option(value='') Non-binary
+        //                    option(value='') Agender
+        //                    // *****************************************
+        //                    option(value='7') Other
+        //                .invalid-feedback
+        //                    | Please select your gender
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='pronoun') What pronouns do you go by?
+        //                select#pronoun.form-select(required='')
+        //                    option(selected='', disabled='', value='') Select
+        //                    option(value='') he/him
+        //                    option(value='') she/her
+        //                    option(value='') they/them
+        //                    option(value='') ze/zir
+        //                    option(value='') Other
+        //                .invalid-feedback
+        //                    | Please select a pronoun
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='typeSchool') In what type of educational institution are you currently enrolled in?
+        //                select#typeSchool.form-select(required='')
+        //                    option(selected='', disabled='', value='') Select
+        //                    option(value='') Less than Secondary / High School
+        //                    option(value='') Secondary / High School
+        //                    option(value='') Undergraduate University (2 year - community college or similar)
+        //                    option(value='') Undergraduate University (3+ year)
+        //                    option(value='') Graduate University (Masters, Professional, Doctoral, etc)
+        //                    option(value='') Code School / Bootcamp
+        //                    option(value='') Other Vocational / Trade Program or Apprenticeship
+        //                    option(value='') Other
+        //                    option(value='') I’m not currently a student
+        //                    option(value='') Prefer not to answer
+        //                .invalid-feedback
+        //                    | Please select type of institution
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='school') What school do you currently attend? If you're no longer a student, what school / university did you most recently graduate from?
+        //                select#school.form-select(required='')
+        //                    option(selected='', disabled='', value='') Select
+        //                    option(value='') ...
+        //                .invalid-feedback
+        //                    | Please select school
+        //
+        //            .col-lg-8.m-3
+        //                p Do you have any food allergies or dietary restrictions we should know about?
+        //                .form-check(onclick="show()")
+        //                    input#validationFormCheck2.form-check-input(type='radio', name='radio-stacked', required='')
+        //                    label.form-check-label(for='validationFormCheck2') Yes
+        //                .form-check(onclick="hide()")
+        //                    input#validationFormCheck3.form-check-input(type='radio', name='radio-stacked', required='')
+        //                    label.form-check-label(for='validationFormCheck3') No
+        //                    .invalid-feedback Please select one
+        //
+        //                // TODO: check for bugs with form itself -- should be fine
+        //                #tutorial(style="display: none;")
+        //                    label.form-label(for='allergyInput') Please list your dietary restrictions and allergies.
+        //                    textarea#allergyInput.form-control(rows='3', required='false')
+        //                    .invalid-feedback Please list restrictions here
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='tshirt') T-Shirt Size
+        //                select#tshirt.form-select
+        //                    option(selected='', disabled='') Select
+        //                    option(value='') ...
+        //                .invalid-feedback
+        //                    | Please select T-Shirt Size
+        //
+        //            .display-5.p-2.m-3 Optional Demographic Information
+        //                hr
+        //
+        //            .col-lg-8.m-3
+        //                span What is your major / primary area of study? If you already graduated, what was your major / primary area of study? Select all that apply.
+        //                .container
+        //                    .form-check
+        //                        input#defaultCheck1.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck1')
+        //                            | Computer science, computer engineering, or software engineering
+        //                    .form-check
+        //                        input#defaultCheck2.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck2')
+        //                            | Another engineering discipline (such as civil, electrical, mechanical, etc.)
+        //                    .form-check
+        //                        input#defaultCheck3.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck3')
+        //                            | Information systems, information technology, or system administration
+        //                    .form-check
+        //                        input#defaultCheck4.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck4')
+        //                            | A natural science (such as biology, chemistry, physics, etc.)
+        //                    .form-check
+        //                        input#defaultCheck5.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck5')
+        //                            | Mathematics or statistics
+        //                    .form-check
+        //                        input#defaultCheck6.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck6')
+        //                            | Web development or web design
+        //                    .form-check
+        //                        input#defaultCheck7.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck7')
+        //                            | Business discipline (such as accounting, finance, marketing, etc.)
+        //                    .form-check
+        //                        input#defaultCheck8.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck8')
+        //                            | Humanities discipline (such as literature, history, philosophy, etc.)
+        //                    .form-check
+        //                        input#defaultCheck9.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck9')
+        //                            | Social science (such as anthropology, psychology, political science, etc.)
+        //                    .form-check
+        //                        input#defaultCheck10.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck10')
+        //                            | Fine arts or performing arts (such as graphic design, music, studio art, etc.)
+        //                    .form-check
+        //                        input#defaultCheck11.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck11')
+        //                            | Health science (such as nursing, pharmacy, radiology, etc.)
+        //                    .form-check
+        //                        input#defaultCheck12.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck12')
+        //                            | Other (please specify)
+        //                    .form-check
+        //                        input#defaultCheck13.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck13')
+        //                            | Undecided / No Declared Major
+        //                    .form-check
+        //                        input#defaultCheck14.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck14')
+        //                            | My school does not offer majors / primary areas of study
+        //                    .form-check
+        //                        input#defaultCheck15.form-check-input(type='checkbox', value='')
+        //                        label.form-check-label(for='defaultCheck15')
+        //                            | Prefer not to answer
+        //
+        //                        .invalid-feedback
+        //                            | Please select major
+        //            .col-lg-8.m-3
+        //                label.form-label(for='identify') Do you identify as part of an underrepresented group in the technology industry?
+        //                    select#identify.form-select(aria-label='Default select example')
+        //                        option(selected='', disabled='') Select
+        //                        option(value='') Yes
+        //                        option(value='') No
+        //                        option(value='') Unsure
+        //                        option(value='') Prefer Not to Answer
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='describe') Which of the following best describes you?
+        //                    select#describe.form-select(aria-label='Default select example')
+        //                        option(selected='', value='Select', disabled='') Select
+        //                        option(value='') Asian Indian
+        //                        option(value='') Black or African
+        //                        option(value='') Chinese
+        //                        option(value='') Filipino
+        //                        option(value='') Guamanian or Chamorro
+        //                        option(value='') Hispanic / Latino / Spanish Origin
+        //                        option(value='') Japanese
+        //                        option(value='') Korean
+        //                        option(value='') Middle Eastern
+        //                        option(value='') Native American or Alaskan Native
+        //                        option(value='') Native Hawaiian
+        //                        option(value='') Samoan
+        //                        option(value='') Vietnamese
+        //                        option(value='') White
+        //                        option(value='') Other Asian (Thai, Cambodian, etc)
+        //                        option(value='') Other Pacific Islander
+        //                        option(value='') Other
+        //                        option(value='') Prefer Not to Answer
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='preference') Do you consider yourself to be any of the following?
+        //                    select#preference.form-select(aria-label='Default select example')
+        //                        option(selected='', value='') Select
+        //                        option(value='') Heterosexual or straight
+        //                        option(value='') Gay or lesbian
+        //                        option(value='') Bisexual
+        //                        option(value='') Different identity
+        //                        option(value='') Prefer not to answer
+        //
+        //            .col-lg-8.m-3
+        //                label.form-label(for='level') What is the highest level of formal education that you have completed?
+        //                    select#level.form-select(aria-label='Default select example')
+        //                        option(selected='', value='Select', disabled='') Select
+        //                        option(value='13') Less than Secondary / High School
+        //                        option(value='14') Secondary / High School
+        //                        option(value='15') Undergraduate University (2 year - community college or similar)
+        //                        option(value='16') Undergraduate University (3+ year)
+        //                        option(value='17') Graduate University (Masters, Professional, Doctoral, etc)
+        //                        option(value='18') Code School / Bootcamp
+        //                        option(value='19') Other Vocational / Trade Program or Apprenticeship
+        //                        option(value='20') Other
+        //                        option(value='21') I’m not currently a student
+        //                        option(value='21+') Prefer not to answer
+        //            .col-lg-8.m-3
+        //                // TODO: file size restraint
+        //                .input-group
+        //                    label.input-group-text(for='inputGroupFile01') Upload Resume
+        //                    input#inputGroupFile01.form-control(type='file', accept='.pdf', required='')
+        //            hr
+        //            .col-lg-8.m-3
+        //                .form-check
+        //                    input#invalidCheck.form-check-input(type='checkbox', value='', required='')
+        //                    label.form-check-label(for='invalidCheck')
+        //                        | I have read and agreed to the
+        //                        a(href='https://goo.gl/jMXKsO')
+        //                            | MLH Contest Terms and Conditions
+        //                        |  and the
+        //                        a(href='https://mlh.io/privacy')  MLH Privacy Policy
+        //                    // TODO: photo release form
+        //                    .invalid-feedback
+        //                        | You must agree before submitting.
+        //
+        //            button.btn.btn-primary(type='submit', onclick="verify()") Submit
+        //
+        //
+        //    #nav-hardware.tab-pane.fade(role='tabpanel', aria-labelledby='nav-checkIn-tab', tabindex='0')
+        //        h1.m-2 Hardware Inventory
+        //        .d-flex.justify-content-around
+        //            // TODO: functionality
+        //            button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#newHardware')
+        //                | Checkout Hardware Item
+        //            button.btn.btn-secondary.m-1(type='button', data-bs-toggle='modal', data-bs-target='#viewHardware')
+        //                | View All Checked-Out Items
+        //
+        //        // TODO: real data
+        //        // - const data = [["5be5a912-a730-11ed-91d9-ac99fa1c98aa","wire","yes","wire",2,"yes","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"],["5be5a9f8-a730-11ed-91d9-ac99fa1c98aa","mouse","yes","mice",2,"yes","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"],["5be5aa48-a730-11ed-91d9-ac99fa1c98aa","computer","yes","computer",2,"no","2023-02-07T16:42:46.000Z","2023-02-07T16:42:46.000Z","ralphs moms house"]];
+        //        // - var x = 0;
+        //        script.
+        //            async function hardware(){
+        //
+        //                const url = "https://starfish-app-amrfh.ondigitalocean.app/api/v1/hardware";
+        //
+        //                    const options = {
+        //                        method: 'GET'
+        //                };
+        //
+        //                const response = await fetch(url, options);
+        //
+        //                const json = await response.json();
+        //
+        //                console.log(json);
+        //                // const tbl = document.createElement("table");
+        //                // const tblBody = document.createElement("tbody");
+        //
+        //                // creating all cells
+        //                for (let i = 0; i < 1; i++) {
+        //                    console.log(json.length);
+        //                    // const row = document.createElement("tr");
+        //
+        //                    for (let j = 0; j < json.length; j++) {
+        //                        // const cell = document.createElement("td");
+        //                        // const cellText = document.createTextNode(`${json[j]}`);
+        //                        document.getElementById('dynamicTable').append(json[j]);
+        //                        console.log(json[j])
+        //                        // cell.appendChild(cellText);
+        //                        // row.appendChild(cell);
+        //                    }
+        //
+        //                    // add the row to the end of the table body
+        //                    // tblBody.appendChild(row);
+        //                }
+        //
+        //                // // put the <tbody> in the <table>
+        //                // tbl.appendChild(tblBody);
+        //                // // appends <table> into <body>
+        //                // document.body.appendChild(tbl);
+        //                // // sets the border attribute of tbl to '2'
+        //                // tbl.setAttribute("border", "solid");
+        //
+        //
+        //
+        //                // for(let i = 0; i < json.length; i++){
+        //                //     for(let j = 0; j < json[i].length; j++){
+        //                //         console.log(json[i][j]);
+        //                //     }
+        //                // }
+        //                // console.log(json.length);
+        //
+        //            }
+        //
+        //        .container-sm.overflow-x-scroll.mt-3.p-3
+        //            button.btn(onclick="hardware()") API Call
+        //            #dynamicTable
+        //
+        //            //table.table.table-striped.table-bordered.my-4
+        //            //    thead
+        //            //        tr
+        //            //            th(scope='col') ID
+        //            //            th(scope='col') Name
+        //            //            th(scope='col') Hardware Name
+        //            //            th(scope='col') X
+        //            //            th(scope='col') X
+        //            //            th(scope='col') X
+        //            //            th(scope='col') Time Checked Out
+        //            //            th(scope='col') X
+        //            //            th(scope='col') X
+        //            //        tbody
+        //            //            tr
+        //            //                td
+        //            //    h5 Total Checked Out : #{x}
+        //
+

@@ -1,0 +1,111 @@
+html
+	head
+		include includes/navbar.pug
+		link(rel='stylesheet', type='text/css', href='/static/stylesheets/pastEventsPage.css')
+
+	main
+		// TODO: pug mixin
+		.container
+			h1.ycpHeader.my-3 get inspired by past projects!
+			.d-flex.justify-content-center
+				.row.row-cols-md-3.row-cols-sm-1.g-4
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/virtual-teacher.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/ycp-virtual-teacher') view on devpost
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/project-hydra.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/project-hydra-ar-night-vision') view on devpost
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/fluid-sim.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/fluid-boid-simulations') view on devpost
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/accountabillie.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/accountabilliebuddies') view on devpost
+
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/super-hack.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/game-super-hack-quest-working-title') view on devpost
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/hows-it-growing.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/plantcare-cdxhoa') view on devpost
+
+			a.link.text-decoration-none.border(href='https://ycp-hacks-2022.devpost.com/project-gallery') see more!
+
+
+			.ycpHeader.my-3 past events
+			.d-flex.justify-content-center
+				table.table.table-success.table-striped.table-bordered
+					tr
+						th.table-dark Events
+					tr
+						td Midnight Nerf War
+					tr
+						td Smash Bros Ultimate 1v1 Tourney
+					tr
+						td Slideshow Karaoke
+					tr
+						td Midnight Whoopie Pies
+
+			.ycpHeader.my-3 past prizes
+			.d-flex.justify-content-center
+				table.table.table-success.table-striped.table-bordered
+					tr
+						th.table-dark Prizes
+					tr
+						td iPad
+					tr
+						td Surface Go
+					tr
+						td Smart TV
+					tr
+						td Quest 2
+					tr
+						td Nintendo Switch
+					tr
+						td Creality Ender 3D Printer
+					tr
+						td TECBOSS 3D Pen and filament
+					tr
+						td Beats Solo 3 Headphones
+					tr
+						td Amazon Echo
+					tr
+						td Apple Homepod Mini
+					tr
+						td Google Nest Speaker
+					tr
+						td Beats Pill
+					tr
+						td Gaming Keyboard and Mouse
+					tr
+						td Gaming Chair
+					tr
+						td Arduino Starter Kit
+					tr
+						td Google Swag!
+					tr
+						td $200+ in gift cards
+					tr
+						td $1000+ in cash prizes
+					tr
+						td Sponsored Hacks to Come!
+
+	include includes/footer

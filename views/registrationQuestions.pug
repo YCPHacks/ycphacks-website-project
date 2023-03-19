@@ -1,0 +1,229 @@
+html
+  head
+    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
+    link(rel='stylesheet', type='text/css', href='/static/stylesheets/registrationQuestions.css')
+  body
+
+   .bg
+   .bg.bg2
+   .bg.bg3
+   .container(style="width: 50%;")
+       h1.text-center Registration Questions
+
+   h1.text-center Required Contact Information
+
+   .container(style="width: 50%")
+       h1.text-center What is your age?
+       ul
+           form(action='/registrationQuestions')
+               select#age(name='age')
+                   option(value='Select') Select
+                   option(value='13') 13
+                   option(value='14') 14
+                   option(value='15') 15
+                   option(value='16') 16
+                   option(value='17') 17
+                   option(value='18') 18
+                   option(value='19') 19
+                   option(value='20') 20
+                   option(value='21') 21
+                   option(value='21+') 21+
+
+   .container(style="width: 50%")
+       h1.text-center In which country do you reside?
+       ul
+           form(action='/registrationQuestions')
+               select#country(name='country')
+                  option(value='13') Select
+                  option(value='14') United States
+                  option(value='15') India
+                  option(value='16') Canada
+                  option(value='17') United Kingdom
+                  option(value='18') Other
+
+   .container(style="width: 50%")
+       h1.text-center What school do you currently attend? If you're no longer a student, what school / university did you most recently graduate from?
+       ul
+           form(action='/registrationQuestions')
+               select#schoolAttend(name='schoolAttend')
+                  option(value='13') Select
+                  option(value='14') York College of Pennsylvania
+                  option(value='15') Other
+
+   .container(style="width: 50%")
+       h1.text-center In what type of educational institution are you currently enrolled in?
+       ul
+           form(action='/registrationQuestions')
+               select#school(name='school')
+                   option(value='Select') Select
+                   option(value='13') Less than Secondary / High School
+                   option(value='14') Secondary / High School
+                   option(value='15') Undergraduate University (2 year - community college or similar)
+                   option(value='16') Undergraduate University (3+ year)
+                   option(value='17') Graduate University (Masters, Professional, Doctoral, etc)
+                   option(value='18') Code School / Bootcamp
+                   option(value='19') Other Vocational / Trade Program or Apprenticeship
+                   option(value='20') Other
+                   option(value='21') I’m not currently a student
+                   option(value='21+') Prefer not to answer
+
+   h1.text-center Optional Demographic Information
+
+   .container(style="width: 50%")
+       h1.text-center Do you identify as part of an underrepresented group in the technology industry?
+       ul
+           li
+               input#g-option(type='radio', name='selector')
+               |
+               label(for='g-option') Yes
+               |
+               .check
+           li
+               input#h-option(type='radio', name='selector')
+               |
+               label(for='h-option') No
+               |
+               .check
+           li
+               input#i-option(type='radio', name='selector')
+               |
+               label(for='i-option') Unsure
+               |
+               .check
+           li
+               input#j-option(type='radio', name='selector')
+               |
+               label(for='j-option') Prefer not to answer
+               |
+               .check
+   .container(style="width: 50%")
+       h1.text-center What is your gender?
+       ul
+           li
+               input#k-option(type='radio', name='selector')
+               |
+               label(for='k-option') Man
+               |
+               .check
+           li
+               input#l-option(type='radio', name='selector')
+               |
+               label(for='l-option') Woman
+               |
+               .check
+           li
+               input#m-option(type='radio', name='selector')
+               |
+               label(for='m-option') Non-Binary
+               |
+               .check
+           li
+               input#n-option(type='radio', name='selector')
+               |
+               label(for='n-option') Prefer to self-describe
+               |
+               .check
+           li
+               input#o-option(type='radio', name='selector')
+               |
+               label(for='o-option') Prefer not to answer
+               |
+               .check
+   .container(style="width: 50%")
+       h1.text-center Which of the following best describes you?
+       ul
+           form(action='/registrationQuestions')
+               select#ethnicity(name='ethnicity')
+                   option(value='Select') Select
+                   option(value='13') Asian Indian
+                   option(value='14') Black or African
+                   option(value='15') Chinese
+                   option(value='16') Filipino
+                   option(value='17') Guamanian or Chamorro
+                   option(value='18') Hispanic / Latino / Spanish Origin
+                   option(value='19') Japanese
+                   option(value='20') Korean
+                   option(value='21') Middle Eastern
+                   option(value='21+') Native American or Alaskan Native
+                   option(value='13') Native Hawaiian
+                   option(value='14') Samoan
+                   option(value='15') Vietnamese
+                   option(value='16') White
+                   option(value='17') Other Asian (Thai, Cambodian, etc)
+                   option(value='18') Other Pacific Islander
+                   option(value='19') Other
+                   option(value='20') Prefer Not to Answer
+
+   .container(style="width: 50%")
+       h1.text-center Do you consider yourself to be any of the following?
+       ul
+           li
+               input#p-option(type='radio', name='selector')
+               |
+               label(for='p-option') Heterosexual or straight
+               |
+               .check
+           li
+               input#q-option(type='radio', name='selector')
+               |
+               label(for='q-option') Gay or lesbian
+               |
+               .check
+           li
+               input#r-option(type='radio', name='selector')
+               |
+               label(for='r-option') Bisexual
+               |
+               .check
+           li
+               input#x-option(type='radio', name='selector')
+               |
+               label(for='x-option') Different Identity
+               |
+               .check
+           li
+               input#y-option(type='radio', name='selector')
+               |
+               label(for='y-option') Prefer not to answer
+               |
+               .check
+
+   .container(style="width: 50%")
+       h1.text-center What is the highest level of formal education that you have completed?
+       ul
+           form(action='/registrationQuestions')
+               select#levelEdu(name='levelEdu')
+                   option(value='Select') Select
+                   option(value='13') Less than Secondary / High School
+                   option(value='14') Secondary / High School
+                   option(value='15') Undergraduate University (2 year - community college or similar)
+                   option(value='16') Undergraduate University (3+ year)
+                   option(value='17') Graduate University (Masters, Professional, Doctoral, etc)
+                   option(value='18') Code School / Bootcamp
+                   option(value='19') Other Vocational / Trade Program or Apprenticeship
+                   option(value='20') Other (please specify)
+                   option(value='21') Prefer not to answer
+
+   .container(style="width: 50%")
+       h1.text-center What is your major / primary area of study? If you already graduated, what was your major / primary area of study? Select all that apply.
+       ul
+           form(action='/registrationQuestions')
+               select#major(name='major')
+                   option(value='Select') Select
+                   option(value='13') Computer science, computer engineering, or software engineering
+                   option(value='14') Another engineering discipline (such as civil, electrical, mechanical, etc.)
+                   option(value='15') Information systems, information technology, or system administration
+                   option(value='16') A natural science (such as biology, chemistry, physics, etc.)
+                   option(value='17') Mathematics or statistics
+                   option(value='18') Web development or web design
+                   option(value='19') Business discipline (such as accounting, finance, marketing, etc.)
+                   option(value='20') Humanities discipline (such as literature, history, philosophy, etc.)
+                   option(value='21') Social science (such as anthropology, psychology, political science, etc.)
+                   option(value='21+') Fine arts or performing arts (such as graphic design, music, studio art, etc.)
+                   option(value='13') Health science (such as nursing, pharmacy, radiology, etc.)
+                   option(value='14') Other (please specify)
+                   option(value='15') Undecided / No Declared Major
+                   option(value='16') My school does not offer majors / primary areas of study
+                   option(value='17') Prefer not to answer
+
+   a.btn.dash(href='/welcomePage') Submit

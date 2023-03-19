@@ -1,0 +1,120 @@
+
+.navbar{
+    background-color: #57ce57;
+}
+
+a.nav-link {
+    color: black;
+    margin-top: 2px;
+}
+
+:root {
+    --font-size-small: 0.75rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.25rem;
+}
+
+:root {
+    font-family: system-ui;
+}
+
+.bd-example-row [class^="col"], .bd-example-cols [class^="col"] > *, .bd-example-cssgrid [class*="grid"] > * , .container-sm.overflow-x-scroll{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+}
+
+button.nav-link {
+    color: black !important;
+}
+
+/* space at top of page */
+.space {
+    height: 10px;
+    background: rgba(78, 108, 94, 0.48);
+}
+
+/* save button in .container1 */
+button.save {
+    justify-content: center;
+    margin: auto;
+    float: bottom;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: .375em;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #363636;
+    display: inline-flex;
+    height: 2.5em;
+    padding: 1em;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+button.save:active {
+    border-color: #4a4a4a;
+    outline: 0;
+}
+
+button.save:focus {
+    border-color: #485fc7;
+    outline: 0;
+}
+
+button.save:hover {
+    border-color: #b5b5b5;
+}
+
+button.save:focus:not(:active) {
+    box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
+
+
+/*team management stuff*/
+button {
+    border: none;
+    background: none;
+}
+
+.btn-primary {
+    margin-left: 10px;
+}
+
+button:hover {
+    color: blue;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+img#output {
+    border-radius: 10px;
+}
+
+img#output {
+    margin-right: 1rem;
+}
+
+input.form-control.popup {
+    margin-top: 1rem;
+}
+
+.regContainer{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(127, 204, 135, 0.51) !important;
+}
+
+a#mlh-trust-badge{
+    display: none!important;
+}

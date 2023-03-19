@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    if isAuthenticated
+      include includes/dashboard.pug
+    else
+      include includes/welcomePage.pug
