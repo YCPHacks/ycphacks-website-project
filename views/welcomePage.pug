@@ -1,29 +1,26 @@
 doctype html
 html
-    head
+    head(style='display:none;')
+
         include includes/navbar
         link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
 
 
-    body
-        a#mlh-trust-badge(style='display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:10000', href='https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue', target='_blank')
-            img.mlh-logo(src='https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg', alt='Major League Hacking 2023 Hackathon Season', style='width:100%')
 
+    main
         .intro.d-flex.flex-column
-            //video#bgvideo(autoplay='true', loop='loop', muted='muted', preload='auto')
-            //    source(src='/static/images/BGVideo.mp4', type='video/mp4')
             .text-center.d-flex.flex-column.p-4
                 .ycpHeader YCPHacks
                 h2.hacks Fall 2023
-                h3.location Willman Business Center
-            a.reggy.m-1(href='/dashboard') Register Now!
+                h3 Willman Business Center
+            a.introButtons.m-1(href='/dashboard') Register Now!
             p
                 // TODO: possible change
-                a.reggy.m-1(href='https://discord.gg/Mx2eH35j') Discord
-                a.reggy.m-1 Sponsor Us
+                a.introButtons.m-1(href='https://discord.gg/Mx2eH35j') Discord
+                a.introButtons.m-1 Sponsor Us
         hr
 
-        .container3.text-container.m-5
+        .elementSize.text-container.m-5
             .row.m-0.d-flex.align-items-center
                 .col-md-8
                     .hacks what is hackathon?
@@ -41,7 +38,7 @@ html
                         | innovation, and entrepreneurship in York and beyond, and we just can't wait to see
                         | what you do next.
                 .col-md-4
-                    img.img2(src='/static/images/Presentation.png')
+                    img.img2(src='/static/images/Presentation.png' alt='Presentation')
 
         .margin.p-2
             h1.display-5.mt-5 Schedule
@@ -85,7 +82,7 @@ html
         // END OF SCHEDULE
 
         h1.display-5.mt-5 FAQ
-        .row.row-cols-md-2.mx-4.row-cols-sm-1
+        .elementSize.row.row-cols-md-2.mx-4.row-cols-sm-1
             .col
                 #accordionExample.accordion
                     .accordion-item

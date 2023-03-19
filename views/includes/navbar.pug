@@ -14,7 +14,7 @@ html(lang='en')
     body
 
         // NAVIGATION BAR
-        .navbar.navbar-expand-md.bg-gradient
+        nav.navbar.navbar-expand-md.bg-gradient(role='navigation')
             .container-fluid
                 a.navbar-brand.text-white(href='welcomePage')
                     img.me-2.d-inline-block(src='/static/images/fountain_white.png', alt='ycp_fountain', width='auto', height='25')
@@ -50,4 +50,6 @@ html(lang='en')
                                     hr.dropdown-divider
                                 li
                                     a.dropdown-item(href='/logout') Logout
+            a#mlh-trust-badge(style='display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:10000', href='https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue', target='_blank')
+                img.mlh-logo(src='https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg', alt='Major League Hacking 2023 Hackathon Season', style='width:100%')
 

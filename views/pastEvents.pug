@@ -1,21 +1,20 @@
 html
 	head
 		include includes/navbar.pug
-		link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
 		link(rel='stylesheet', type='text/css', href='/static/stylesheets/pastEventsPage.css')
 
-	body
+	main
 		// TODO: pug mixin
 		.container
-			.ycpHeader.my-3 get inspired by past projects!
+			h1.ycpHeader.my-3 get inspired by past projects!
 			.d-flex.justify-content-center
 				.row.row-cols-md-3.row-cols-sm-1.g-4
 					.col
 						.card
-							img.card-img-top(src='/static/images/devpost/crush-dem-demons.png', alt='...')
+							img.card-img-top(src='/static/images/devpost/virtual-teacher.png', alt='...')
 							.card-body.p-2
 								p.card-text
-									a.link.text-decoration-none(href='https://devpost.com/software/crush-dem-demons') view on devpost
+									a.link.text-decoration-none(href='https://devpost.com/software/ycp-virtual-teacher') view on devpost
 					.col
 						.card
 							img.card-img-top(src='/static/images/devpost/project-hydra.png', alt='...')
@@ -34,18 +33,21 @@ html
 							.card-body.p-2
 								p.card-text
 									a.link.text-decoration-none(href='https://devpost.com/software/accountabilliebuddies') view on devpost
-					.col
-						.card
-							img.card-img-top(src='/static/images/devpost/virtual-teacher.png', alt='...')
-							.card-body.p-2
-								p.card-text
-									a.link.text-decoration-none(href='https://devpost.com/software/ycp-virtual-teacher') view on devpost
+
 					.col
 						.card
 							img.card-img-top(src='/static/images/devpost/super-hack.png', alt='...')
 							.card-body.p-2
 								p.card-text
 									a.link.text-decoration-none(href='https://devpost.com/software/game-super-hack-quest-working-title') view on devpost
+					.col
+						.card
+							img.card-img-top(src='/static/images/devpost/hows-it-growing.png', alt='...')
+							.card-body.p-2
+								p.card-text
+									a.link.text-decoration-none(href='https://devpost.com/software/plantcare-cdxhoa') view on devpost
+
+			a.link.text-decoration-none.border(href='https://ycp-hacks-2022.devpost.com/project-gallery') see more!
 
 
 			.ycpHeader.my-3 past events
@@ -105,3 +107,5 @@ html
 						td $1000+ in cash prizes
 					tr
 						td Sponsored Hacks to Come!
+
+	include includes/footer

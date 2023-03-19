@@ -1,23 +1,29 @@
 doctype html
 html
     head
-        title Image Gallery
-        link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
-        link(rel='stylesheet', type='text/css', href='/static/stylesheets/gallery.css')
-    body
         include includes/navbar.pug
-        h1.display-5.my-5 Image Gallery
-        .container
-            .gallery-wrapper
-                .img
-                    img(src='/static/images/TeamFocused.PNG', alt='hacks_four')
-                .img
-                    img(src='/static/images/Presentation.PNG', alt='hacks_five')
-                .img
-                    img(src='/static/images/Drone.PNG', alt='hacks_six')
-                .img
-                    img(src='/static/images/Hardware.PNG', alt='hacks_one')
-                .img
-                    img(src='/static/images/TylerEating.PNG', alt='hacks_two')
-                .img
-                    img(src='/static/images/NerfWinners.PNG', alt='hacks_three')
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/gallery.css')
+
+    main
+        h1.ycpHeader.my-3.display-4 Image Gallery
+        .d-flex.justify-content-center
+            .container.m-0
+                .row.m-0
+                    .col-md-6
+                        img.img.m-3(src='/static/images/TeamFocused.PNG', alt='hacks_four')
+                    .col-md-6
+                        img.img.m-3(src='/static/images/Presentation.PNG', alt='hacks_five')
+                .row.m-0
+                    .col-md-4
+                        img.img.m-3(src='/static/images/Drone.PNG', alt='hacks_six')
+                    .col-md-4
+                        img.img.m-3(src='/static/images/Hardware.PNG', alt='hacks_one')
+                    .col-md-4
+                        img.img.m-3(src='/static/images/pic1.PNG', alt='hacks_two')
+                .row.m-0
+                    .col-md-4
+                        img.img.m-3(src='/static/images/TylerEating.PNG', alt='hacks_two')
+                    .col-md-4
+                        img.img.m-3(src='/static/images/NerfWinners.PNG', alt='hacks_two')
+
+    include includes/footer

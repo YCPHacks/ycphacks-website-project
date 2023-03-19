@@ -1,7 +1,7 @@
 body {
-    background-color: #efebeb;
+    background: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
     font-family: sans-serif;
-    background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
+    /*background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);*/
     font-weight: 500;
     font-size: 1.2em;
     text-align: center;
@@ -188,7 +188,7 @@ td, tr {
 
 .memberPhoto .memberLabel {
     position: absolute;
-    font-family: 'Roboto';
+    /*font-family: 'Roboto';*/
     padding: 5px;
     z-index: 1000;
     top: 60%;
@@ -264,7 +264,7 @@ td, tr {
 }
 
 /* ------Intro Buttons------ */
-.reggy {
+.introButtons {
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -295,16 +295,16 @@ td, tr {
     font-size: 16px;
 }
 
-.reggy:focus {
+.introButtons:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-.reggy:hover {
+.introButtons:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-.reggy:active {
+.introButtons:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
@@ -324,4 +324,7 @@ hr {
 
 .icon{
     font-size: 20px;
+}
+.elementSize{
+    width: 95%;
 }
