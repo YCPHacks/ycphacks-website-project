@@ -1,3 +1,8 @@
+
+.navbar{
+    background-color: #57ce57;
+}
+
 a.nav-link {
     color: black;
     margin-top: 2px;
@@ -104,9 +109,12 @@ input.form-control.popup {
     margin-left: 15%;
 }
 
-
 .form-select:focus, .form-control:focus {
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(127, 204, 135, 0.51) !important;
+}
+
+a#mlh-trust-badge{
+    display: none!important;
 }

@@ -1,15 +1,7 @@
 html
-  head
-    link(rel='icon', type='image/x-icon', href='/static/images/favicon.png')
-  body
-   include includes/navbar.pug
-   include includes/dashboardBar.pug
-           .display-5 User List
-               hr
-           .container
-               each user of users
-                   img(src=user['picture'] referrerpolicy="no-referrer")
+    head
+        link(rel='stylesheet', href='/static/stylesheets/404.css')
 
-                   each [key, value] of Object.entries(user)
-                       unless (key == 'picture')
-                           div= `${key}: ${value}`
+    body
+        p heloo
+        img(src='static/images/stars1.svg')
