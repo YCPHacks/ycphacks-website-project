@@ -1,30 +1,215 @@
 body {
     background-color: #efebeb;
-    font-family: sans-serif;
+    font-family: 'Sora';
     background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
     font-weight: 500;
     font-size: 1.2em;
-    /*text-align: center;*/
 }
 
+/* ----- TEXT STYLES -----*/
 .ycpHeader {
     font-family: 'MuseoModerno', serif;
     color: #ffffff;
-    font-size: 3vw;
+    font-size: 8vw;
     letter-spacing: 1.5pt;
-    margin-bottom: 0px;
+    /* sad attempt of svg background :( */
+    /*display: grid;*/
+    /*align-items: center;*/
+    /*background: url("../images/gooey.svg") center no-repeat;*/
+    /*background-size: 47vw;*/
+    /*height: 510px;*/
 }
+
 .hacks {
-    font-size: 1.5em;
+    font-size: 4.5em;
+    font-family: 'Gruppo', cursive;
     font-weight: 700;
-    padding: 10px;
+    padding: 15px;
     letter-spacing: 2pt;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 3px;
     color: #1a3a69;
-    /*border-bottom: 2px white double;*/
 }
-.card{
-    border:none;
-    background: none;
+
+/* ----- BOTTOM SPONSOR CONTAINER ----- */
+.bottom {
+    background: rgba(255, 255, 255, 0.37);
+    width: fit-content;
+    padding: 20px;
 }
+
+/* ----- SPONSOR CONTAINERS ----- */
+/**,*/
+/**:before,*/
+/**:after {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.intro {
+    position: relative;
+    min-height: 320px;
+    height: 95%;
+    width: 100%;
+    overflow: hidden;
+    transition: all .72s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* INDIVIDUAL SPONSORS */
+[title~="bd"] {
+    background: rgba(255, 255, 255, 0.65) url(../images/sponsors/bd_logo.png) top center no-repeat;
+    background-size: contain;
+}
+
+[title~="cs_davidson"] {
+    background: rgba(255, 255, 255, 0.65) url(../images/sponsors/cs-davidson-logo.png) top center no-repeat;
+    background-size: contain;
+}
+
+[title~="penn_waste"] {
+    background: rgba(255, 255, 255, 0.65) url(../images/sponsors/pennWaste.png) top center no-repeat;
+    background-size: contain;
+}
+
+[title~="jdb_engineering"] {
+    background: rgba(255, 255, 255, 0.65) url(../images/sponsors/jdb_engineering.png) top center no-repeat;
+    background-size: contain;
+}
+
+[title~="dataforma"] {
+    background: rgba(255, 255, 255, 0.65) url(../images/sponsors/dataforma.png) top center no-repeat;
+    background-size: contain;
+}
+
+.intro:after {
+    /*content: '';*/
+    display: block;
+    position: absolute;
+    /* width: 100%; */
+    height: 500px;
+    right: -100%;
+    left: 0;
+    transform: skew(100deg);
+    background: #fff;
+    bottom: -70%;
+    box-shadow: inset 1px 0px 5px 0px rgba(204, 204, 204, 0.72);
+}
+
+.container:after {
+    content: '';
+    max-width: 300px;
+    width: 100%;
+    margin: 0% auto 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: all .52s ease-in-out;
+}
+
+.meta {
+    max-width: 300px;
+    width: 100%;
+    margin: 0% auto 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    padding-top: 110px;
+    overflow: hidden;
+    transition: all .52s ease-in-out;
+}
+
+.meta__inner {
+    padding: .25rem 1rem;
+    /*line-height: 1.5rem;*/
+    position: relative;
+    background: #fff;
+    z-index: 15;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.meta:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    max-width: 300px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    transform: rotate(90deg) skew(5deg);
+    z-index: 4;
+}
+
+h3 {
+    position: relative;
+    font-family: sans-serif;
+    font-weight: 300;
+    border-left: 4px solid #114b07;
+    padding-left: .72rem;
+}
+
+p.innerText {
+    /*font-family: serif;*/
+    font-size: 16px;
+    font-weight: inherit;
+    color: #555;
+    text-align: center;
+}
+
+.container:hover .meta {
+    transform: translateY(5px);
+}
+
+.container:hover .intro {
+    transform: translateY(-5px);
+}
+
+.container:hover:after {
+    transform: translateY(5px);
+}
+
+@media (max-width: 500px) {
+    .col {
+        margin-top: 20px;
+    }
+
+    .intro {
+        height: 80%;
+    }
+
+    .hacks {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+/*.link {*/
+/*    box-shadow: inset 0 0 0 0 #54b3d6;*/
+/*    color: #1b53ce;*/
+/*    padding: 4px .40rem;*/
+/*    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;*/
+/*}*/
+/*.link:hover {*/
+/*    box-shadow: inset 200px 0 0 0 #54b3d6;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+

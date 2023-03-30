@@ -1,37 +1,93 @@
 html
-	head
-		include includes/navbar.pug
-		link(rel='stylesheet', type='text/css', href='/static/stylesheets/sponsorPage.css')
+    head
+        include includes/navbar.pug
+        link(rel='stylesheet', type='text/css', href='/static/stylesheets/sponsorPage.css')
+        link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Gruppo')
 
-	body
-		.ycpHeader.text-center Sponsoring
-		.d-flex.flex-column
-			.platinum.hacks Platinum
 
-			.gold.hacks Gold
-				.row.row-cols-3
-					.col
-						.card.m-3
-							.row.g-0
-								.col-md-4
-									img.img-fluid.rounded-start(src='static/images/sponsors/bd_logo.png', alt='BD')
-								.col-md-8
-									.card-body
-										h5.card-title BD
-										p.card-text
-											| BD is one of the largest global medical technology companies in the world and is advancing the world of healthTM by improving medical discovery, diagnostics and the delivery of care. The company supports the heroes on the frontlines of healthcare by developing innovative technology, services and solutions that help advance both
-											| clinical therapy for patients and clinical process for healthcare providers.
-			.silver.hacks Silver
-				.row.row-cols-3
-					.col
-						.card.m-3
-							.row.g-0
-								.col-md-4
-									img.img-fluid.rounded-start(src='static/images/sponsors/pennWaste.png', alt='BD')
-								.col-md-8
-									.card-body
-										h5.card-title Penn Waste
-										p.card-text
-											| This is a wider card with suppor
+    body
+        main
+            .ycpHeader.text-center.mt-5 Sponsors
+            h5.text-center Thank you to our 2022 YCPHacks sponsors!
 
-			.bronze.hacks Bronze
+
+            .hacks.text-center.mt-5 Gold Tier
+            hr
+            .row.row-cols-1.row-cols-md-2.g-4.m-0.justify-content-center.mb-5
+                .col
+                    .container
+                        section.intro(title='bd')
+                        .meta
+                            .meta__inner
+                                h3 BD
+                                p.innerText
+                                    | BD is one of the largest global medical technology companies in the world and is advancing
+                                    | the world of healthTM by improving medical discovery, diagnostics and the delivery of care.
+                                    br
+                                    a.link.text-decoration-none(href='https://www.bd.com/en-us') Read more
+
+            .mt-5
+
+            .hacks.text-center.mt-5 Silver Tier
+            hr
+            .row.row-cols-1.row-cols-md-2.g-4.m-0.justify-content-center
+                .col
+                    .container
+                        section.intro(title='penn_waste')
+                        .meta
+                            .meta__inner
+                                h3 Penn Waste
+                                p.innerText
+                                    | A locally-operated and managed company, Penn Waste is committed to improving the communities
+                                    | we serve throughout the counties of York, Lancaster, Adams, Dauphin, Cumberland and Perry.
+                                    br
+                                    a.link.text-decoration-none(href='https://www.pennwaste.com/') Read more
+                .col
+                    .container
+                        section.intro(title='jdb_engineering')
+                        .meta
+                            .meta__inner
+                                h3 JDB Engineering
+                                p.innerText
+                                    | We provide integrated MEP engineering dedicated to mitigating the inherent financial and operational risks,
+                                    | delivering on the established goals, and enabling the success of all project partners.
+                                    br
+                                    a.link.text-decoration-none(href='https://jdbengineering.com/') Read more
+
+            .hacks.text-center.mt-5 Bronze Tier
+            hr
+            .row.row-cols-1.row-cols-md-2.g-4.m-0.justify-content-center
+                .col
+                    .mobileContainer
+
+                    .container
+                        section.intro(title='dataforma')
+                        .meta
+                            .meta__inner
+                                h3 Dataforma
+                                p.innerText
+                                    | Dataforma is now a full-service web-based business management system,
+                                    | designed for any business in the service management
+                                    br
+                                    a.link.text-decoration-none(href='https://www.dataforma.com/') Read more
+                .col
+                    .container
+                        section.intro(title='cs_davidson')
+                        .meta
+                            .meta__inner
+                                h3 CS Davidson
+                                p.innerText
+                                    | We provide excellence in engineering and customer service to municipalities
+                                    | and a wide range of private clients, helping them preserve, manage, and construct a better world.
+                                    br
+                                    a.link.text-decoration-none(href='https://csdavidson.com/') Read more
+            .hacks.mt-5
+            .d-flex.justify-content-center
+                .bottom.text-center
+                    .display-5 Want to sponsor?
+                    .d-flex.flex-column.my-2
+                        a.fa-solid.fa-envelope.text-decoration-none(href='mailto:INFO@YCPHacks.io')
+                        hr
+                        a.text-decoration-none(href='https://ycphacks.io/YCP_HACKS_SPONOSRSHIP_BROCHURE_2022_FINAL_FILE.pdf') Prospectus
+                        hr
+    include includes/footer
