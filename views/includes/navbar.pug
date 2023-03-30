@@ -11,14 +11,28 @@ html(lang='en')
         link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Sora')
         link(rel='stylesheet', href='/static/stylesheets/navbar.css')
 
+        script(src='https://kit.fontawesome.com/5aea80cc0d.js', crossorigin='anonymous')
+
+
     body
 
         // NAVIGATION BAR
         nav.navbar.navbar-expand-md.bg-gradient(role='navigation')
             .container-fluid
                 a.navbar-brand.text-white(href='welcomePage')
-                    img.me-2.d-inline-block(src='/static/images/fountain_white.png', alt='ycp_fountain', width='auto', height='25')
-                    | YCP Hacks
+
+                    // MOBILE
+                    #mobileHeader
+                        img.me-2.d-inline-block(src='/static/images/fountain_white.png', alt='ycp_fountain', width='auto', height='25')
+                        | YCP Hacks
+
+                    // DESKTOP
+                    #desktopHeader
+                        .me-2.d-inline-block
+                            img(src='/static/images/fountain_white.png', alt='ycp_fountain', width='auto', height='25')
+                            a.replaceText.text-decoration-none#style-2(href='welcomePage', data-replace='Home')
+                                span YCP Hacks
+
                 button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#collapsibleNavbar')
                     span.navbar-toggler-icon
                 |
@@ -52,4 +66,3 @@ html(lang='en')
                                     a.dropdown-item(href='/logout') Logout
             a#mlh-trust-badge(style='display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:10000', href='https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=blue', target='_blank')
                 img.mlh-logo(src='https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-blue.svg', alt='Major League Hacking 2023 Hackathon Season', style='width:100%')
-
