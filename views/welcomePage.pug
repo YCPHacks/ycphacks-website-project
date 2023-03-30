@@ -6,270 +6,287 @@ html
         link(rel='stylesheet', type='text/css', href='/static/stylesheets/welcomePage.css')
 
 
+    body
+        svg.svg(viewbox='0 0 300 300')
+            path.path(fill='none', stroke='white', stroke-width='0.2', d='M0,0Q6.759098,89.428076,82.668977,89.948007c75.909879.519931,78.509532,31.71577,90.987868,60.051992q12.478336,28.336222,44.194106,35.09532')
+        svg.svg(viewbox='0 0 300 300')
+            path.path(fill='none', stroke='white', stroke-width='0.2', d='M0,0Q8.158033,134.791582,84.067912,135.311513c75.909879.519931,74.212797-24.103302,109.099155,0q34.886358,24.103302,67.869823,71.675608')
 
-    main
-        .intro.d-flex.flex-column
-            .text-center.d-flex.flex-column.p-4
-                .ycpHeader YCPHacks
-                h2.hacks Fall 2023
-                h3 Willman Business Center
-            a.introButtons.m-1(href='/dashboard') Register Now!
-            p
-                // TODO: possible change
-                a.introButtons.m-1(href='https://discord.gg/Mx2eH35j') Discord
-                a.introButtons.m-1 Sponsor Us
-        hr
+        img.alien(src='static/assets/alien2.png')
 
-        .elementSize.text-container.m-5
-            .row.m-0.d-flex.align-items-center
-                .col-md-8
-                    .hacks what is hackathon?
-                    p
-                        | Conveniently nestled in the middle of rural Pennsylvania, YCP Hacks is a
-                        | college level hackathon with small town charm.
-                        br
-                        | An hour north of Baltimore, an hour and a
-                        | half from Philadelphia, and 2 hours from Penn State places it right in the middle of
-                        | Pennsylvania Dutch Country (presumably made of funnel cake). The event is set on the
-                        | charming York College of Pennsylvania campus, with all the facilities, people and
-                        | camaraderie that comes with it.
-                        br
-                        | Our mission is to promote technical knowledge,
-                        | innovation, and entrepreneurship in York and beyond, and we just can't wait to see
-                        | what you do next.
-                .col-md-4
-                    img.img2(src='/static/images/Presentation.png' alt='Presentation')
 
-        .margin.p-2
-            h1.display-5.mt-5 Schedule
-            .container.p-3.shadow
-                ul#myTab.nav.nav-tabs.nav-justified(role='tablist')
-                    li.nav-item(role='presentation')
-                        button#fri-tab.nav-link.link-dark.active(data-bs-toggle='tab', data-bs-target='#fri-tab-pane', type='button', role='tab', aria-controls='fri-tab-pane', aria-selected='true') Friday
-                    li.nav-item(role='presentation')
-                        button#sat-tab.nav-link.link-dark(data-bs-toggle='tab', data-bs-target='#sat-tab-pane', type='button', role='tab', aria-controls='sat-tab-pane', aria-selected='false') Saturday
-                    li.nav-item(role='presentation')
-                        button#sun-tab.nav-link.link-dark(data-bs-toggle='tab', data-bs-target='#sun-tab-pane', type='button', role='tab', aria-controls='sun-tab-pane', aria-selected='false') Sunday
-                #myTabContent.tab-content
-                    #fri-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab', tabindex='0')
-                        - const friday = [["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"]];
-                        table.table.table-striped
-                            thead
-                                tr
-                                    th(scope='col') Event
-                                    th(scope='col') Time
-                                    th(scope='col') Location
-                            tbody
-                                each item of friday
+        main
+            .intro.d-flex.flex-column
+                .text-center.d-flex.flex-column.p-4
+                    .ycpHeader YCPHacks
+                    h2.hacks Fall 2023
+                    h3.text-white Willman Business Center
+                a.introButtons.m-1(href='/dashboard') Register Now!
+                p
+                    // TODO: possible change
+                    a.introButtons.m-1(href='https://discord.gg/Mx2eH35j') Discord
+                    a.introButtons.m-1 Sponsor Us
+                // TODO: implement smooth scrolling
+                a(href='#jump')
+                    i.fa-solid.fa-chevron-down.scrollDown(style='color: white;')
+
+            hr#jump
+
+            .text-container.m-5
+                .row.m-0.d-flex.align-items-center
+                    .col-md-8
+                        .hacks.text-white
+                            u what is hackathon?
+                        p
+                            | Conveniently nestled in the middle of rural Pennsylvania, YCP Hacks is a
+                            | college level hackathon with small town charm.
+                            br
+                            | An hour north of Baltimore, an hour and a
+                            | half from Philadelphia, and 2 hours from Penn State places it right in the middle of
+                            | Pennsylvania Dutch Country (presumably made of funnel cake). The event is set on the
+                            | charming York College of Pennsylvania campus, with all the facilities, people and
+                            | camaraderie that comes with it.
+                            br
+                            | Our mission is to promote technical knowledge,
+                            | innovation, and entrepreneurship in York and beyond, and we just can't wait to see
+                            | what you do next.
+                    .col-md-4
+                        img.img2(src='/static/images/Presentation.png' alt='Presentation')
+
+            .margin.p-2
+                h1.display-5.mt-5 Schedule
+                .container.p-3.shadow
+                    ul#myTab.nav.nav-tabs.nav-justified(role='tablist')
+                        li.nav-item(role='presentation')
+                            button#fri-tab.nav-link.link-dark.active(data-bs-toggle='tab', data-bs-target='#fri-tab-pane', type='button', role='tab', aria-controls='fri-tab-pane', aria-selected='true') Friday
+                        li.nav-item(role='presentation')
+                            button#sat-tab.nav-link.link-dark(data-bs-toggle='tab', data-bs-target='#sat-tab-pane', type='button', role='tab', aria-controls='sat-tab-pane', aria-selected='false') Saturday
+                        li.nav-item(role='presentation')
+                            button#sun-tab.nav-link.link-dark(data-bs-toggle='tab', data-bs-target='#sun-tab-pane', type='button', role='tab', aria-controls='sun-tab-pane', aria-selected='false') Sunday
+                    #myTabContent.tab-content
+                        #fri-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab', tabindex='0')
+                            - const friday = [["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"]];
+                            table.table.table-striped
+                                thead
                                     tr
-                                        each value of item
-                                            td(style="width: 5px;")=value
+                                        th(scope='col') Event
+                                        th(scope='col') Time
+                                        th(scope='col') Location
+                                tbody
+                                    each item of friday
+                                        tr
+                                            each value of item
+                                                td(style="width: 5px;")=value
 
-                    #sat-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
-                        - const saturday = [["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"]];
-                        table.table.table-striped
-                            thead9
-                                tr
-                                    th(scope='col') Event
-                                    th(scope='col') Time
-                                    th(scope='col') Location
-                            tbody
-                                each item of saturday
+                        #sat-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab', tabindex='0')
+                            - const saturday = [["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"],["Event","1000","Business Center"]];
+                            table.table.table-striped
+                                thead9
                                     tr
-                                        each value of item
-                                            td(style="width: 5px;")=value
-                    #sun-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab', tabindex='0') ...
-        // END OF SCHEDULE
+                                        th(scope='col') Event
+                                        th(scope='col') Time
+                                        th(scope='col') Location
+                                tbody
+                                    each item of saturday
+                                        tr
+                                            each value of item
+                                                td(style="width: 5px;")=value
+                        #sun-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab', tabindex='0') ...
+            // END OF SCHEDULE
 
-        h1.display-5.mt-5 FAQ
-        .elementSize.row.row-cols-md-2.mx-4.row-cols-sm-1
-            .col
-                #accordionExample.accordion
-                    .accordion-item
-                        h2#headingOne.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-                                .icon 🤖
-                                | What's a hackathon?
-                        #collapseOne.accordion-collapse.collapse(aria-labelledby='headingOne', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | A 36 hour event where you work together with a team to make something awesome. You don't need to know how to code or be a supreme hacker,
-                                | just how to be creative! You can also get help from our mentors and speakers who will be attending.
-                    .accordion-item
-                        h2#headingTwo.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                                .icon 😄
-                                | Can I come?
-                        #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | We'll take any college student from anywhere on earth! We sadly cannot accept students under the age of 18.
-                                | All students from outside of York College may be asked to attend online if Covid protocols change
-                    .accordion-item
-                        h2#headingFour.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
-                                .icon 🌎
-                                | Where is this going to be?
-                        #collapseFour.accordion-collapse.collapse(aria-labelledby='headingFour', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | The Willman Business Center of York College! There will be free parking in the adjacent lot for the entire weekend.
-                    .accordion-item
-                        h2#headingFive.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
-                                .icon 📅
-                                | When will this be?
-                        #collapseFive.accordion-collapse.collapse(aria-labelledby='headingFive', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | XXX
-                    .accordion-item
-                        h2#headingSix.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
-                                .icon 😯
-                                |Why?
-                        #collapseSix.accordion-collapse.collapse(aria-labelledby='headingSix', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | Learn new things, meet new people, and tons of free food and swag.
-                    .accordion-item
-                        h2#headingSeven.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
-                                .icon 💰
-                                | Will you reimburse travel?
-                        #collapseSeven.accordion-collapse.collapse(aria-labelledby='headingSeven', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | If we get enough sponsors this season, we may offer it closer to the event date. At this time we cannot confirm it though.
-                                | Apply and we'll email our applicants with more information as it becomes available.
-                    .accordion-item
-                        h2#headingEight.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
-                                .icon 🤷
-                                | I don't have a team so....
-                        #collapseEight.accordion-collapse.collapse(aria-labelledby='headingEight', data-bs-parent='#accordionExample')
-                            .accordion-body
-                                | Well you're in luck! We have tons of team building activities if you don't have a team to come with you. You can also work alone if you'd like.
-            .col
-                #accordionExample1.accordion
-                    .accordion-item
-                        h2#headingNine.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseNine', aria-expanded='false', aria-controls='collapseNine')
-                                .icon 💻
-                                | But I can't code!
-                        #collapseNine.accordion-collapse.collapse(aria-labelledby='headingNine', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                | We'll have tons of great workshops and mentors to help you learn and build something amazing!
-                    .accordion-item
-                        h2#headingTen.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTen', aria-expanded='false', aria-controls='collapseTen')
-                                .icon 💸
-                                | How much does it cost?
-                        #collapseTen.accordion-collapse.collapse(aria-labelledby='headingTen', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                | Nothing! Registration is free and food will be provided for you. And of course, swag is free too.
-                    .accordion-item
-                        h2#headingEleven.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseEleven', aria-expanded='false', aria-controls='collapseEleven')
-                                .icon ⚙️
-                                | Will there be hardware available?
-                        #collapseEleven.accordion-collapse.collapse(aria-labelledby='headingEleven', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                | Yes! Hardware will be provided.
-                    .accordion-item
-                        h2#headingTwelve.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTwelve', aria-expanded='false', aria-controls='collapseTwelve')
-                                .icon 🎒
-                                | What should I bring?
-                        #collapseTwelve.accordion-collapse.collapse(aria-labelledby='headingTwelve', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                | ID, Clothing, sleeping bag, and any necessary tech (and chargers). And deodorant. Please.
-                    .accordion-item
-                        h2#headingThirteen.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseThirteen', aria-expanded='false', aria-controls='collapseThirteen')
-                                .icon 🧠
-                                | Do I keep my Intellectual Property?
-                        #collapseThirteen.accordion-collapse.collapse(aria-labelledby='headingThirteen', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                | Yes! Participants retain 100% of the intellectual property that they create during the event.
-                    .accordion-item
-                        h2#headingFourteen.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFourteen', aria-expanded='false', aria-controls='collapseFourteen')
-                                .icon 📜
-                                | Are there any rules?
-                        #collapseFourteen.accordion-collapse.collapse(aria-labelledby='headingFourteen', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                |  You can find the MLH code of conduct&nbsp
-                                a.primary-link(href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf') here!
-                    .accordion-item
-                        h2#headingFifteen.accordion-header
-                            button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFifteen', aria-expanded='false', aria-controls='collapseFifteen')
-                                | You didn't answer my question! ️
-                        #collapseFifteen.accordion-collapse.collapse(aria-labelledby='headingFifteen', data-bs-parent='#accordionExample1')
-                            .accordion-body
-                                |  Send it to us at&nbsp
-                                a.primary-link(href='mailto:info@ycphacks.io') info@ycphacks.io!
+            h1.display-5.mt-5 FAQ
+            .elementSize.row.row-cols-md-2.mx-4.row-cols-sm-1
+                .col
+                    #accordionExample.accordion
+                        .accordion-item
+                            h2#headingOne.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                    .icon 🤖
+                                    | What's a hackathon?
+                            #collapseOne.accordion-collapse.collapse(aria-labelledby='headingOne', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | A 36 hour event where you work together with a team to make something awesome. You don't need to know how to code or be a supreme hacker,
+                                    | just how to be creative! You can also get help from our mentors and speakers who will be attending.
+                        .accordion-item
+                            h2#headingTwo.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                    .icon 😄
+                                    | Can I come?
+                            #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | We'll take any college student from anywhere on earth! We sadly cannot accept students under the age of 18.
+                                    | All students from outside of York College may be asked to attend online if Covid protocols change
+                        .accordion-item
+                            h2#headingFour.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                                    .icon 🌎
+                                    | Where is this going to be?
+                            #collapseFour.accordion-collapse.collapse(aria-labelledby='headingFour', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | The Willman Business Center of York College! There will be free parking in the adjacent lot for the entire weekend.
+                        .accordion-item
+                            h2#headingFive.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                                    .icon 📅
+                                    | When will this be?
+                            #collapseFive.accordion-collapse.collapse(aria-labelledby='headingFive', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | XXX
+                        .accordion-item
+                            h2#headingSix.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                                    .icon 😯
+                                    | Why?
+                            #collapseSix.accordion-collapse.collapse(aria-labelledby='headingSix', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | Learn new things, meet new people, and tons of free food and swag.
+                        .accordion-item
+                            h2#headingSeven.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
+                                    .icon 💰
+                                    | Will you reimburse travel?
+                            #collapseSeven.accordion-collapse.collapse(aria-labelledby='headingSeven', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | If we get enough sponsors this season, we may offer it closer to the event date. At this time we cannot confirm it though.
+                                    | Apply and we'll email our applicants with more information as it becomes available.
+                        .accordion-item
+                            h2#headingEight.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
+                                    .icon 🤷
+                                    | I don't have a team so....
+                            #collapseEight.accordion-collapse.collapse(aria-labelledby='headingEight', data-bs-parent='#accordionExample')
+                                .accordion-body
+                                    | Well you're in luck! We have tons of team building activities if you don't have a team to come with you. You can also work alone if you'd like.
+                .col
+                    #accordionExample1.accordion
+                        .accordion-item
+                            h2#headingNine.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseNine', aria-expanded='false', aria-controls='collapseNine')
+                                    .icon 💻
+                                    | But I can't code!
+                            #collapseNine.accordion-collapse.collapse(aria-labelledby='headingNine', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    | We'll have tons of great workshops and mentors to help you learn and build something amazing!
+                        .accordion-item
+                            h2#headingTen.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTen', aria-expanded='false', aria-controls='collapseTen')
+                                    .icon 💸
+                                    | How much does it cost?
+                            #collapseTen.accordion-collapse.collapse(aria-labelledby='headingTen', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    | Nothing! Registration is free and food will be provided for you. And of course, swag is free too.
+                        .accordion-item
+                            h2#headingEleven.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseEleven', aria-expanded='false', aria-controls='collapseEleven')
+                                    .icon ⚙️
+                                    | Will there be hardware available?
+                            #collapseEleven.accordion-collapse.collapse(aria-labelledby='headingEleven', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    | Yes! Hardware will be provided.
+                        .accordion-item
+                            h2#headingTwelve.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTwelve', aria-expanded='false', aria-controls='collapseTwelve')
+                                    .icon 🎒
+                                    | What should I bring?
+                            #collapseTwelve.accordion-collapse.collapse(aria-labelledby='headingTwelve', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    | ID, Clothing, sleeping bag, and any necessary tech (and chargers). And deodorant. Please.
+                        .accordion-item
+                            h2#headingThirteen.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseThirteen', aria-expanded='false', aria-controls='collapseThirteen')
+                                    .icon 🧠
+                                    | Do I keep my Intellectual Property?
+                            #collapseThirteen.accordion-collapse.collapse(aria-labelledby='headingThirteen', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    | Yes! Participants retain 100% of the intellectual property that they create during the event.
+                        .accordion-item
+                            h2#headingFourteen.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFourteen', aria-expanded='false', aria-controls='collapseFourteen')
+                                    .icon 📜
+                                    | Are there any rules?
+                            #collapseFourteen.accordion-collapse.collapse(aria-labelledby='headingFourteen', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    |  You can find the MLH code of conduct&nbsp
+                                    a.primary-link(href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf') here!
+                        .accordion-item
+                            h2#headingFifteen.accordion-header
+                                button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseFifteen', aria-expanded='false', aria-controls='collapseFifteen')
+                                    | You didn't answer my question! ️
+                            #collapseFifteen.accordion-collapse.collapse(aria-labelledby='headingFifteen', data-bs-parent='#accordionExample1')
+                                .accordion-body
+                                    |  Send it to us at&nbsp
+                                    a.primary-link(href='mailto:info@ycphacks.io') info@ycphacks.io!
 
 
-        // Youtube Recap Videos
-        h1.display-5.text-center.mt-5  Recaps
-        .youtube.d-flex.justify-content-center.mx-3
-            iframe.videos.m-1(src='https://www.youtube.com/embed/Ru9zvWGSH8U', allow='fullscreen' aria-label='students')
-            iframe.videos.m-1(src='https://www.youtube.com/embed/k5A2QTasITs', allow='fullscreen' aria-label='2017-recap')
+            // Youtube Recap Videos
+            h1.display-5.text-center.mt-5  Recaps
+            .youtube.d-flex.justify-content-center.mx-3
+                iframe.videos.m-1(src='https://www.youtube.com/embed/Ru9zvWGSH8U', allow='fullscreen' aria-label='students')
+                iframe.videos.m-1(src='https://www.youtube.com/embed/k5A2QTasITs', allow='fullscreen' aria-label='2017-recap')
 
 
-        // Sponsor Carousel
-        h1.display-5.text-center.mt-5.sponsorSection Our Sponsors!
+            // Sponsor Carousel
+            h1.display-5.text-center.mt-5.sponsorSection Our Sponsors!
 
-        #carouselExampleAutoplaying.carousel.carousel-dark.slide(data-bs-ride='carousel')
+            #carouselExampleAutoplaying.carousel.carousel-dark.slide(data-bs-ride='carousel')
 
-            .carousel-inner
-                .carousel-item.active
-                    .carousel-item-container
-                        .dixie
-                            a.linkSponsor(href='https://www.standoutstickers.com/?utm_campaign=events-league-organizers-spring2022&utm_medium=email&utm_source=customerio-zoho_creator_-_standout_sticker_intro')
-                                img.img-fluid1.platinum.sponsorImage(src='/static/images/sponsors/stand-out-stickers-logo.png', alt='...')
-                        .dixie
-                            a.linkSponsor(href='https://www.bd.com/en-us')
-                                img.img-fluid1.platinum.sponsorImage(src='/static/images/sponsors/bd_logo.png', alt='BD')
-                        .dixie
-                            a.linkSponsor(href='https://mlh.io/seasons/2023/events')
-                                img.img-fluid1.platinum.sponsorImage(src='/static/images/sponsors/mlh-logo-color.svg', alt='Dataforma')
-                .carousel-item
-                    .carousel-item-container
-                        .dixie
-                            a.linkSponsor(href='https://www.ycp.edu/about-us/offices-and-departments/student-development-and-campus-life/student-activities-and-orientation/esports/')
-                                img.img-fluid1.gold.sponsorImage(src='/static/images/sponsors/eSports.png', alt='eSports YCP')
-                        .dixie
-                            a.linkSponsor(href='https://www.dataforma.com/')
-                                img.img-fluid1.gold.sponsorImage(src='/static/images/sponsors/dataforma.png', alt='Dataforma')
-                        .dixie
-                            a.linkSponsor(href='https://www.wolfram.com/wolfram-one/')
-                                img.img-fluid1.gold.sponsorImage(src='/static/images/sponsors/wolframLang.png', alt='Wolfram Language')
-                .carousel-item
-                    .carousel-item-container
-                        .dixie
-                            a.linkSponsor(href='https://www.pennwaste.com/')
-                                img.img-fluid1.sponsorImage.silver(src='/static/images/sponsors/pennWaste.png', alt='Penn Waste')
-                        .dixie
-                            a.linkSponsor(href='https://www.ycp.edu/academics/graham-school-of-business/')
-                                img.img-fluid1.sponsorImage.silver(src='/static/images/sponsors/grahamSchool.png', alt='Graham School of Business')
-                        .dixie
-                            a.linkSponsor(href='https://mrgcorp.com/')
-                                img.img-fluid1.sponsorImage.silver(src='/static/images/sponsors/mrg-labs-logo.png', alt='MRG Labs')
-            button.carousel-control-prev(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='prev')
-                span.carousel-control-prev-icon(aria-hidden='true')
-                span.visually-hidden Previous
-            button.carousel-control-next(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='next')
-                span.carousel-control-next-icon(aria-hidden='true')
-                span.visually-hidden Next
+                .carousel-inner
+                    .carousel-item.active
+                        .carousel-item-container
+                            .dixie
+                                a.linkSponsor(href='https://www.standoutstickers.com/?utm_campaign=events-league-organizers-spring2022&utm_medium=email&utm_source=customerio-zoho_creator_-_standout_sticker_intro')
+                                    img.img-fluid1.platinum.sponsorImage(src='/static/images/sponsors/stand-out-stickers-logo.png', alt='...')
+                            .dixie
+                                a.linkSponsor(href='https://www.bd.com/en-us')
+                                    img.img-fluid1.platinum.sponsorImage(src='/static/images/sponsors/bd_logo.png', alt='BD')
+                            .dixie
+                                a.linkSponsor(href='https://mlh.io/seasons/2023/events')
+                                    img.img-fluid1.platinum.sponsorImage(src='/static/images/sponsors/mlh-logo-color.svg', alt='Dataforma')
+                    .carousel-item
+                        .carousel-item-container
+                            .dixie
+                                a.linkSponsor(href='https://www.ycp.edu/about-us/offices-and-departments/student-development-and-campus-life/student-activities-and-orientation/esports/')
+                                    img.img-fluid1.gold.sponsorImage(src='/static/images/sponsors/eSports.png', alt='eSports YCP')
+                            .dixie
+                                a.linkSponsor(href='https://www.dataforma.com/')
+                                    img.img-fluid1.gold.sponsorImage(src='/static/images/sponsors/dataforma.png', alt='Dataforma')
+                            .dixie
+                                a.linkSponsor(href='https://www.wolfram.com/wolfram-one/')
+                                    img.img-fluid1.gold.sponsorImage(src='/static/images/sponsors/wolframLang.png', alt='Wolfram Language')
+                    .carousel-item
+                        .carousel-item-container
+                            .dixie
+                                a.linkSponsor(href='https://www.pennwaste.com/')
+                                    img.img-fluid1.sponsorImage.silver(src='/static/images/sponsors/pennWaste.png', alt='Penn Waste')
+                            .dixie
+                                a.linkSponsor(href='https://www.ycp.edu/academics/graham-school-of-business/')
+                                    img.img-fluid1.sponsorImage.silver(src='/static/images/sponsors/grahamSchool.png', alt='Graham School of Business')
+                            .dixie
+                                a.linkSponsor(href='https://mrgcorp.com/')
+                                    img.img-fluid1.sponsorImage.silver(src='/static/images/sponsors/mrg-labs-logo.png', alt='MRG Labs')
+                button.carousel-control-prev(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.visually-hidden Previous
+                button.carousel-control-next(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.visually-hidden Next
 
-        // Some more sponsor information
-        .text-center.mt-3
-            #sponsorStuff.p
-                | Want to sponsor? Email us at INFO@YCPHacks.io
-                br
-                |  Checkout what we have to offer to sponsors&nbsp
-                a.primary-link(href='https://www.youtube.com/watch?v=Vp7dTMmLmos&t=1s') Sponsor Video!
-                br
-                |  Our prospectus can be found&nbsp
-                a.primary-link(href='https://ycphacks.io/YCP_HACKS_SPONOSRSHIP_BROCHURE_2022_FINAL_FILE.pdf') here!
+            // Some more sponsor information
+            .text-center.mt-2
+                #sponsorStuff.p
+                    //| Want to sponsor? Email us at INFO@YCPHacks.io
+                    | Want to sponsor?&nbsp
+                    a.link.text-decoration-none(href='mailto:INFO@YCPHacks.io') Email us&nbsp
+                        i.fa-solid.fa-envelope
+                    br
+                    |  Check out what we have to offer to sponsors
+                    a.link.text-decoration-none(href='https://www.youtube.com/watch?v=Vp7dTMmLmos&t=1s') Sponsor Video!
+                    br
+                    |  Our prospectus can be found
+                    a.link.text-decoration-none(href='https://ycphacks.io/YCP_HACKS_SPONOSRSHIP_BROCHURE_2022_FINAL_FILE.pdf') here!
 
-            hr
+                a.prospectus.text-decoration-none(href='sponsor') Learn more!
+                hr
 
             .mt-3.text-center
                 h1 The Team
@@ -292,16 +309,6 @@ html
                             .memberLabel Backend
 
 
-        //footer.text-center.mt-3.text-light.py-3
-        //    a.link-light(href='http://mlh.io/code-of-conduct') MLH Code of Conduct
-        //    | &nbsp|&nbsp
-        //    a.link-light(href='https://ycphacks.io/YCP_HACKS_SPONOSRSHIP_BROCHURE_2022_FINAL_FILE.pdf') Sponsor Us
-        //    | &nbsp|&nbsp
-        //    a.link-light(href='info@ycphacks.io') Contact Us
-        //    br
-        //    a.fa.fa-twitter(href="https://twitter.com/YCPHacks")
-        //
-        //    p Made with love by the YCPHacks Team&nbsp
-        //        svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 512 512' width='12' height='12')
-        //            path(d='M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z')
         include includes/footer
+        .planet
+            #spriteContainer

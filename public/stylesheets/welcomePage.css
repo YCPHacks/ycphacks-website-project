@@ -1,55 +1,129 @@
-body {
-    background: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);
-    font-family: sans-serif;
-    /*background-image: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);*/
+html, body {
+    /*background: linear-gradient(90deg, #8eb5da 0%, #1bb144 100%);*/
+    font-family: Sora;
+    background-image: url("../images/bg2.png");
+    background-repeat: no-repeat;
     font-weight: 500;
     font-size: 1.2em;
+    position: relative;
     text-align: center;
+    height: 100vh;
+    overflow-x: hidden;
+    color: white;
+    z-index: 0;
+
+}
+.planet{
+    width: 105%;
+    position: absolute;
+    display: grid;
+    height: 330px;
+    background-image: url(../assets/planet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center, 50%, 50%;
+    justify-items: center;
+    align-content: center;
+}
+
+.alien{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    animation:  float 6s ease-in-out infinite;
+}
+.scrollDown{
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+main{
+    position: relative;
+    z-index: 0;
+    stroke: #52b6c8;
+}
+.svg{
+    z-index: -1;
+    left: 0;
+    position: fixed;
+
+}
+.path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 1000;
+    animation: dash 20s linear infinite;
+    stroke: #3f6087;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 /* ------SPONSOR CAROUSEL------ */
-.platinum {
-    animation: platinum 2.0s infinite;
-}
+/*.platinum {*/
+/*    animation: platinum 2.0s infinite;*/
+/*}*/
 
-.gold {
-    animation: gold 2.0s infinite;
-}
+/*.gold {*/
+/*    animation: gold 2.0s infinite;*/
+/*}*/
 
-.silver {
-    animation: silver 2.0s infinite;
-}
+/*.silver {*/
+/*    animation: silver 2.0s infinite;*/
+/*}*/
 
-.bronze {
-    animation: bronze 2.0s infinite;
-}
+/*.bronze {*/
+/*    animation: bronze 2.0s infinite;*/
+/*}*/
 
-@keyframes platinum {
-    50% {
-        filter: drop-shadow(0px 10px 20px #52b6c8);
-    }
-}
+/*@keyframes platinum {*/
+/*    50% {*/
+/*        filter: drop-shadow(0px 10px 20px #52b6c8);*/
+/*    }*/
+/*}*/
 
-@keyframes gold {
-    50% {
-        filter: drop-shadow(0px 10px 20px #e27628);
-    }
-}
+/*@keyframes gold {*/
+/*    50% {*/
+/*        filter: drop-shadow(0px 10px 20px #e27628);*/
+/*    }*/
+/*}*/
 
-@keyframes silver {
-    50% {
-        filter: drop-shadow(0px 10px 20px #859294);
-    }
-}
+/*@keyframes silver {*/
+/*    50% {*/
+/*        filter: drop-shadow(0px 10px 20px #859294);*/
+/*    }*/
+/*}*/
 
-@keyframes bronze {
-    50% {
-        filter: drop-shadow(0px 10px 20px #efb521);
-    }
+/*@keyframes bronze {*/
+/*    50% {*/
+/*        filter: drop-shadow(0px 10px 20px #efb521);*/
+/*    }*/
+/*}*/
+
+/* dont know if i want to keep this*/
+[type=button]:not(:disabled):hover, [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled):hover {
+    cursor: pointer;
+    background: #ffffff63;
 }
 
 .carousel, .carousel-inner, .carousel-item, .carousel-item-container {
-    height: 250px;
+    height: 300px;
 }
 
 .carousel-item-container {
@@ -79,6 +153,7 @@ body {
 
 .sponsorImage:hover {
     transform: scale(1.2);
+    /*transition: 0.6s;*/
 }
 
 
@@ -96,6 +171,10 @@ h3 {
     .youtube {
         flex-direction: column;
         align-items: center;
+    }
+
+    .ycpHeader {
+        text-shadow: none;
     }
 }
 
@@ -123,14 +202,13 @@ td, tr {
 
 /* ------FAQ Section------ */
 .accordion {
-    --bs-accordion-bg: none;
+    --bs-accordion-bg: #cfcfcf;
     --bs-accordion-border-color: none;
     --bs-accordion-btn-active-color: none;
 }
 
 .accordion-item {
     margin: 10px;
-    /*box-shadow: rgb(103, 100, 100) 0px 3px 8px;*/
 }
 
 .accordion-body {
@@ -138,7 +216,7 @@ td, tr {
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #97cd8a;
+    background-color: rgb(110, 205, 239);
     color: black;
 }
 
@@ -242,10 +320,16 @@ td, tr {
 .ycpHeader {
     font-family: 'MuseoModerno', serif;
     color: #ffffff;
-    text-shadow: 5px 5px rgba(255, 255, 255, 0.6);
+    /*text-shadow: 5px 5px rgba(255, 255, 255, 0.6);*/
     font-size: 10vw;
     letter-spacing: 1.5pt;
     margin-bottom: 0px;
+}
+
+@media (max-width: 500px) {
+    .ycpHeader {
+        text-shadow: none;
+    }
 }
 
 .hacks {
@@ -254,7 +338,7 @@ td, tr {
     letter-spacing: 2pt;
     margin-top: 0px;
     margin-bottom: 3px;
-    color: #1a3a69;
+    color: white;
 }
 
 .location {
@@ -316,15 +400,91 @@ hr {
     border-style: solid;
 }
 
-.img2{
+.img2 {
     width: 100%;
     align-content: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.icon{
+.icon {
     font-size: 20px;
 }
-.elementSize{
-    width: 95%;
+
+.prospectus {
+    padding: 13px 26px;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 300px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+
+.link {
+    /* RESET */
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 5px 5px;
+    overflow: hidden;
+    vertical-align: bottom;
+    transition: color .3s ease-out;
+}
+
+.link::before {
+    color: white;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100% - 2px));
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+    transition: transform .25s ease-out;
+}
+
+.link:hover {
+    color: #000000;
+}
+
+.link:hover::before {
+    transform: translateY(0);
+    transition: transform .25s ease-out;
+}
+
+#spriteContainer {
+    z-index: -1;
+    width: 300px;
+    position: relative;
+    bottom: 45%;
+    height: 300px;
+    display: block;
+    background-image: url(../assets/antenna.png);
+    animation: sprite 2s steps(2) infinite;
+    transform: scale(0.5);
+}
+
+@keyframes sprite {
+    100% {
+        background-position: -600px;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    #spriteContainer{
+        display: none;
+    }
+    .planet{
+        display: none;
+    }
+
 }
